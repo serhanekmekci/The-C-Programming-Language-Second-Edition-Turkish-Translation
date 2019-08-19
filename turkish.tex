@@ -238,7 +238,7 @@ tür(\textbf{type}) \textbf{int} kendisinin ardından listelenen değişkenlerin
         double  64-bit (double precision) ondalıklı (float)
 \end{lstlisting}
 Bu objelerin büyüklüğü de makineye dayalı (\textbf{machine-dependent}). Bunların yanında kurs boyunca tanışacağımız dizeler (\textbf{arrays}), yapılar (\textbf{structers}) ve birlikler (\textbf{unions}) gibi basit türler (\textbf{types}); onları işaretlemek (\textbf{pointing}) için işaretleyiciler (\textbf{pointers}) ve onları döndürmek (\textbf{return}) için fonksiyonlar (\textbf{functions}) vardır. \pagebreak
-\par Isı birimi dönüşümü programında hesaplama atama ifadeleriyle (\textbf{assignment statements}) başlıyor.
+\par Isı birimi dönüşümü programında hesaplama atama (\textbf{assignment}) ifadeleriyle (\textbf{assignment statements}) başlıyor.
 \begin{lstlisting}
         lower = 0;
         upper = 300;
@@ -328,7 +328,7 @@ ilk sayıyı 3 basamak genişliğinde, ikinci sayıyı da 6 basamak genişliğin
 \par Eğer aritmetik operatörün tam sayı (\textbf{integer}) işlenenleri (\textbf{operands}) olursa tam sayılarla (\textbf{integers}) gerçekleşen bir işlem yapılırdı. Eğer aritmetik operatörün bir ondalıklı sayı (\textbf{float}) ve bir tam sayı (\textbf{integer}) işleneni (\textbf{operand}) var ise bir şey farketmez ve tam sayı (\textbf{integer}) işlemden önce ondalıklı sayıya (\textbf{float}) dönüştürülür ve ardından hesaplama yapılırdı. Eğer \textbf{fahr-32} yazmış olsaydık, \textbf{32} otomatikman ondalıklı sayıya (\textbf{float}) dönüştürülürdü. Yine de ondalıklı sayı (\textbf{float}) olan sabitleri tam (\textbf{integral}) olmalarına rağmen ondalık noktasını kullanarak yazmamız, onların ondalıklı sayı (\textbf{float}) doğasını insan okuyucular için vurgular. Tam sayıların (\textbf{integer}) ondalıklı sayılara (\textbf{float}) dönüşümlerinin detaylarını Bölüm 2'de göreceğiz.
 
 
-\pagebreak Şuanlık şu atamayı farkedin
+\pagebreak Şuanlık şu atamayı (\textbf{assignment}) farkedin
 \begin{lstlisting}
         fahr = lower;
 \end{lstlisting} ve test edin.
@@ -488,9 +488,45 @@ Mantıksal bir operatör olan \textbf{ !=} "eşit değil" anlamına gelir.
 \par Tabiki ekrandaki yada klavyedeki karakter, diğer her şey gibi, bit olarak içeride saklanıyor. Tür (\textbf{type}) \textbf{char} özellikle karakter verisi taşıması için oluşturuldu fakat herhangi bir tam sayı (\textbf{integer}) değer kullanılabilir. Biz ince ve önemli bir sebeple \textbf{int} kullandık.
 \par Problem, girdinin (\textbf{input}) sonunun geçerli veriden ayırılması. Çözüm ise \textbf{getchar}'ın girdi (\textbf{input}) kalmadığında herhangi gerçek bir karakterle karıştırılamayacak belirgin bir değer dönmesi (\textbf{return}). Bu değer \textbf{EOF} olarak adlandırılıyor, "dosya sonu" (\textbf{end of file}) anlamına geliyor. Biz c'yi \textbf{getchar}'ın döndürebileceği kadar büyük bir değer taşıyan bir türde tanımlamamız gerekiyor. c, lazım olduğunda EOF'yi taşıyabileceği kadar büyük olması gerektiğinden \textbf{char} kullanamazdık. Bu nedenle \textbf{int} kullandık.
 \par EOF \textbf{<stdio.h>}'da bir tam sayı (\textbf{integer}) olarak tanımlanmıştır, fakat EOF'nin sayı değeri hakkında \textbf{char} değeri ile aynı olmadığından dolayı endişelenmemiz gerekmiyor. Sembolik sabiti (\textbf{Symbolic Constant}) kullanarak, programdaki hiçbir şeyin belirli bir sayı değerine dayalı olmadığından emin olduk.
-\par Kopyalama programı tecrübeli C programcıları tarafından daha farklı yazılabilir. C'de herhangi bir atama, örneğin
+\par Kopyalama programı tecrübeli C programcıları tarafından daha farklı yazılabilir. C'de herhangi bir atama (\textbf{assignment}), örneğin
 \begin{lstlisting}
 		c = getchar()
 \end{lstlisting}
-bir açıklamadır (\textbf{expression}) ve değeri vardır,
+bir açıklamadır (\textbf{expression}) ve değeri vardır, eşitliğin sol tarafindekinin değeri atamadan (\textbf{assignment}) sonra belirlenir. Böylece bir atama (\textbf{assignment}) daha geniş bir açıklamanın bir parçası olabilir. Eğer c'nin bir karaktere atanması \textbf{while} döngüsünün test kısmının içerisine konulursa, kopyalama programı bu şekilde yazılabilir:
+\begin{lstlisting}
+		#include <stdio.h>
+
+		/* girdiyi (input) çıktıya (output) kopyala; 2. versiyon */
+
+		main()
+		{
+			int c;
+
+			while ((c = getchar()) != EOF)
+				putchar(c);
+		}
+\end{lstlisting}
+
+\textbf{while} karakteri alıyor, c'ye atıyor, ve karakterin dosya-sonu (\textbf{end-of-file}) sinyali olmadığı koşulunu test ediyor. Eğer değilse, \textbf{while}'ın gövde (\textbf{gövde}) kısmı çalıştırılıyor ve karakter bastırılıyor. Sonra \textbf{while} tekrar ediyor. Ve girdinin sonuna ulaşıldığında, \textbf{while} sona eriyor ve ardından tabiki \textbf{main} de.
+
+\par Bu versiyon girdiyi (\textbf{input}) merkezleştiriyor - artık sadece tek \textbf{getchar}'a tek bir referans var - ve programı kısaltıyor. Son program çok daha kompakt, ve bu kullanımda ustalaştıkça, okumak da daha kolay. Bu tarzı çok sık göreceksiniz. (bunu biraz abartmak ve anlaşılmaz kodlar yazmak mümkün, bu kendimizi tutmamız gereken bir eğilim.)
+
+\par Atamanın etrafındaki koşulun içindeki parantezler gerekli. !='in \textit{önceliği} (\textbf{precedence}) ='den yüksek, bu yüzden parantezler olmasaydı mantıksal test olan != atama (\textbf{assignment}) olan ='den önce yapılırdı. \\ \pagebreak
+
+Bu yüzden ifade (\textbf{statement})
+
+\begin{lstlisting}
+		c = getchar() != EOF
+\end{lstlisting}
+eşittir
+\begin{lstlisting}
+		c = (getchar() != EOF)
+\end{lstlisting}
+Bunun \textbf{getchar}'ın dosya-sonu (\textbf{end-of-file}) sinyaline ulaşıp ulaşmadığına göre c'yi ya 0'a yada 1' atamak (\textbf{assignment}) gibi bir istenmeyen etkisi var. (Bölüm 2'de bununla ilgili fazlası var.) \newline
+\par \textbf{Egzersiz 1-6.} Açıklama (\textbf{expression}) getchar() != EOF'nin 0'a yada 1'e eşit olduğunu doğrulayın.
+\newline
+\par \textbf{Egzersiz 1.7.} EOF'in değerini bastıran bir program yazın.
+
+\subsection{Karakter Sayma}
+
 \end{document}
