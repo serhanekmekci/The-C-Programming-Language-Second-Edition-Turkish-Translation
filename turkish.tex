@@ -128,10 +128,10 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 \pagebreak
 
 Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak tanımlandı, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
-Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde tanımlanır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor, \\
-
-\textbf{printf("hello, world\textbackslash n");} \\
-
+Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde tanımlanır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor,
+\begin{lstlisting}
+printf("hello, world\n");
+\end{lstlisting}
 C derleyicisi (\textbf{compiler}) hata mesajı üretecektir.
 \textbf{printf} asla yeni bir satırı otomatik olarak sağlamayacaktır, yani bu sayede tek bir çıktıyı (\textbf{output}) aralıksız bir biçimde printf fonksiyonunu (\textbf{function}) birden fazla kere çağırarak bastırabiliriz ve bu ilk programımız kadar iyi çalışır.
 
@@ -155,7 +155,7 @@ Bu şekilde aynı çıktıyı (\textbf{output}) bastırabiliriz.
 
 \section{Değişkenler ve Aritmetik Açıklamalar}
 
-Sonraki program aşağıdaki Fahrenhayt dereceleri ve onların Selsiyus (Santigrat) eşitliklerini gösteren tabloyu bastırmak için \degree \textit{C} = (5/9)(\degree \textit{F}-32) formülünü kullanıyor.
+Sonraki program aşağıdaki Fahrenhayt dereceleri ve onların Selsiyus (Santigrat) eşitliklerini gösteren tabloyu bastırmak için \degree \textit{C} = (5/9)(\degree \textit{F}-32) formülünü kullanıyor. \pagebreak
 
 \begin{lstlisting}
         0   -17
