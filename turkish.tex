@@ -6,6 +6,20 @@
 \usepackage{indentfirst}
 \usepackage{listings}
 \usepackage{gensymb}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[RE,LO]{\thepage}
+
+\definecolor{gray75}{gray}{0.75}
+
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[hang]{\filleft\Huge\bfseries}{Bölüm \thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 \begin{document}
 
@@ -65,7 +79,7 @@
 \chapter{Öğretici Kısıma Giriş}
 C'ye hızlı bir girişle başlayalım. Ana odağımız dilin gerekli elemanlarını detaylara, ayrıntılara, kurallara ve istisnalara girmeden gerçek programlar aracılığıyla göstermek. Bu aşamada tamamlayıcı ve kusursuz olmaya çalışmıyoruz. Sizi, olabilecek en kısa sürede işe yarar programlar yazabilecek hale getirmeye çalışıyoruz. Ve bunu yapabilmek için temellere (değişkenler (\textbf{variables}), sabitler (\textbf{constants}), aritmetikler, kontrol akışı (\textbf{control flow}), fonksiyonlar (\textbf{functions}), girdi (\textbf{input}) ve çıktıların (\textbf{output}) esasları) odaklanmamız gerekmekte. Bilerek bu bölümde C'nin büyük programlar yazmak için önemli olan özelliklerine değinmiyoruz. Bu işaretleyiciler (\textbf{pointers}), yapılar (\textbf{structers}), C'nin zengin operatör setinin çoğunu, bazı kontrol akışı (\textbf{control-flow}) ifadelerini (\textbf{statement}) ve temel C standart kütüphanesini (\textbf{library}) içeriyor.
 \par Bu amacın kendine has sakıncaları bulunmakta. En öne çıkanı ise belirli bir dilin baştan sona hikayesinin burada bulunmaması. Aynı zamanda, öğretici kısım özetleyici olduğu gibi yanıltıcı da olabilir. Ve örnekler öğretim amacıyla C'nin tüm gücünden faydalanmadığından, olabilecek en öz ve zarif şekilde değiller. Bu etkileri hafifletebileceğimiz kadar hafiflettik fakat dikkatli olmanız gerekmekte. Bir diğer sakınca ise bundan sonraki bölümlerin bu bölümün bir kısmının tekrarını içeriyor olması. Umuyoruz ki bu tekrarlama size rahatsızlıktan çok yardım sağlar.
-\par Herhangi bir durumda, deneyimli programcılar kendi programcılık ihtiyaçları doğrultusunda verilen materyalden faydalanacaklardır. Yeni başlayanlar ise bunu kendi küçük benzer programlarını yazarak sağlayabilirler. İki grup da bunu çatı (\textbf{framework}) olarak Bölüm 2'de başlayan daha detaylı açıklamaların üstüne kullanabilirler.
+\par Herhangi bir durumda, deneyimli programcılar kendi programcılık ihtiyaçları doğrultusunda verilen materyalden faydalanacaklardır. Yeni başlayanlar ise bunu kendi küçük benzer programlarını yazarak sağlayabilirler. İki grup da bunu çatı (\textbf{framework}) olarak Bölüm 2'de başlayan daha detaylı açıklamaların üstüne kullanabilirler. \pagebreak
 
 \section{Başlamak}
 
