@@ -64,9 +64,9 @@
 
 \frontmatter
 
-\fancypagestyle{preface}{\fancyhf{}\renewcommand{\headrulewidth}{1pt}\fancyhead[LE,RO]{Önsöz}\fancyhead[RE,LO]{\thepage}}
-\fancypagestyle{prefacetofe}{\fancyhf{}\renewcommand{\headrulewidth}{1pt}\fancyhead[LE,RO]{İlk Tiraja Önsöz}\fancyhead[RE,LO]{\thepage}}
-\fancypagestyle{introduction}{\fancyhf{}\renewcommand{\headrulewidth}{1pt}\fancyhead[LE,RO]{Giriş}\fancyhead[RE,LO]{\thepage}}
+\fancypagestyle{preface}{\fancyhf{}\renewcommand{\headrulewidth}{0.5pt}\fancyhead[LE,RO]{Önsöz}\fancyhead[RE,LO]{\thepage}}
+\fancypagestyle{prefacetofe}{\fancyhf{}\renewcommand{\headrulewidth}{0.5pt}\fancyhead[LE,RO]{İlk Tiraja Önsöz}\fancyhead[RE,LO]{\thepage}}
+\fancypagestyle{introduction}{\fancyhf{}\renewcommand{\headrulewidth}{0.5pt}\fancyhead[LE,RO]{Giriş}\fancyhead[RE,LO]{\thepage}}
 
 
 \maketitle
@@ -76,14 +76,14 @@
 \chapter{Önsöz}
 
 Bilgi işlem dünyası, 1978 yılında "C Programlama Dili"nin yayınlanmasından itibaren köklü bir devrime uğramıştır. Büyük bilgisayarlar artık daha da büyükler ve kişisel bilgisayarlar artık on yıl öncesinin ana bilgisayarlarına rakip olabilecek kapasitedeler. Bu zaman içerisinde, mütevazi bir şekilde olsa da C de değişime uğradı ve kendi orijini olan sadece UNIX işletim sisteminin dili olmaktan çok uzaklara yayıldı.
-\par C'nin gittikçe artan popülaritesi, yıllar içerisinde dilde gerçekleşen değişimler ve gruplar tarafından derleyicilerin (\textbf{compilers}) oluşturulması onun dizaynına bulaştırılmadı; dilin daha açık ve kitabın ilk tirajına göre daha çağdaş bir tanımı için kombine edildi. 1983'te Amerikan Ulusal Standartları Enstitüsü (\textbf{American National Standards Institue}) (ANSI) amacı, C dilinin ruhunu kaybettirmeden kesin ve makineye dayalı olmayan bir tanımını üretmek olan bir komite kurmuştur. Sonuç, C için "ANSI" standardıdır.
+\par C'nin gittikçe artan popülaritesi, yıllar içerisinde dilde gerçekleşen değişimler ve gruplar tarafından derleyicilerin (\textbf{compilers}) oluşturulması onun dizaynına bulaştırılmadı; dilin daha açık ve kitabın ilk tirajına göre daha çağdaş bir tanımı için kombine edildi. 1983'te Amerikan Ulusal Standartları Enstitüsü (\textbf{American National Standards Institue}) (ANSI) amacı, C dilinin, ruhunu kaybettirmeden kesin ve makineye dayalı olmayan bir tanımını üretmek olan bir komite kurmuştur. Sonuç, C için "ANSI" standardıdır.
 \par Standart, ilk tirajda bahsi geçmiş fakat tam anlamıyla tanımlanmamış yapıları formüllendiriyor. Özellikle yapı ataması ve numaralandırma gibi konularda. Bu; fonksiyon (\textbf{function}) tanımlamanın çapraz-kontrole (\textbf{cross-checking}) izin veren, kullanımla beraber bir tanımını sağlar. Girdi (\textbf{input}) ve çıktıları (\textbf{output}) sergilemek için olan fonksiyonların (\textbf{functions}) geniş bir dizisi, hafıza yönetimi, dize manipülasyonu ve benzer görevlerle birlikte standart bir kütüphane belirtir. Orijinal tanımlamada ayrıntılı olarak açıklanmamış özelliklerin davranışlarını açık ve kesin bir hale getirir ve aynı zamanda dilin makineye dayalı kalan yönlerini açık bir şekilde belirtir.
 \par C Programlama Dili'nin ikinci tirajı, C'yi ANSI standartlarında olduğu gibi açıklar. Biz, dilin evrildiği yerleri belirtmiş olmamıza rağmen bilerek yeni formda yazmayı tercih ettik. Büyük bir bölüm için bu, çok önemli bir fark yaratmaz. En gözle görülür değişim, fonksiyon (\textbf{function}) açıklanması ve tanımlanmasının yeni formudur. Modern derleyiciler (\textbf{compilers}) standardın özelliklerinin çoğunu çoktan desteklemektedir.
 \par Kitabı ilk tirajın kısalığında tutmaya çalıştık. C, büyük bir dil değil ve büyük bir kitap onun çok işine yaramaz. C programlamanın merkezi olan işaretleyiciler (\textbf{pointers}) gibi kritik özelliklerin anlatımını geliştirdik. \pagebreak
 
 
 \thispagestyle{preface} \noindent Orijinal örnekler işledik ve birkaç bölüme yeni örnekler ekledik. Örneğin; tanımlamaları kelimelere dönüştüren ve bunun tersini yapan programlar tarafından komplike tanımlamalar oluşturduk. Önceden olduğu gibi bütün örnekler doğrudan, makine tarafından okunulabilir formda olan metinden test edilmiştir.
-\par Ek Bölüm A; referans el kitabı, standart değildir. Fakat bizim girişimimiz standardın gerekliliklerini daha küçük bir alanda iletmek. Bu programcılar tarafından kolay anlaşılmak üzere yapıldı ancak derleyici yazarları için bir açıklama olarak yapılmadı. - Bu görev tamamen standardın kendisine düşüyor. Ek Bölüm B, standart kütüphanenin özetidir. Ve bu da dahil ediciler (\textbf{implementers}) için değil programcılar için referans edildi. Ek Bölüm C, orijinal versiyondaki değişimlerin kısa özetidir.
+\par Ek Bölüm A; referans el kitabı, standart değildir. Fakat bizim girişimimiz standardın gerekliliklerini daha küçük bir alanda iletmek. Bu programcılar tarafından kolay anlaşılmak üzere yapıldı ancak derleyici (\textbf{compiler}) yazarları için bir açıklama olarak yapılmadı. - Bu görev tamamen standardın kendisine düşüyor. Ek Bölüm B, standart kütüphanenin özetidir. Ve bu da dahil ediciler (\textbf{implementers}) için değil programcılar için referans edildi. Ek Bölüm C, orijinal versiyondaki değişimlerin kısa özetidir.
 \par İlk tirajın önsözünde de söylediğimiz gibi C "sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor." On yılların getirdiği tecrübe ile birlikte biz hala bu şekilde hissediyoruz. Umuyoruz ki bu kitap, C'yi öğrenmenizde ve iyi bir şekilde kullanmanızda yardımcı olur.
 \par Bu ikinci tirajı ortaya çıkarmamızda yardımcı olan arkadaşlarımıza derinden borçlu hissediyoruz.  Jon Bentley, Doug Gwyn, Doug Mcllroy, Peter Nelson ve Rob Pike bize neredeyse taslağın her sayfasında sezgilerinden yola çıkarak yorumlarda bulundular. Dikkatli okumaları için  Al Aho, Dennis Allison, Joe Campbell, G. R. Emlin, Karen Fortgang, Allen Holub, Andrew Hume, Dave Kristol, John Linderman, Dave Prosser, Gene Spafford, ve Chris Van Wyk'e minnettarız. Ayrıca  BHl Cheswick, Mark Kernighan, Andy Koenig, Robin Lake, Tom London, Jim Reeds, Clovis Tondo, ve Peter Weinberger'den yardımcı tavsiyeler aldık. Dave Prosser ANSI standartları hakkında birçok detaylı sorumuzu cevapladı. Programlarımızın yerel testleri için yaygın olarak  Bjarne Stroustrup'ın C++ çeviricisini kullandık ve Dave Kristol bize final testi için bir ANSI C derleyicisi (\textbf{compiler}) sağladı. Rich Drechsler dizgilerde bize son derece yardımcı oldu.
 \par Hepsine içten teşekkürlerimizle.
@@ -145,11 +145,11 @@ bunu bastıracaktır
 
 Diğer sistemlerde kurallar farklı olacaktır, sisteminizle ilgili yerel bir uzmana danışın.
 Şimdi programın kendisi hakkında biraz açıklama. Bir C programı, boyutu ne olursa olsun, fonksiyonlardan(\textbf{functions}) ve değişkenlerden(\textbf{variables}) oluşur. Bir fonksiyon (\textbf{function}), yapılacak bilgisayarsal operasyonları belirten ifadeler (\textbf{statements}) ve çalışma sırasında kullanılacak değerleri (\textbf{values}) taşıyan değişkenler (\textbf{variables}) içerir. C fonksiyonları (\textbf{functions}) daha çok altprogramlara (\textbf{subroutines}) ya da Fortran dilini bilenlerin aşina olduğu Fortran fonksiyonlarına (\textbf{function}), Pascal prosedürlerine (\textbf{procedures}) ve Pascal fonksiyonlarına (\textbf{functions}) oldukça benzer. Bizim örneğimiz \textbf{main} isimli fonksiyon (\textbf{function}). Normalde fonksiyonlara (\textbf{functions}) istediğiniz ismi vermekte özgürsünüz fakat "\textbf{main}" için değil. Programınız \textbf{main} fonksiyonunu (\textbf{function}) baştan aşağıya doğru çalıştırarak işe başlar. Bu, her programın herhangi bir yerinde bir \textbf{main} fonksiyonu (\textbf{function}) olmasını gerektirir.
-\textbf{main} genellikle başka fonksiyonları (\textbf{functions}) gerçekleştireceği işe yardım için çağırır, bazen sizin yazdıklarınız, bazen de kütüphanelerde (\textbf{libraries}) sizin için sağlanan fonksiyonları. Programınızın ilk satırı, \\
-
-\textbf{\#include $<$stdio.h$>$} \\
-
-derleyiciye (\textbf{compiler}) standart girdi (\textbf{input}), çıktı (\textbf{output}) hakkında bilgilerin programa dahil edilmesini söyler. Bu satır hemen hemen her C kaynak (\textbf{source}) dosyasında bulunur. Standart kütüphane (\textbf{library}) Bölüm 7'de ve Ek B'de açıklanmıştır.
+\textbf{main} genellikle başka fonksiyonları (\textbf{functions}) gerçekleştireceği işe yardım için çağırır, bazen sizin yazdıklarınız, bazen de kütüphanelerde (\textbf{libraries}) sizin için sağlanan fonksiyonları. Programınızın ilk satırı,
+\begin{lstlisting}
+		#include <stdio.h>
+\end{lstlisting}
+derleyiciye (\textbf{compiler}) standart girdi (\textbf{input}) çıktı (\textbf{output}) hakkında bilgilerin programa dahil edilmesini söyler. Bu satır hemen hemen her C kaynak (\textbf{source}) dosyasında bulunur. Standart kütüphane (\textbf{library}) Bölüm 7'de ve Ek B'de açıklanmıştır.
 Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot, çağırılan fonksiyonlara (\textbf{functions}) argümanlar (\textbf{arguments}) adı verilen değer veya değerler vermektir. Fonksiyon adından sonraki parantezlerin arasında argüman (\textbf{argument}) veya argümanlar (\textbf{arguments}) bulunur. \\
 
 \begin{lstlisting}
@@ -542,7 +542,7 @@ bir açıklamadır (\textbf{expression}) ve değeri vardır, eşitliğin sol tar
 
 \par Bu versiyon girdiyi (\textbf{input}) merkezleştiriyor - artık sadece tek \textbf{getchar}'a tek bir referans var - ve programı kısaltıyor. Son program çok daha kompakt, ve bu kullanımda ustalaştıkça, okumak da daha kolay. Bu tarzı çok sık göreceksiniz. (bunu biraz abartmak ve anlaşılmaz kodlar yazmak mümkün, bu kendimizi tutmamız gereken bir eğilim.)
 
-\par Atamanın etrafındaki koşulun içindeki parantezler gerekli. !='in \textit{önceliği} (\textbf{precedence}) ='den yüksek, bu yüzden parantezler olmasaydı mantıksal test olan != atama (\textbf{assignment}) olan ='den önce yapılırdı. \\ \pagebreak
+\par Atamanın etrafındaki koşulun içindeki parantezler gerekli.  !='in \textit{önceliği} (\textbf{precedence})  ='den yüksek, bu yüzden parantezler olmasaydı mantıksal test olan  != atama (\textbf{assignment}) olan  ='den önce yapılırdı. \\ \pagebreak
 
 Bu yüzden ifade (\textbf{statement})
 
@@ -560,4 +560,41 @@ Bunun \textbf{getchar}'ın dosya-sonu (\textbf{end-of-file}) sinyaline ulaşıp 
 
 \subsection{Karakter Sayma}
 
+Bir sonraki program karakterleri sayıyor; kopyalama programına oldukça benziyor.
+\begin{lstlisting}
+		#include <stdio.h>
+		/* girdideki (input) karakterleri say; 1. versiyon */
+		main()
+		{
+			long nc;
+
+			nc = 0;
+			while (getchar() != EOF)
+				++nc;
+			printf("%ld\n", nc);
+		}
+\end{lstlisting}
+\par İfade (\textbf{statements})
+\begin{lstlisting}
+		++nc;
+\end{lstlisting}
+yeni bir operatörü bize tanıtıyor, ++, \textit{bir ile arttır} anlamına geliyor. Bunun yerine nc = nc+1 yazabilirdiniz fakat ++nc çok daha kısa ve çoğunlukla daha verimli. Bu operatörün eşi -- operatörü ise bir ile azalt anlamına geliyor. ++ ve -- operatörleri önek (\textbf{prefix}) (++nc) veya arkak (\textbf{postfix}) (nc++) olabilirler; bu ki formun Bölüm 2'de göstereceğimiz gibi açıklamalarda (\textbf{expressions}) farklı değerleri olur, fakat hem nc++ hem ++nc de nc'yi birer arttıracaktır. Şuanlık sadece önek (\textbf{prefix}) formunu kullanacağız..
+\par Karakter sayma programı sayımlarını \textbf{int} yerine \textbf{long} bir değişken (\textbf{variable}) içinde biriktirir. \textbf{long} tam sayılar (\textbf{integer}) en az 32 bit olsa da bazı makinelerde \textbf{long} ve \textbf{int} aynı boyuttadır, diğerlerinde ise \textbf{int} maksimum değeri 32767'dir ve 16 bit yer kaplar. Bu sebeple \textbf{int} bir sayacı geçmek oldukça az girdi (\textbf{input}) gerektirecektir. Dönüşüm özelliği (\textbf{conversion spesification}) \textbf{\%ld} \textbf{printf}'e eşleşecek olan argümanın (\textbf{argument}) bir \textbf{long} tam sayı (\textbf{integer}) olacağını söyler.
+\par Bundan bile daha büyük sayılarla bile başa çıkmak ise \textbf{double} (double precision float) ile mümkündür. Ayrıca döngü (\textbf{loop}) yazmanın bir diğer yolunu göstermek için \textbf{while} ifadesi (\textbf{statement}) yerine de \textbf{for} ifadesi kullanacağız.
+\begin{lstlisting}
+		#include <stdio.h>
+
+		/* girdideki (input) karakterleri say; 2. versiyon */
+		main()
+		{
+			double nc;
+
+			for (nc = 0; getchar() != EOF; ++nc)
+				;
+			printf("%.0f\n", nc);
+		}
+\end{lstlisting}
+\textbf{printf} \textbf{\%f}'i hem \textbf{float} hem de \textbf{double} için kullanıyor; \textbf{\%0.f} ise ondalık noktasını ve bu programda her zaman 0 olan kesirli kısmın bastırılmamasını sağlıyor.
+\par Bu \textbf{for} döngüsünün (\textbf{loop}) gövde (\textbf{body}) kısmı boş, çünkü bütün iş koşul ve arttırma bölümleri tarafından yapılıyor. Fakat C'nin gramatik kuralları gereği \textbf{for} ifadesinin (\textbf{statement}) bir gövdesi olması gerek. Yalnız duran noktalı virgül, \textit{boş ifade} (\textbf{null statement}) olarak adlandırılır, bu C'nin bu gerekliliğini sağlamak için kullanılır. Bunu daha görünür yapmak için ayrı bir satıra koyduk.
+\par Karakter sayma programını bir kenara bırakmadan önce, eğer girdi (\textbf{input}) hiç karakter içermiyorsa, \textbf{while} veya \textbf{for} daha \textbf{getchar}'ı ilk çağırışta sona eriyor, ve program doğru sonuç olan 0 sonucunu üretiyor. Bu önemli. \textbf{while} ve \textbf{for} ile ilgili güzel şeylerden biri ise, daha döngünün (\textbf{loop}) gövde (\textbf{body}) kısmına başlamadan önce koşul bölümünü test ediyor olmaları. Eğer yapılacak bir şey yoksa, hiçbir şey yapılmıyor, bu döngünün (\textbf{loop}) gövde (\textbf{body}) kısmının asla çalıştırılmayacak olduğu anlamına gelse bile. Programlar onlara sıfır-uzunlukta girdi (\textbf{input}) verildiğinde zekice haraket etmelidirler. \textbf{while} ve \textbf{for} ifadeleri (\textbf{statements}) en ekstrem (sınır, limit) koşullarda bile programların mantıklı şeyler yapmasından emin oluyor.
 \end{document}
