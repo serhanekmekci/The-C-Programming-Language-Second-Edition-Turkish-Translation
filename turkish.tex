@@ -102,7 +102,7 @@ C; açıklama (\textbf{expression}) idaresi, modern kontrol akışı (\textbf{co
 \par Bu kitap okurun C'de programlamanın nasıl olduğunu öğrenmesine yardım etmek içindir. Yeni kullanıcıların mümkün olan en kısa sürede başlaması için öğretici bir giriş, her majör özellik için ayrı bölüm ve referans el kitabı içerir. İşleyişin çoğu sadece kuralların ifade edilmesinden çok okumaya, yazmaya ve tekrar örneklerine dayalı. Çoğu kısımda örnekler ayrılmış parçalar olmaktan ziyade tamamlanmış gerçek programlar. Bütün örnekler doğrudan makine tarafından okunulabilir (\textbf{machine-readable}) formda olan metin üzerinden test edildiler. Biz, dilin etkili kullanımının nasıl olacağını göstermek dışında ayrıca mümkün olduğu yerlerde kullanışlı algoritmaları ve iyi bir tasarımın prensiplerini örneklemeyi denedik.
 \par Bu kitap tanıtıcı bir programlama el kitabı değildir. Okuyucunun değişkenler (\textbf{variables}), atama ifadeleri (\textbf{statements}), döngüler (\textbf{loops}) ve fonksiyonlar (\textbf{functions}) gibi temel programlama konseptlerine biraz aşinalığı olduğunu varsayar. Yine de acemi bir programcının, daha bilgili bir iş ortağına erişmesi okuyabilmesi ve dili algılayabiliyor olmasına yardımcı olacaktır. \pagebreak
 
-\par Bizim deneyimimizde C; kendini çok çeşitli programlar için keyifli, etkileyici ve çok yönlü bir dil olarak kanıtlamıştır. Öğrenmek için kolaydır ve sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor. Umuyoruz ki bu kitap onu iyi bir şekilde kullanmanızda yardımcı olacaktır.
+\par Bizim deneyimimizde C; kendini çok çeşitli programlar için keyifli, etkileyici ve çok yönlü bir dil olarak kanıtlamıştır. Öğrenmesi kolaydır ve sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor. Umuyoruz ki bu kitap onu iyi bir şekilde kullanmanızda yardımcı olacaktır.
 \thispagestyle{prefacetofe}
 \par Birçok arkadaş ve iş ortağımızın düşünceli eleştiri ve önerilerini (\textbf{suggestions}) büyük ölçüde bu kitaba ve onu yazma zevkimize kattık. Özellikle Mike Bianchi, Jim Blue, Stu Feldman, Doug McIlroy, Bill Roome, Bob Rosin, ve Larry Rosie çoklu versiyonların hepsini dikkatle okudular. Ayrıca çeşitli evrelerdeki yardımcı yorumları (\textbf{comments}) için Al Aho, Steve Bourne, Dan Dvorak, Chuck Haley, Debbie Haley, Marion Harris, Rick Holt, Steve Johnson, John Mashey, Bob Mitze, Ralph Muha, Peter Nelson, Elliot Pinson, Bill PIauger, Jerry Spivack, Ken Thompson, ve Peter Weinberger'e ve yazım düzenlemesindeki sağlam yardımları için  Mike Lesk ve Joe Ossanna'ya minnettarız.
 
@@ -184,20 +184,20 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak tanımlandı, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
 Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde tanımlanır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor,
 \begin{lstlisting}
-printf("hello, world\n");
+		printf("hello, world\n");
 \end{lstlisting}
 C derleyicisi (\textbf{compiler}) hata mesajı üretecektir.
 \textbf{printf} asla yeni bir satırı otomatik olarak sağlamayacaktır, yani bu sayede tek bir çıktıyı (\textbf{output}) aralıksız bir biçimde printf fonksiyonunu (\textbf{function}) birden fazla kere çağırarak bastırabiliriz ve bu ilk programımız kadar iyi çalışır.
 
 \begin{lstlisting}
-    #include <stdio.h>
+		#include <stdio.h>
 
-    main()
-    {
-        printf("hello, ");
-        printf("world");
-        printf("\n");
-    }
+		main()
+		{
+			printf("hello, ");
+			printf("world");
+			printf("\n");
+		}
 \end{lstlisting}
 
 Bu şekilde aynı çıktıyı (\textbf{output}) bastırabiliriz.
@@ -232,41 +232,41 @@ Sonraki program aşağıdaki Fahrenhayt dereceleri ve onların Selsiyus (Santigr
 \par Programın kendisi hâlen sadece \textbf{main} adında tek bir fonksiyon (\textbf{function}) içeriyor. "hello, world" bastıran programdan biraz uzun ancak korkacak bir şey yok, komplike değil. Bu program bize, yorumlar (\textbf{comments}), tanımlamalar (\textbf{declerations}), değişkenler (\textbf{variables}), aritmetik açıklamalar, döngüler (\textbf{loops}) ve formatlanmış çıktılar (\textbf{output}) gibi birkaç yeni fikri gösteriyor.
 
 \begin{lstlisting}
-#include <stdio.h>
+		#include <stdio.h>
 
-/* Fahrenhayt-Selsiyus tablosunu bastır
+		/* Fahrenhayt-Selsiyus tablosunu bastır
 
-    for fahr = 0, 20, ... 300 */
+			for fahr = 0, 20, ... 300 */
 
-main()
-{
-    int fahr, celsius;
-    int lower, upper, step;
+		main()
+		{
+			int fahr, celsius;
+			int lower, upper, step;
 
-    lower = 0; /* ısı tablosunun en düşük değeri */
-    upper = 300; /* ısı tablosunun en yüksek değeri */
-    step = 20; /* adım değeri */
+			lower = 0; /* ısı tablosunun en düşük değeri */
+			upper = 300; /* ısı tablosunun en yüksek değeri */
+			step = 20; /* adım değeri */
 
-    fahr = lower;
+			fahr = lower;
 
-    while (fahr <= upper) {
-        celsius = 5 * (fahr-32) / 9;
-        printf("%d\t%d\n", fahr, celsius);
-        fahr = fahr + step;
-    }
-}
+			while (fahr <= upper) {
+				celsius = 5 * (fahr-32) / 9;
+				printf("%d\t%d\n", fahr, celsius);
+				fahr = fahr + step;
+			}
+		}
 \end{lstlisting}
 Bu iki satır \begin{lstlisting}
-/* Fahrenhayt-Selsiyus tablosunu bastır
+		/* Fahrenhayt-Selsiyus tablosunu bastır
 
-    for fahr = 0, 20, ... 300 */
+			for fahr = 0, 20, ... 300 */
 \end{lstlisting}
 bu durumda programın nasıl çalıştığını, programın kaynak (\textbf{source}) kodunu okuyanlara açıklayan \textit{yorum} (\textbf{comment}) satırlarıdır. \textbf{/*} ve \textbf{*/} karakterleri arasında olan karakterler derleyici (\textbf{compiler}) tarafından görmezden gelinir, bu satırlar programı okurken anlamayı daha kolay hale getirmek için özgürce kullanılabilir. Yorum satırları boşluk, tab veya yeni satır karakterinin koyulabileceği bütün yerlere koyulabilirler.
 \par C'de; bütün değişkenler (\textbf{variables}) kullanılmadan önce tanımlanmalı. Genellikle fonksiyonun (\textbf{function}) başında bütün çalıştırılabilir ifadelerden (\textbf{executable statements}) önce tanımlanır. Bir tanımlama (\textbf{decleration}) değişkenlerin (\textbf{variables}) özelliklerini anons eder; bu anons değişkenlerin (\textbf{variables}) tanımlanacak türünü (\textbf{type}) ve değişkenlere (\textbf{variable}) verilecek adları içerir, örneğin
 \newline
 \begin{lstlisting}
-int fahr, celsius;
-int lower, upper, step;
+		int fahr, celsius;
+		int lower, upper, step;
 \end{lstlisting}
 tür(\textbf{type}) \textbf{int} kendisinin ardından listelenen değişkenlerin (\textbf{variable}) birer tamsayı (\textbf{integer}) olduğunu belirtir. Kayar noktalı yani ondalıklı sayılar (\textbf{float}) ile karşılaştırırsak, \textbf{int} ve \textbf{float}'un da sahip olduğu aralık, kullandığınız makineye dayalıdır; 16-bit \textbf{int'ler}, -32768 ve +32767 arasındadır ve 16-bit \textbf{int'ler} de 32-bit \textbf{int'ler} kadar yaygındır, çoğunlukla \textbf{float} sayı 32-bit niceliğindedir, bu en az 6 farklı basamağa ve $10^{-38}$ ve $10^{+38}$ arasında bir büyüklüğe tekabül eder.
 \par C \textbf{int} ve \textbf{float}'un yanında birkaç başka temel veri türü (\textbf{type}) daha sağlıyor:
@@ -426,7 +426,7 @@ Genişlik ve nicelik bir belirteçle görmezden gelinebilir: \textbf{\%6f} sayı
 \par Bir programı belirli bir görevi gerçekleştirmesi için çok farklı şekillerde yazabiliriz. Haydi ısı dönüşüm programının bir varyasyonunu oluşturalım.
 
 \begin{lstlisting}
-        #include <stdio.h>
+		#include <stdio.h>
 
         /* Fahrenhayt-Selsiyus tablosu bastır */
         main()
