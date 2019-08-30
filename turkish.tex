@@ -635,4 +635,29 @@ yeni bir operatörü bize tanıtıyor, ++, \textit{bir ile arttır} anlamına ge
 \textbf{printf} \textbf{\%f}'i hem \textbf{float} hem de \textbf{double} için kullanıyor; \textbf{\%0.f} ise ondalık noktasını ve bu programda her zaman 0 olan kesirli kısmın bastırılmamasını sağlıyor.
 \par Bu \textbf{for} döngüsünün (\textbf{loop}) gövde (\textbf{body}) kısmı boş, çünkü bütün iş koşul ve arttırma bölümleri tarafından yapılıyor. Fakat C'nin gramatik kuralları gereği \textbf{for} ifadesinin (\textbf{statement}) bir gövdesi olması gerek. Yalnız duran noktalı virgül, \textit{boş ifade} (\textbf{null statement}) olarak adlandırılır, bu C'nin bu gerekliliğini sağlamak için kullanılır. Bunu daha görünür yapmak için ayrı bir satıra koyduk.
 \par Karakter sayma programını bir kenara bırakmadan önce, eğer girdi (\textbf{input}) hiç karakter içermiyorsa, \textbf{while} veya \textbf{for} daha \textbf{getchar}'ı ilk çağırışta sona eriyor, ve program doğru sonuç olan 0 sonucunu üretiyor. Bu önemli. \textbf{while} ve \textbf{for} ile ilgili güzel şeylerden biri ise, daha döngünün (\textbf{loop}) gövde (\textbf{body}) kısmına başlamadan önce koşul bölümünü test ediyor olmaları. Eğer yapılacak bir şey yoksa, hiçbir şey yapılmıyor, bu döngünün (\textbf{loop}) gövde (\textbf{body}) kısmının asla çalıştırılmayacak olduğu anlamına gelse bile. Programlar onlara sıfır-uzunlukta girdi (\textbf{input}) verildiğinde zekice haraket etmelidirler. \textbf{while} ve \textbf{for} ifadeleri (\textbf{statements}) en ekstrem (sınır, limit) koşullarda bile programların mantıklı şeyler yapmasından emin oluyor.
+
+\subsection{Satır Sayma}
+
+Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce belirttiğimiz gibi, standart kütüphane, girdi (\textbf{input}) metin akışının satır dizeleriyle ortaya çıkmasını sağlıyor, her satır bir yeni satır karakteri ile bitiyor. Bu yüzden satırları saymak ile yeni satır karakterlerini saymak aynı şey:
+
+\begin{lstlisting}
+		#include <stdio.h>
+
+		/* girdiden (input) satır say  */
+		main()
+		{
+			int c, n1;
+
+			n1 = 0;
+			while ((c = getchar()) != EOF)
+				if (c == '\n')
+					++n1;
+
+			printf("%d\n", n1);
+
+		}
+\end{lstlisting}
+
+\textbf{while}'ın gövde kısmı şuan \textbf{if}'ten oluşuyor, burada \textbf{if}, ++n1 artışını kontrol ediyor.
+
 \end{document}
