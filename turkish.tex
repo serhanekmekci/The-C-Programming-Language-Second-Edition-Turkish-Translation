@@ -503,8 +503,11 @@ Daha sonra programda herhangi bir yerde bu isim (\textbf{name}) geçtiğinde, is
 		#define    UPPER    300        /* en yüksek limiti */
 
 		/* Fahrenhayt-Selsiyus tablosunu bastır */
-		int main () {
-			for(int fahr = LOWER; fahr <= UPPER; fahr += STEP) {
+		main ()
+		{
+			int fahr;
+
+			for(fahr = LOWER; fahr <= UPPER; fahr += STEP) {
 				printf("%3d\t%6.1f\n", fahr, (5.0/9.0)*(fahr-32));
 			}
 
@@ -669,4 +672,51 @@ Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce 
 
 \textbf{Egzersiz 1-10.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her tabi \textbackslash t ile, her geri tuşunu \textbackslash b ile ve her ters eğik çizgiyi \textbackslash \textbackslash ile değiştirecek. Bu tableri, ters eğik çizgiyi ve geri tuşu karakterlerini daha açık bir yolla gösterecek.
 
+\subsection{Kelime Sayma}
+
+\par Yararlı programlar serimizdeki dördüncü program, gevşek bir tanımlamayla boşluk, tab veya yeni satır içermeyen her karakter sekansını kelime olarak saymakla birlikte satırları ve karakterleri sayıyor. \pagebreak
+
+\noindent Bu bir UNIX programı olan \textbf{wc}'nin oldukça temel bir hali.
+
+\begin{lstlisting}
+		#include <stdio.h>
+
+		#define IN	1	/* kelimenin içinde  */
+		#define OUT 0	/* kelimenin dışında */
+
+		/* girdideki (input) satırları, kelimeleri ve karakterleri say  */
+		main ()
+		{
+			int c, n1, nw, nc, state;
+
+			state = OUT;
+			n1 = nw = nc = 0;
+			while((c = getchar()) != EOF) {
+				++nc;
+				if (c == '\n')
+					++n1;
+				if (c == ' ' || c == '\n' || c == '\t')
+					state = OUT;
+				else if (state == OUT) {
+					state = IN;
+					++nw;
+				}
+			}
+			printf("%d %d %d\n", n1, nw, nc);
+		}
+\end{lstlisting}
+\par Program her bir kelimenin ilk harfi ile karşılaştığında bir kelime daha sayıyor. Değişken (\textbf{variable}) \textbf{state} programın anlık olarak bir kelimenin içinde mi yoksa dışında mı olduğunu kaydediyor; başlangıçta "kelimenin içinde değil" yani OUT'un değerine atanıyor. Biz, gerçek sayılar olan 0 ve 1 yerine IN ve OUT olan sembolik sabitleri (\textbf{symbolic constants}) kullanmayı tercih ediyoruz çünkü bu programı daha okunabilir bir hale getiriyor. Bu gibi küçük programlara oldukça az fark yaratıyor, fakat daha büyük programlarda, programın berraklığındaki artış programın en başından beri sadece mütevazi bir eforla bu şekilde yazmaya değer. Ayrıca programda geniş değişiklikler yapmanın önemli sayıların sadece sembolik sabitler (\textbf{symbolic constants}) olarak ortaya çıkmasıyla daha kolay olduğunu göreceksiniz. \pagebreak
+\par Bu satır
+\begin{lstlisting}
+		n1 = nw = nc = 0;
+\end{lstlisting}
+üç değişkeni (\textbf{variable}) de 0'a atıyor. Bu özel bir durum değil, fakat bu durumun sonucu oluşan, bir değerle beraber bir açıklama (\textbf{expression}) olan bir atama (\textbf{assignment}) ve atamalar (\textbf{assignments}) sağdan sola doğru bağlanır. Bu şekilde yazmışız gibi
+\begin{lstlisting}
+		n1 = (nw = (nc = 0));
+\end{lstlisting}
+Operatör (\textbf{operator}) \textbf{||} yada (\textbf{OR}) anlamına gelir, yani bu satır
+\begin{lstlisting}
+		if (c == ' ' || c == '\n' || c == '\t')
+\end{lstlisting}
+şunu söylüyor "c bir boşluk veya c bir yeni satır veya c bir tab ise". (Kaçış dizesi (\textbf{escape sequence}) olan \textbackslash t'nin tab karakterinin görünür temsili olduğunu belirtelim) VE'nin (\textbf{AND}) yerine geçen bir operatör var \&\&; ve önceliği ||'den büyük.
 \end{document}
