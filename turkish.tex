@@ -445,7 +445,7 @@ Genişlik ve nicelik bir belirteçle görmezden gelinebilir: \textbf{\%6f} sayı
                     genişliğinde ve ondalık noktasından sonra iki karakter
 \end{lstlisting} Diğerlerininin yanında, \textbf{printf} ayrıca \textbf{\%o} belirtecini sekizlikler(\textbf{octal}), \textbf{\%x} onaltılıklar(\textbf{hexademical}) için, \textbf{\%c}'yi karakterler için, \textbf{\%s}'yi karakter öbekleri(\textbf{string}) için, ve \textbf{\%\%}'yi \%'ün kendisi için kullanıyor. \\
 
-\textbf{Egersiz 1-3.} Isı birimi dönüşüm programını tablonun başındaki yorum satırlarındaki başlığı bastıracak şekilde düzenleyin. \\
+\textbf{Egzersiz 1-3.} Isı birimi dönüşüm programını tablonun başındaki yorum satırlarındaki başlığı bastıracak şekilde düzenleyin. \\
 
 
 \textbf{Egzersiz 1-4.} Tablodakileri bastıracak benzer bir programı yardım almadan kendiniz yazın.
@@ -658,6 +658,15 @@ Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce 
 		}
 \end{lstlisting}
 
-\textbf{while}'ın gövde kısmı şuan \textbf{if}'ten oluşuyor, burada \textbf{if}, ++n1 artışını kontrol ediyor.
+\textbf{while}'ın gövde kısmı şuan \textbf{if}'ten oluşuyor, burada \textbf{if}, ++n1 artışını kontrol ediyor. \textbf{if} ifadesi kendisini takiben gelen (\textbf{statement}) parantezler içerisindeki koşulu test ediyor, ve koşul doğru (\textbf{true}) ise, ifadeyi (\textbf{statement}) (veya süslü parantezler içerisindeki bir grup ifadeyi çalıştırıyor. Neyin ne tarafından kontrol edildiğini göstermek için yine girintiledik.
+\par Çift eşittir \textbf{==} gösterimi "eşit mi" anlamına gelen bir C notasyonudur (Pascal'ın tek ='i veya Fortran'ın .EQ.'sı gibi). Bu sembol eşitlik testini C'de atama (\textbf{assignment}) için kullanılan tek \textbf{=}'den ayırmak için kullanıldı. Biraz uyarı: C'ye yeni başlayanlar ara sıra \hspace{1mm} \textbf{==}'i kast etmelerine rağmen \hspace{1mm} \textbf{=} yazıyorlar. Bölüm 2'de göreceğimiz üzere bunun sonucu geçerli bir açıklama (\textbf{expression}) oluyor ve bir uyarı almıyorsunuz.
+\par Tek tırnak arasına yazılan karakter, makinenin karakter setindeki, karakterin numerik değerine eşit olan bir tamsayıyı (\textbf{integer}) temsil ediyor. Bu \textit{karakter sabiti} (\textbf{character constant}) olarak adlandırılıyor, buna rağmen bu sadece küçük bir tamsayı (\textbf{integer}) yazmanın bir diğer yolu. Örneğin, \textbf{'A'} bir karakter sabiti (\textbf{character constant}); ASCII karakter setindeki değeri 65, bu, karakter \textbf{A}'nın içerideki temsili. Tabiki \textbf{'A'} 65'in üzerinde bir değer olarak tercih edilebilir: bunun anlamı açık, ve belirli bir karakter setinden bağımsız.
+\par Karakter öbeği sabitlerinde (\textbf{string constants}) kullanılan kaçış dizelerinin (\textbf{escape sequences}) kullanımı da geçerli, yani \textbf{'\textbackslash n'} yeni satır karakterinin değerini temsil ediyor, ASCII'de bu değer 10. \textbf{\textbackslash n}'in tek bir karakter olduğunu farketmeniz gerekiyor, ve bu açıklama (\textbf{expression}) sadece bir tamsayı (\textbf{integer}); bir diğer deyişle, \textbf{"\textbackslash n"} sadece tek bir karakter içeren bir karakter öbeği sabiti (\textbf{string constant}). Karakter öbeklerinin (\textbf{string}) ve karakterlerin farklarına Bölüm 2'nin sonlarında bahsedeceğiz. \newline
+
+\textbf{Egzersiz 1-8.} Boşlukları, tableri, ve yenı satırları sayan bir program yazınız. \newline
+
+\textbf{Egzersiz 1-9.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her karakter öbeğindeki (\textbf{string}) birden fazla olan boşlukları tek boşlukla değiştirecek. \newline
+
+\textbf{Egzersiz 1-10.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her tabi \textbackslash t ile, her geri tuşunu \textbackslash b ile ve her ters eğik çizgiyi \textbackslash \textbackslash ile değiştirecek. Bu tableri, ters eğik çizgiyi ve geri tuşu karakterlerini daha açık bir yolla gösterecek.
 
 \end{document}
