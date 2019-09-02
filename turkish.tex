@@ -61,7 +61,6 @@
     {ç}{{\c{c}}}1
     {Ç}{{\c{C}}}1
 }
-
 \frontmatter
 
 \fancypagestyle{preface}{\fancyhf{}\renewcommand{\headrulewidth}{0.5pt}\fancyhead[LE,RO]{Önsöz}\fancyhead[RE,LO]{\thepage}}
@@ -232,9 +231,9 @@ C derleyicisi (\textbf{compiler}) hata mesajı üretecektir.
 Bu şekilde aynı çıktıyı (\textbf{output}) bastırabiliriz.
 \textbackslash n'nin sadece bir karakteri temsil ettiğini farkedin. \textbackslash n  gibi bir kaçış dizesi (\textbf{escape sequence}) bize yazılması zor veya görünmez karakteri belirtmek için genel ve genişletilebilir bir mekanik sağlıyor. C'nin diğer sağladığı kaçış dizeleri: \textbackslash t tab karakteri için, \textbackslash b geri tuşu (\textbf{backspace}) için, \textbackslash " çift tırnak için, ve  \textbackslash \textbackslash \hspace*{1mm}ters eğik çizginin (\textbf{backslash}) kendisi için. Bunların listesinin tamamını Bölüm 2.3'te bulabilirsiniz. \\
 
-\textbf{Egzersiz 1-1.} "hello, world" programını sisteminizde çalıştırın. Programın belli başlı parçalarını çıkartın ve alacağınız uyarı mesajlarını ve çıktıları (\textbf{outputs}) görün. \\
+\noindent \textbf{Egzersiz 1-1.} "hello, world" programını sisteminizde çalıştırın. Programın belli başlı parçalarını çıkartın ve alacağınız uyarı mesajlarını ve çıktıları (\textbf{outputs}) görün. \\
 
-\textbf{Egzersiz 1-2.} printf'in argümanı (\textbf{argument}) olan karakter öbeği (\textbf{string}) burada listelenmemiş olan \textbackslash c karakterini içerdiğinde ne olacağını görün.
+\noindent \textbf{Egzersiz 1-2.} printf'in argümanı (\textbf{argument}) olan karakter öbeği (\textbf{string}) burada listelenmemiş olan \textbackslash c karakterini içerdiğinde ne olacağını görün.
 
 \section{Değişkenler ve Aritmetik Açıklamalar}
 
@@ -445,10 +444,10 @@ Genişlik ve nicelik bir belirteçle görmezden gelinebilir: \textbf{\%6f} sayı
                     genişliğinde ve ondalık noktasından sonra iki karakter
 \end{lstlisting} Diğerlerininin yanında, \textbf{printf} ayrıca \textbf{\%o} belirtecini sekizlikler(\textbf{octal}), \textbf{\%x} onaltılıklar(\textbf{hexademical}) için, \textbf{\%c}'yi karakterler için, \textbf{\%s}'yi karakter öbekleri(\textbf{string}) için, ve \textbf{\%\%}'yi \%'ün kendisi için kullanıyor. \\
 
-\textbf{Egzersiz 1-3.} Isı birimi dönüşüm programını tablonun başındaki yorum satırlarındaki başlığı bastıracak şekilde düzenleyin. \\
+\noindent \textbf{Egzersiz 1-3.} Isı birimi dönüşüm programını tablonun başındaki yorum satırlarındaki başlığı bastıracak şekilde düzenleyin. \\
 
 
-\textbf{Egzersiz 1-4.} Tablodakileri bastıracak benzer bir programı yardım almadan kendiniz yazın.
+\noindent \textbf{Egzersiz 1-4.} Tablodakileri bastıracak benzer bir programı yardım almadan kendiniz yazın.
 
 \section{For Döngüsü (loop)}
 
@@ -486,7 +485,7 @@ Bu koşul değerlendirilir; eğer doğru ise, döngünün (\textbf{loop}) gövde
 \end{lstlisting}
 çalıştırılır ve koşul tekrardan test edilir. Döngü (\textbf{loop}) eğer koşul yanlış (\textbf{false}) olursa sonlanır. \textbf{while}'da olduğu gibi gövde (\textbf{body}) kısmı tek bir ifadeden (\textbf{statement}) veya süslü parantezler arasındaki ifade (\textbf{statements}) gruplarından oluşabilir. Tanımlama, koşul ve arttırma bölümleri herhangi bir açıklamadan (\textbf{expression}) oluşabilir.
 \par \textbf{while} ve \textbf{for} arasındaki seçim isteğe bağlı, hangisi gereken durum için daha temiz görünüyorsa onu kullanın. \textbf{while}'dan daha kompakt olduğundan ve döngü (\textbf{loop}) kontrol ifadelerini (\textbf{statements}) beraber tek bir yerde tuttuğundan, \textbf{for} genellikle tanımlama ve arttırmanın tek bir ifade olduğu ve mantıksal olarak ilişkili olduğu döngüler (\textbf{loop}) için daha uygundur. \newline
-\\ \textbf{Egzersiz 1-5.} Isı dönüşüm programını tabloyu tersine bastıracak şekilde düzenleyin, 300 dereceden 0'a doğru. \pagebreak
+\\ \noindent \textbf{Egzersiz 1-5.} Isı dönüşüm programını tabloyu tersine bastıracak şekilde düzenleyin, 300 dereceden 0'a doğru. \pagebreak
 
 \section{Sembolik Sabitler (constants)}
 
@@ -595,9 +594,9 @@ eşittir
 		c = (getchar() != EOF)
 \end{lstlisting}
 Bunun \textbf{getchar}'ın dosya-sonu (\textbf{end-of-file}) sinyaline ulaşıp ulaşmadığına göre c'yi ya 0'a yada 1' atamak (\textbf{assignment}) gibi bir istenmeyen etkisi var. (Bölüm 2'de bununla ilgili fazlası var.) \newline
-\par \textbf{Egzersiz 1-6.} Açıklama (\textbf{expression}) getchar() != EOF'nin 0'a yada 1'e eşit olduğunu doğrulayın.
+\noindent \textbf{Egzersiz 1-6.} Açıklama (\textbf{expression}) getchar() != EOF'nin 0'a yada 1'e eşit olduğunu doğrulayın.
 \newline
-\par \textbf{Egzersiz 1.7.} EOF'in değerini bastıran bir program yazın.
+\noindent \textbf{Egzersiz 1.7.} EOF'in değerini bastıran bir program yazın.
 
 \subsection{Karakter Sayma}
 
@@ -666,11 +665,11 @@ Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce 
 \par Tek tırnak arasına yazılan karakter, makinenin karakter setindeki, karakterin numerik değerine eşit olan bir tamsayıyı (\textbf{integer}) temsil ediyor. Bu \textit{karakter sabiti} (\textbf{character constant}) olarak adlandırılıyor, buna rağmen bu sadece küçük bir tamsayı (\textbf{integer}) yazmanın bir diğer yolu. Örneğin, \textbf{'A'} bir karakter sabiti (\textbf{character constant}); ASCII karakter setindeki değeri 65, bu, karakter \textbf{A}'nın içerideki temsili. Tabiki \textbf{'A'} 65'in üzerinde bir değer olarak tercih edilebilir: bunun anlamı açık, ve belirli bir karakter setinden bağımsız.
 \par Karakter öbeği sabitlerinde (\textbf{string constants}) kullanılan kaçış dizelerinin (\textbf{escape sequences}) kullanımı da geçerli, yani \textbf{'\textbackslash n'} yeni satır karakterinin değerini temsil ediyor, ASCII'de bu değer 10. \textbf{\textbackslash n}'in tek bir karakter olduğunu farketmeniz gerekiyor, ve bu açıklama (\textbf{expression}) sadece bir tamsayı (\textbf{integer}); bir diğer deyişle, \textbf{"\textbackslash n"} sadece tek bir karakter içeren bir karakter öbeği sabiti (\textbf{string constant}). Karakter öbeklerinin (\textbf{string}) ve karakterlerin farklarına Bölüm 2'nin sonlarında bahsedeceğiz. \newline
 
-\textbf{Egzersiz 1-8.} Boşlukları, tableri, ve yenı satırları sayan bir program yazınız. \newline
+\noindent \textbf{Egzersiz 1-8.} Boşlukları, tableri, ve yenı satırları sayan bir program yazınız. \newline
 
-\textbf{Egzersiz 1-9.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her karakter öbeğindeki (\textbf{string}) birden fazla olan boşlukları tek boşlukla değiştirecek. \newline
+\noindent \textbf{Egzersiz 1-9.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her karakter öbeğindeki (\textbf{string}) birden fazla olan boşlukları tek boşlukla değiştirecek. \newline
 
-\textbf{Egzersiz 1-10.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her tabi \textbackslash t ile, her geri tuşunu \textbackslash b ile ve her ters eğik çizgiyi \textbackslash \textbackslash ile değiştirecek. Bu tableri, ters eğik çizgiyi ve geri tuşu karakterlerini daha açık bir yolla gösterecek.
+\noindent \textbf{Egzersiz 1-10.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her tabi \textbackslash t ile, her geri tuşunu \textbackslash b ile ve her ters eğik çizgiyi \textbackslash \textbackslash ile değiştirecek. Bu tableri, ters eğik çizgiyi ve geri tuşu karakterlerini daha açık bir yolla gösterecek.
 
 \subsection{Kelime Sayma}
 
@@ -718,5 +717,22 @@ Operatör (\textbf{operator}) \textbf{||} yada (\textbf{OR}) anlamına gelir, ya
 \begin{lstlisting}
 		if (c == ' ' || c == '\n' || c == '\t')
 \end{lstlisting}
-şunu söylüyor "c bir boşluk veya c bir yeni satır veya c bir tab ise". (Kaçış dizesi (\textbf{escape sequence}) olan \textbackslash t'nin tab karakterinin görünür temsili olduğunu belirtelim) VE'nin (\textbf{AND}) yerine geçen bir operatör var \&\&; ve önceliği ||'den büyük.
+şunu söylüyor "c bir boşluk veya c bir yeni satır veya c bir tab ise". (Kaçış dizesi (\textbf{escape sequence}) olan \textbackslash t'nin tab karakterinin görünür temsili olduğunu belirtelim) VE'nin (\textbf{AND}) yerine geçen bir operatör var \&\&; ve önceliği ||'den büyük. \&\& veya || ile bağlanan açıklamalar (\textbf{expressions}) soldan sağa doğru değerlendirilir, ve değerledirmenin yanlış (\textbf{false}) olma sonucuna ulaştığı bilindiğinde duracağı garanti edilmiştir. Eğer c boşluk ise, c'nin yeni satır veya tab olup olmadığını test etmeye gerek yoktur, bu yüzden bu testler yapılmaz. Bunun burada bir önemi yok, fakat yakında göreceğimiz daha komplike durumlarda önem arz ediyor.
+\par Örnek, eğer \textbf{if}'in koşulu yanlış (\textbf{false}) çıkarsa alınacak aksiyonları belirten \textbf{else}'i gösteriyor. Genel form şu şekilde
+\begin{lstlisting}
+		if (açıklama (*\textit{(expression)}*))
+			(* $ ifade_1$ $(statement_1) $ *)
+		else
+			(* $ ifade_2$ $(statement_2) $ *)
+
+\end{lstlisting}
+\noindent İki ifadenin (\textbf{statement}) tek ilişkisi \textbf{if-else}'in gerçekleşmesidir. Eğer açıklama (\textbf{expression}) doğru (\textbf{true}) ise, $ ifade_1 $ (\textbf{$ statement_1 $}) çalıştırılır, eğer doğru değil ise, $ ifade_2 $ ($ statement_2 $) çalıştırılır. Her ifade (\textbf{statement}) tek veya süslü parantezler içerisinde birden fazla olabilir. Kelime sayma programında, \textbf{else}'den sonraki if süslü parantez içerisinde iki ifadeyi (\textbf{statement}) kontrol ediyor. \newline
+
+\noindent \textbf{Egzersiz 1-11.} Kelime sayma programını nasıl test ederdin ? Eğer programda hatalar varsa bunları ortaya çıkaracak girdi (\textbf{input}) türleri nelerdir ? \newline
+\newline \textbf{Egzersiz 1-12.} Satır başı tek kelime bastıracak bir program yazınız.
+
+\section{Diziler}
+
+
+
 \end{document}
