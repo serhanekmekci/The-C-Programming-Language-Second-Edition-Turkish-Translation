@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt,oneside]{book}
 
-\usepackage[turkish]{babel}
+\usepackage[english,turkish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{indentfirst}
@@ -731,8 +731,60 @@ Operatör (\textbf{operator}) \textbf{||} yada (\textbf{OR}) anlamına gelir, ya
 \noindent \textbf{Egzersiz 1-11.} Kelime sayma programını nasıl test ederdin ? Eğer programda hatalar varsa bunları ortaya çıkaracak girdi (\textbf{input}) türleri nelerdir ? \newline
 \newline \textbf{Egzersiz 1-12.} Satır başı tek kelime bastıracak bir program yazınız.
 
-\section{Diziler}
+\section{Diziler (arrays)}
+
+Her rakamın kaç kere yazıldığını, boşluk karakterleri (boşluk, tab, yeni satır) ve diğer tüm karakterleri sayan bir program yazalım. Bu yapmacık, fakat bize C'nin bir çok yönünü tek bir programda göstermemizi sağlayacak.
+\par Programımızda girdinin (\textbf{input}) 12 farklı kategorisi var, bu yüzden her rakamın kaç kere yazıldığını bir dizide (\textbf{array}), 10 farklı değişken (\textbf{variable}) kullanmaktan çok daha uygun. İşte programın bir versiyonu:
+\begin{lstlisting}
+		#include <stdio.h>
+
+		/* rakamları, boşlukları ve diğerlerini say  */
+
+		main()
+		{
+			int c, i, nwhite, nother;
+			int ndigit[10];
+
+			nwhite = nother = 0;
+			for (i = 0; i < 10; ++i)
+				ndigit[i] = 0;
+
+			while ((c = getchar()) != EOF)
+				if (c >= '0' && c <= '9')
+					++ndigit[c-'0'];
+				else if (c == ' ' || c == '\n' || c == '\t')
+					++nwhite;
+				else
+					++nother;
+
+			printf("digits =");
+			for (i = 0; i < 10; ++i)
+				printf(" %d", ndigit[i]);
+			printf(", white space = %d, other = %d\n",
+					nwhite, nother);
+		}
+\end{lstlisting}
+Programa girdi (\textbf{input}) olarak kendi kaynak kodu verildiğinde çıktısı (\textbf{output})
+\begin{lstlisting}
+		digits = 9 3 0 0 0 0 0 0 0 1, white space = 126, other = 358
+\end{lstlisting}
+Tanımlama (\textbf{decleration})
+\begin{lstlisting}
+		int ndigit[10];
+\end{lstlisting}
+\textbf{ndigit}'i 10 tamsayıdan (\textbf{integer}) oluşan biri dizi (\textbf{array}) olarak tanımlıyor (\textbf{declare}). \pagebreak
 
 
-
+\noindent Dizilerin (\textbf{arrays}) alt elemanları (\textbf{subscripts}) C'de her zaman 0 ile sayılmaya başlanır, Yani elemanlar bu şekildedir \textbf{ndigit[0], ndigit[1], ..., ndigit[9]}. Bu, dizileri (\textbf{arrays}) başlatan ve onları bastıran \textbf{for} döngülerinde (\textbf{loop}) gösterilmiştir.
+\par Eleman (\textbf{subscript}) herhangi bir tamsayı (\textbf{integer}) açıklama (\textbf{expression}) olabilir, i gibi tamsayı (\textbf{integer}) değişkenleri (\textbf{variables}) ve tamsayı (\textbf{integer}) sabitleri (\textbf{constants}) gibi.
+\par Bu program rakamların karakter temsillerinin özelliklerine dayanıyor. Örneğin, bu test
+\begin{lstlisting}
+		if (c >= '0' && c <= '9')
+\end{lstlisting}
+c'nin içindeki karakterin bir rakam olup olmadığını belirliyor. Eğer öyle ise, o rakamın numerik değeri
+\begin{lstlisting}
+		c - '0'
+\end{lstlisting}
+\noindent Bu sadece '0', '1', ..., '9' gibi ardışık değerlerde çalışıyor. Neyse ki bu bütün karakter setleri için geçerli.
+\par Tanımları gereği \textbf{char}'lar sadece küçük tamsayılar (\textbf{integer}), yani \textbf{char} değişkenleri (\textbf{variables}) ve sabitleri (\textbf{constants}) aritmetik açıklamalarda (\textbf{expressions}) \textbf{int} olarak tanınırlar.
 \end{document}
