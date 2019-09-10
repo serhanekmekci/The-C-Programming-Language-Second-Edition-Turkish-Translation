@@ -787,5 +787,40 @@ c'nin içindeki karakterin bir rakam olup olmadığını belirliyor. Eğer öyle
 		c - '0'
 \end{lstlisting}
 \noindent Bu sadece '0', '1', ..., '9' gibi ardışık değerlerde çalışıyor. Neyse ki bu bütün karakter setleri için geçerli.
-\par Tanımları gereği \textbf{char}'lar sadece küçük tamsayılar (\textbf{integer}), yani \textbf{char} değişkenleri (\textbf{variables}) ve sabitleri (\textbf{constants}) aritmetik açıklamalarda (\textbf{expressions}) \textbf{int} olarak tanınırlar.
+\par Tanımları gereği \textbf{char}'lar sadece küçük tamsayılar (\textbf{integer}), yani \textbf{char} değişkenleri (\textbf{variables}) ve sabitleri (\textbf{constants}) aritmetik açıklamalarda (\textbf{expressions}) \textbf{int} olarak tanınırlar. Bu gayet doğal ve kullanışlı; örneğin \textbf{c-'0'}, 0 ve 9 arasında c içinde saklanan '0' ile '9' arasındaki bir karakter ile eşleşen bir tamsayı (\textbf{integer}) açıklaması (\textbf{expression}), bu nedenle \textbf{c-'0'} \textbf{ndigit} dizisi (\textbf{array}) için geçerli bir eleman (\textbf{subscript}).
+\par Karakterin bir rakam mı, yoksa bir boşluk karakteri mi, veya başka bir şey mi olduğu bu sekans ile yapılıyor
+\begin{lstlisting}
+		if (c >= '0' && c <= '9')
+			++ndigit[c-'0'];
+		else if (c == ' ' || '\n' || c == '\t')
+			++nwhite;
+		else
+			++nother;
+\end{lstlisting}
+Bu desen
+\begin{lstlisting}
+		if ((* $ koşul_1 $ (\textbf{condition})*))
+			(* $ ifade_1 $ (\textbf{statement})*)
+		else if ((* $ koşul_2 $ (\textbf{condition})*))
+			(* $ ifade_2 $ (\textbf{statement})*)
+		...
+			...
+		else
+			(*$ifade_n $ (\textbf{statement})*)
+\end{lstlisting}
+sıklıkla karşımıza çok yönlü kararların açıklandığı prograda çıkıyor. Koşullar (\textbf{conditions}) yukarıdan aşağıya bir koşul (\textbf{condition}) doğru olana kadar değerlendiriliyor; bu noktada eşleşen \textit{ifade} (\textbf{statement}) kısmı çalıştırılır, ve bütün yapı (\textbf{construction}) biter. (Her \textit{ifade} (\textbf{statement}) süslü parantezler içerisinde birden fazla olabilir.) Eğer hiçbir koşul (\textbf{condition}) sağlanmazsa, eğer varsa \textbf{else}'den sonraki \textit{ifade} (\textbf{statement}) çalıştırılır. Eğer son \textbf{else} ve \textit{ifade} (\textbf{statement}) atlanırsa, kelime sayma programında yapıldığı gibi, herhangi bir aksiyon alınmaz. \textbf{if} ve son \textbf{else} arasında
+\begin{lstlisting}
+		else if ( (* $koşul$ (\textbf{condition}) *) )
+			(* \textit{ifade} (\textbf{statement}) *)
+\end{lstlisting}
+sayısız grup olabilir.
+\par Tarz gereği, yapıyı (\textbf{construction}) gösterdiğimiz formatta yazmanız önerilir; eğer her \textbf{if} \textbf{else}'den önce girdilenirse kararlardan uzun bir sekans sayfanın sağ tarafına doğru kayacaktır.
+\par \textbf{switch} ifadesi (\textbf{statement}), Bölüm 3'de anlatılacaktır, \textbf{switch}, koşul (\textbf{condition}), bir sabitler (\textbf{constants}) setiyle eşleşen bir tamsayı (\textbf{integer}) veya karakter açıklaması (\textbf{expresion}) olduğunda kullanımı özellikle uygun olan bir diğer çok yönlü dal (\textbf{branch}) yazmamıza olanak sağlıyor. Karşılaştırmak için bu programın \textbf{switch} versiyonunu Bölüm 3.4'de göstereceğiz. \newline
+
+
+\noindent \textbf{Egzersiz 1-13.} \newline
+
+
+\noindent \textbf{Egzersiz 1-14.}
+
 \end{document}
