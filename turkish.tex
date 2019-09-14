@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{indentfirst}
-\usepackage{listings}
+\usepackage{listingsutf8}
 \usepackage{gensymb}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -43,18 +43,14 @@
     tabsize=4,
     inputencoding=utf8,
     extendedchars=true,
-    % German umlauts
+    % Turkish chars
     literate=%
     {Ö}{{\"O}}1
-    {Ä}{{\"A}}1
     {Ü}{{\"U}}1
-    {ß}{{\ss}}1
     {ü}{{\"u}}1
-    {ä}{{\"a}}1
     {ö}{{\"o}}1
-    %Türkçe karakterler
     {ı}{{\i}}1
-    {İ}{{\.{I}}}1    % This is the problem character.
+    {İ}{{\.{I}}}1
     {ğ}{{\u{g}}}1
     {Ğ}{{\u{G}}}1
     {ş}{{\c{s}}}1
@@ -192,7 +188,6 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 
 \begin{lstlisting}
     #include <stdio.h>              standart kütüphane (library) hakkında                                 bilgileri içer
-
     main()                          main adında hiç argümanı (argument)
                                     olmayan bir fonksiyon (function) tanımla
 
@@ -825,6 +820,96 @@ sayısız grup olabilir.
 
 \section{Fonksiyonlar (functions)}
 
+C'de, fonksiyonlar (\textbf{function}) Fortran'daki altprogramların (\textbf{subroutines}) veya fonksiyonların (\textbf{functions}) veyahut Pascal'daki prosedürlerin (\textbf{procedure}) veya fonksiyonların (\textbf{function}) denkidir. Bir fonksiyon (\textbf{function}), bir hesaplamayı daha sonra kendi implementasyonunda hakkında endişelenmeden kullanmak üzere barındırmak için kullanışlı bir yol sağlar. Uygun şekilde düzenlenen fonksiyonlarla (\textbf{functions}), işin \textit{nasıl} gerçekleştirildiğini görmezden gelmek mümkün; sadece \textit{ne} yapıldığını bilmek yeterlidir. C, fonksiyonların (\textbf{functions}) kullanımını kolay, kullanışlı ve verimli yapıyor; sıklıkla kısa bir fonksiyonun (\textbf{function}) tarif edildiğini (\textbf{define}) ve sadece küçük bir parça kodu içerdiğinden sadece bir kere çağırıldığını (\textbf{call}) göreceksiniz.
+\par Bu zamana kadar sadece \textbf{printf}, \textbf{getchar}, ve \textbf{putchar} gibi bize sağlanan fonksiyonları (\textbf{functions}) kullandık; artık birkaçını kendimizin yazma vakti geldi. C'nin Fortran'ın \textbf{**}'ı gibi bir üsalma operatörü olmadığından, fonksiyon (\textbf{function}) tanımlamanın (\textbf{definition}) mekaniklerini göstermek için \textbf{power(m,n)} fonksiyonunu, m tamsayısını (\textbf{integer}) n kuvvetiyle göstermek için yazalım. Bu, \textbf{power(2,5)}'in değerini 32 yapar. Bu fonksiyon (\textbf{function}), sadece küçük tamsayıların (\textbf{integer}) pozitif değerleriyle hesap yapabildiğinden pratik bir bir üsalma rutini değil, fakat bu gösterimi yapmamız için yeterli. (Standart kütüphane (\textbf{library}) \textbf{pow(x,y)} adında \textbf{$x^y$}'yi hesaplayan bir fonksiyon (\textbf{function}) içeriyor.)
+\par İşte, fonksiyon (\textbf{function}) \textbf{power} ve onu çalıştırması için main programı, bu sayede bütün yapıyı (\textbf{structure}) bir arada görebilirsiniz.
+\begin{lstlisting}
+		#include <stdio.h>
+
+		int power(int m, int n);
+
+		/* power fonksiyonunu test et */
+		main()
+		{
+			int i;
+
+			for (i = 0; i < 10; ++i)
+				printf("%d %d %d\n", i, power(2,i), power(-3,i));
+			return 0;
+		}
+
+		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0 */
+		int power(int base, int n)
+		{
+			int i ,p;
+
+			p = 1;
+			for (i = 1; i <= n; ++i)
+				p = p * base;
+			return p;
+		}
+\end{lstlisting}
+Fonksiyon (\textbf{function}) tarif etmek (\textbf{definition}) böyle bir forma sahip:
+\begin{lstlisting}
+		dönüş-türü fonksiyon-adı(parametre tanımlamaları, eğer varsa)
+		{
+			tanımlamalar (* \textit{(declarations)} *)
+			ifadeler (* \textit{(statements)} *)
+		}
+\end{lstlisting}
+dönüş-türü (\textbf{return-type}) fonksiyon (\textbf{function}) \pagebreak \\
+\noindent Fonksiyon tarifleri (\textbf{definition}) herhangi bir şekilde bulunabilir, bir kaynak (\textbf{source}) dosyasında veya birden fazlasında, buna karşın hiçbir fonksiyon (\textbf{function}) dosyalar arasında bölünemez. Eğer kaynak (\textbf{source}) program birden fazla dosya halinde bulunuyorsa, belki tek dosya halinde bulunandan daha fazla derleyip (\textbf{compile}) yükleyecek (\textbf{load}) olduğunuzu söyleyebilirsiniz fakat bu bir işletim sistemi konusu, dilin bir niteliği değil. Şu anlık, iki fonksiyonun (\textbf{function}) da aynı dosya içinde bulunduğunu farz ediyoruz, bu yüzden şuana kadar C programlarının çalışması hakkında öğrendiğiniz her şey hala geçerli.
+\par Fonksiyon (\textbf{function}) \textbf{power}, \textbf{main} tarafından iki kere çağırılıyor, bu satırda
+\begin{lstlisting}
+		printf("%d %d %d\n", i, power(2,i), power(-3,i));
+\end{lstlisting}
+Her çağırma, her defasında formatlanıp bastırılacak olan bir tam sayı (\textbf{integer}) döndüren \textbf{power}'a iki argüman geçiriyor. Açıklamada \textbf{power(2,i)} aynı i ve 2 gibi birere tamsayı (\textbf{integer}). (Her fonksiyon (\textbf{function}) bir tamsayı (\textbf{integer}) değeri üretmez; bunu Bölüm 4'de konuşacağız.)
+\par \textbf{power}'ın kendisinin ilk satırı:
+\begin{lstlisting}
+		int power(int base, int n)
+\end{lstlisting}
+parametre türlerini (\textbf{type}), adlarını ve fonksiyonun (\textbf{function}) döndüreceği sonucun türünü (\textbf{type}) tanımlıyor (\textbf{declare}). \textbf{power} tarafından parametreleri için kullanılan isimler \textbf{power}'a yereldir (\textbf{local}), ve bir dğer fonksiyon (\textbf{function}) tarafından görünebilir değildir: diğer rutinler aynı ismi bir çakışma yaşanmadan kullanabilirler. Bu aynen i ve p değişkenleri (\textbf{variable}) için de geçerli; \textbf{power} içindeki i ile \textbf{main} içindeki i tamami ile ilişkisiz.
+\par Biz genellikle \textit{parametre}'yi fonksiyon (\textbf{function}) tarifinde (\textbf{definition}) parantezler içerisindeki listede adlandırılmış değişken (\textbf{variable}) için, argümanı ise fonksyon çağırımı (\textbf{call}) sırasında kullanılan değer (\textbf{value}) için kullanacağız. \textit{biçimsel} (\textbf{formal}) argümanın ve \textit{actual} (\textbf{actual}) argümanın koşulları bazen aynı ayrımı yapmak için kullanılır.
+\par \textbf{power}'ın hesapladığı değer, \textbf{return} ifade (\textbf{statement}) tarafından \textbf{main}'e döndürüldü. \textbf{return}'ü takip eden herhangi bir açıklama:
+\begin{lstlisting}
+		return açıklama (*\textit{(expression)} *)
+\end{lstlisting}
+Bir değer döndürmesine gerek olmayan fonksiyonda: bir açıklaması (\textbf{expression}) olmayan \textbf{return} ifadesi (\textbf{statement}) kontrolü sağlar, fakat çağırıcı (\textbf{caller}) tarafından kullanılacak kullanışlı bir değeri (\textbf{value}) değil, fonksiyonu (\textbf{function}) sonlandıran sağ süslü paranteze ulaşarak fonksiyonun (\textbf{function}) "sonuna düşmek" ile olduğu gibi. Ve çağırılan fonksiyon (\textbf{function}), fonksiyon (\textbf{function}) tarafından döndürülen (\textbf{return}) değeri (\textbf{value}) görmezden gelebilir.
+\par \textbf{main}'in sonunda bir \textbf{return} ifadesi (\textbf{statement}) olduğunu farketmişsinizdir.  \textbf{main} diğerleri gibi bir fonksiyon (\textbf{function}) olduğundan dolayı, o da çağıranına (\textbf{caller}) bir değer gönderebilir, bu da programın çalıştırıldığı çevreyi (\textbf{environment}) etkileyebilir. içeriği sıfır olan bir \textbf{return} değeri (\textbf{value}) normal bitişi (\textbf{termination}); sıfır-olmayan değerler (\textbf{values}) ise sinyal alışılmadık (\textbf{unusual}) veya hata (\textbf{erroneous}) bitirme koşullarıdır (\textbf{conditions}). Bu noktadan önce basitlik uğruna, \textbf{main} fonksiyonlarımızdaki (\textbf{function}) \textbf{return} ifadesini (\textbf{statement}) atladık, fakat bundan böyle artık onları da dahil edeceğiz, bir hatırlatma olarak, programların durumlarını çevrelerine (\textbf{environment}) döndürmelerinin (\textbf{return}) iyi olacağını belirtelim.
+\par \textbf{main}'den hemen önceki bu tanımlama (\textbf{decleration})
+\begin{lstlisting}
+		int power(int m, int n);
+\end{lstlisting}
+\textbf{power}'ın iki \textbf{int} argüman bekleyen ve int döndüren (\textbf{return}) bir fonksiyon (\textbf{function}) olduğunu söylüyor. \textit{fonksiyon prototipi} olarak adlandırılan bu tanımlama (\textbf{decleration}), \textbf{power}'ın tarifi (\textbf{definition}) ve kullanımı konusuna açıklık getirmek zorunda. Bu fonksiyonun (\textbf{function}) tarifi (\textbf{function}) veya herhangi bir kullanımı ile prototipi arasında bir uyuşmazlık var ise bu hataya sebep olur.
+\par Parametre isimlerinin uyuşmasına gerek yok. Aslında parametre isimleri fonksiyon prototipi için opsiyonel, yani prototip için bunu da yazabilirdik
+\begin{lstlisting}
+		int power(int, int);
+\end{lstlisting}
+Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları sıklıkla kullanacağız.
+
+\par Tarih notu: ANSI C ve daha önceki versiyonlar arasındaki en önemli fark, fonksiyonların nasıl tarif (\textbf{definition}) edildiği ve tanımlandığıdır (\textbf{declare}). C'nin orijinal tarifinde (\textbf{definition}), \textbf{power} fonksiyonu bu şekilde yazılmalıydı:
+\begin{lstlisting}
+		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0 */
+		/*		  (eski-stil versiyon) */
+		power(base, n)
+		int base, n;
+		{
+			int i, p;
+
+			p = 1;
+			for (i = 1; i <= n; ++i)
+				p = p * base;
+			return p;
+		}
+\end{lstlisting}
+Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce tanımlanıyordu (\textbf{declaration}); tanımlanmayan (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
+\par \textbf{power}'ın tanımlanması \textbf{declaration} böyle gözükmeliydi:
+\begin{lstlisting}
+		int power();
+\end{lstlisting}
+Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) \textbf{power}'ın doğru çağırılıp çağırılmadığını kolayca kontrol edemiyordu. Aslında, varsayılan olarak \textbf{power}'ın \textbf{int} döndüreceği (\textbf{return}) farzedildiğinden, tüm tanımla (\textbf{decleration}) atlanabilirdi.
+\par Fonksiyon prototiplerinin yeni sözdizimi (\textbf{syntax}) derleyicinin (\textbf{compiler}) hataları ve argümanların sayılarını veya onların türlerini (\textbf{types}) tespit etmesini oldukça kolaylaştırıyor. Eski stil tanımlama (\textbf{declaration}) ve tarif etme (\textbf{definition}) ANSI C'de halen çalışıyor, en azından bir geçiş periyodu için, fakat eğer destekleyen bir derleyiciniz (\textbf{compiler}) varsa yeni formu kullanmanızı şiddetle tavsiye ediyoruz. \\
 
 
+\textbf{Egzersiz 1-15.} Bölüm 1.2'nin ısı dönüşüm programını dönüşüm için bir fonksiyon kullanmak üzere yeniden yazınız.
 \end{document}
