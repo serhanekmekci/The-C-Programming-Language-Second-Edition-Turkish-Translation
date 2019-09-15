@@ -903,12 +903,12 @@ Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları s�
 		}
 \end{lstlisting}
 Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce tanımlanıyordu (\textbf{declaration}); tanımlanmayan (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
-\par \textbf{power}'ın tanımlanması \textbf{declaration} böyle gözükmeliydi:
+\par Eski stilde \textbf{power}'ın tanımlanması (\textbf{declaration}) böyle gözükmeliydi:
 \begin{lstlisting}
 		int power();
 \end{lstlisting}
-Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) \textbf{power}'ın doğru çağırılıp çağırılmadığını kolayca kontrol edemiyordu. Aslında, varsayılan olarak \textbf{power}'ın \textbf{int} döndüreceği (\textbf{return}) farzedildiğinden, tüm tanımla (\textbf{decleration}) atlanabilirdi.
-\par Fonksiyon prototiplerinin yeni sözdizimi (\textbf{syntax}) derleyicinin (\textbf{compiler}) hataları ve argümanların sayılarını veya onların türlerini (\textbf{types}) tespit etmesini oldukça kolaylaştırıyor. Eski stil tanımlama (\textbf{declaration}) ve tarif etme (\textbf{definition}) ANSI C'de halen çalışıyor, en azından bir geçiş periyodu için, fakat eğer destekleyen bir derleyiciniz (\textbf{compiler}) varsa yeni formu kullanmanızı şiddetle tavsiye ediyoruz. \\
+Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) \textbf{power}'ın doğru çağırılıp çağırılmadığını kolayca kontrol edemiyordu. Aslında, varsayılan olarak \textbf{power}'ın \textbf{int} döndüreceği (\textbf{return}) farzedildiğinden, tüm tanımlama (\textbf{decleration}) atlanabilirdi.
+\par Fonksiyon prototiplerinin yeni sözdizimi (\textbf{syntax}) derleyicinin (\textbf{compiler}) hataları ve argümanların sayılarını veya onların türlerini (\textbf{types}) tespit etmesini oldukça kolaylaştırıyor. Eski stil tanımlamama (\textbf{declaration}) ve tarif etme (\textbf{definition}) ANSI C'de halen çalışıyor, en azından bir geçiş periyodu için, fakat eğer destekleyen bir derleyiciniz (\textbf{compiler}) varsa yeni formu kullanmanızı şiddetle tavsiye ediyoruz. \\
 
 
 \textbf{Egzersiz 1-15.} Bölüm 1.2'nin ısı dönüşüm programını dönüşüm için bir fonksiyon kullanmak üzere yeniden yazınız.
