@@ -912,4 +912,24 @@ Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) 
 
 
 \textbf{Egzersiz 1-15.} Bölüm 1.2'nin ısı dönüşüm programını dönüşüm için bir fonksiyon kullanmak üzere yeniden yazınız.
+
+\section{Argümanlar - Değer ile Çağırma}
+
+C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran kullanmış olan programcılara yabancı gelebilir. C'de, bütün fonksiyon argümanları "değerleriyle" (\textbf{by value}) geçirilir. Bu, çağırılan (\textbf{call}) fonksiyona, fonksiyonun argümanlarına verilmiş değerlerin (\textbf{value}), orijinallerinden ziyade, geçici değişkenler (\textbf{variables}) olarak verilmesidir. Bu, bizi "referans ile çağır" (\textbf{call by reference}) kullanan Fortran gibi veya \textbf{var} parametreleri içen Pascal gibi dillerden farklı özellikler getiriyor, bu gibi dillerde çağırılan (\textbf{call}) rutinin yerel bir kopyadan ziyade, orijinal argümana erişimi var.
+\par Ana değişiklik, C'de çağırılan (\textbf{call}) fonksiyonun direkt olarak çağırılan fonksiyondaki değişkende (\textbf{variable}) bir değişiklik yapamamasıdır; sadece kendi özel, geçici kopyasını değiştirebilir.
+\par Değer ile çağır (\textbf{call by value}) bir varlık (asset), ancak, bir yükümlülük değil. Bu, daha az fazladan değişken (\textbf{variable}) ile daha kompakt programları sağlıyor, çünkü çağırılan (\textbf{call}) rutinde parametrelere sıradan şekilde ilklendirilmiş (\textbf{initialize}) yerel değişkenler gibi davranılabiliyor. Örneğin, \textbf{power}'ın bu özelliği kullanan bir versiyonu. \pagebreak
+\begin{lstlisting}
+		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0; versiyon 2 */
+		int power(int base, int n)
+		{
+			int p;
+
+			for (p = 1; n > 0; --n)
+				p = p * base;
+			return p;
+		}
+\end{lstlisting}
+Parametre n, geçici bir değişken (\textbf{variable}) olarak kullanılıyor, ve geriye doğru sayılıyor (\textbf{for} döngüsü (\textbf{loop} geriye doğru çalışıyor) sıfır olana kadar; artık değişken (\textbf{variable}) i'ye ihtiyaç yok. \textbf{power}'ın içinde n'ye ne yapıldıysa \textbf{power}'ın çağırıldığı argüman üstünde hiçbir etkisi yok.
+\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkene (\textbf{variable}) bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon paramterenin bir işaretleyici (\textbf{pointer}) olduğunu tanımlamalı (\textbf{declare}) ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
+\par Diziler (\textbf{array}) için hikaye farklı. Bir dizinin (\textbf{array}) adı argüman olarak kullanıldığında, fonksiyona geçen değer dizinin (\textbf{array}) başlangıcının konumu veya adresi - dizi (\textbf{array}) elemanların bir kopyalanma seçeneği yok. Bu değerin (\textbf{value}) yardımıyla, fonksiyon bir dizinin (\textbf{array}) her elemanına erişip değiştirebilir. Bu bir sonraki bölümün konusu.
 \end{document}
