@@ -27,7 +27,6 @@
 \author{Dennis M. Ritchie \\
 \newline Brian W. Kernighan \\
 \newline \small İngilizce Aslından Çeviren: Serhan Ekmekçi \\
-\newline \small Çeviri Editörü: Eylül Elif Beşdallı}
 
 \title{C Programlama Dili İkinci Tiraj}
 \date{}
@@ -929,7 +928,7 @@ C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran
 			return p;
 		}
 \end{lstlisting}
-Parametre n, geçici bir değişken (\textbf{variable}) olarak kullanılıyor, ve geriye doğru sayılıyor (\textbf{for} döngüsü (\textbf{loop} geriye doğru çalışıyor) sıfır olana kadar; artık değişken (\textbf{variable}) i'ye ihtiyaç yok. \textbf{power}'ın içinde n'ye ne yapıldıysa \textbf{power}'ın çağırıldığı argüman üstünde hiçbir etkisi yok.
-\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkene (\textbf{variable}) bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon paramterenin bir işaretleyici (\textbf{pointer}) olduğunu tanımlamalı (\textbf{declare}) ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
+Parametre n, geçici bir değişken (\textbf{variable}) olarak kullanılıyor, ve geriye doğru sayılıyor (\textbf{for} döngüsü (\textbf{loop}) geriye doğru çalışıyor, sıfır olana kadar; artık değişken (\textbf{variable}) i'ye ihtiyaç yok. \textbf{power}'ın içinde n'ye ne yapıldıysa \textbf{power}'ın çağırıldığı argüman üstünde hiçbir etkisi yok.
+\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkene (\textbf{variable}) bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon parametrenin bir işaretleyici (\textbf{pointer}) olduğunu tanımlamalı (\textbf{declare}) ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
 \par Diziler (\textbf{array}) için hikaye farklı. Bir dizinin (\textbf{array}) adı argüman olarak kullanıldığında, fonksiyona geçen değer dizinin (\textbf{array}) başlangıcının konumu veya adresi - dizi (\textbf{array}) elemanların bir kopyalanma seçeneği yok. Bu değerin (\textbf{value}) yardımıyla, fonksiyon bir dizinin (\textbf{array}) her elemanına erişip değiştirebilir. Bu bir sonraki bölümün konusu.
 \end{document}
