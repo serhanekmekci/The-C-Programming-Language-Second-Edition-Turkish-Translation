@@ -122,7 +122,7 @@ C, genel amaçlı bir programlama dilidir. C, UNIX sisteminin kendisi olduğu gi
 
 \thispagestyle{introduction} \par Yıllarca C'nin tarifi, C Programlama Dili'nin ilk tirajındaki referans el kitabı oldu. 1983'te, Amerikan Standartları Enstitüsü (\textbf{American National Standards Institute}) (\textbf{ANSI}) C'nin modern ve kapsamlı bir tarifini sağlamak için bir komite kurdu. Ortaya çıkan tarif, "ANSI standardı" ya da "ANSI C" 1988'in sonlarına doğru tamamlandı. Standardın birçok özelliği çoktan modern derleyiciler (\textbf{compilers}) tarafından desteklenmiştir.
 \par Standart, orijinal referans el kitabını baz almıştır. Dil nispeten biraz değişti; standartın amaçlarından biri hali hazırda varolan programların çoğunun geçerli kalması veya bu mümkün olmazsa derleyicilerin (\textbf{compilers}) yeni davranışlar için uyarılar üretmesiydi.
-\par Birçok programcı için en önemli değişim; fonksiyonları (\textbf{functions}) deklara etmek veya tarif etmek (\textbf{define}) için olan yeni sözdizimi (\textbf{syntax}). Bir fonksiyon (\textbf{function}) declara şimdi fonksiyonun (\textbf{function}) argümanlarının (\textbf{arguments}) açıklamasını içerebilir; tarif etme (\textbf{definition}) sözdizimi (\textbf{syntax}) eşleşmek üzere değişir. Bu ekstra bilgilendirme derleyicilerin (\textbf{compilers}) eşleşmeyen argümanlar (\textbf{arguments}) yüzünden ortaya çıkan hataları farketmesini daha kolay hale getirir. Bizim deneyimimizde, dile yapılan son derece kullanışlı bir ekleme.
+\par Birçok programcı için en önemli değişim; fonksiyonları (\textbf{functions}) deklare etmek veya tarif etmek (\textbf{define}) için olan yeni sözdizimi (\textbf{syntax}). Bir fonksiyon (\textbf{function}) declara şimdi fonksiyonun (\textbf{function}) argümanlarının (\textbf{arguments}) açıklamasını içerebilir; tarif etme (\textbf{definition}) sözdizimi (\textbf{syntax}) eşleşmek üzere değişir. Bu ekstra bilgilendirme derleyicilerin (\textbf{compilers}) eşleşmeyen argümanlar (\textbf{arguments}) yüzünden ortaya çıkan hataları farketmesini daha kolay hale getirir. Bizim deneyimimizde, dile yapılan son derece kullanışlı bir ekleme.
 \par Daha küçük çaplı dil değişimleri var. Geniş ölçüde mevcut olan yapı atamaları (\textbf{structure assignment}) ve numaralandırmalar (\textbf{enumerations}) şimdi resmi olarak dilin bir parçası. Kayan noktalı sayıların (\textbf{floating-point numbers}) hesaplamaları şimdi tek duyarlıklı (\textbf{single precision}) formatta yapılabilir. Aritmetiğin özellikleri, özellikle belirlenmemiş türler (\textbf{unsigned types}) için netleştirildi. Önişlemci (\textbf{preprocessor}) daha ayrıntılı. Bu değişimlerin çoğu, birçok programcı üzerinde sadece minör etkiye sahip olacaktır.
 \par Standardın ikinci en önemli katkısı, C'ye eşlik etmek üzere bir kütüphanenin tarifidir (\textbf{definition}). Bu; işletim sistemine erişmek için fonksiyonlar (\textbf{functions}) (örneğin dosyaları okumak ve yazmak için), biçimlendirilmiş girdi (\textbf{input}) ve çıktı (\textbf{output}), hafıza tahsisi (\textbf{memory allocation}), karakter öbeği (\textbf{string}) manipülasyonu vb. şeyler belirtir. Standart başlıkların (\textbf{header}) koleksiyonu, fonksiyonların (\textbf{functions}) ve veri türlerinin (\textbf{data types} deklarasyonlarına tek tip erişim sağlar. Bu kütüphaneyi programların konakçı (\textbf{host}) bilgisayar ile etkileşim için kullanması, uyumlu (compatible) davranışlar sergilemelerini güvence altına almıştır. Kütüphanenin büyük bir kısmı "standart I/O kütüphanesinde" (input/output girdi/çıktı) dikkatle modellenmiştir. Bu kütüphane ilk tirajda açıklanıyor ve diğer sistemlerde de geniş ölçüde kullanılmıştır. Tekrar söylüyoruz, birçok programcı çok fazla değişim görmeyecek.
 \par C tarafından sağlanan veri türleri ve kontrol yapılarının (\textbf{structures}) birçok bilgisayar tarafından doğrudan destekleniyor olması yüzünden kendine yeten programları implement etmek için gerekli olan çalışma kütüphanesi (\textbf{run-time library}) oldukça küçük. \pagebreak
@@ -188,7 +188,7 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 \begin{lstlisting}
     #include <stdio.h>              standart kütüphane (library) hakkında                                 bilgileri içer
     main()                          main adında hiç argümanı (argument)
-                                    olmayan bir fonksiyon (function) deklara et
+                                    olmayan bir fonksiyon (function) deklare et
 
     {
                                     main'in ifadeleri (statements) süslü
@@ -204,7 +204,7 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 \begin{center}İlk C programı.\end{center}
 \pagebreak
 
-Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak deklara edildi, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
+Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak deklare edildi, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
 Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde yer alır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor,
 \begin{lstlisting}
 		printf("hello, world\n");
@@ -285,7 +285,7 @@ Bu iki satır \begin{lstlisting}
 			for fahr = 0, 20, ... 300 */
 \end{lstlisting}
 bu durumda programın nasıl çalıştığını, programın kaynak (\textbf{source}) kodunu okuyanlara açıklayan \textit{yorum} (\textbf{comment}) satırlarıdır. \textbf{/*} ve \textbf{*/} karakterleri arasında olan karakterler derleyici (\textbf{compiler}) tarafından görmezden gelinir, bu satırlar programı okurken anlamayı daha kolay hale getirmek için özgürce kullanılabilir. Yorum satırları boşluk, tab veya yeni satır karakterinin koyulabileceği bütün yerlere koyulabilirler.
-\par C'de; bütün değişkenler (\textbf{variables}) kullanılmadan önce deklara edildi. Genellikle fonksiyonun (\textbf{function}) başında bütün çalıştırılabilir ifadelerden (\textbf{executable statements}) önce deklara edilmeli. Bir deklarasyon değişkenlerin (\textbf{variables}) özelliklerini anons eder; bu anons değişkenlerin (\textbf{variables}) deklare edilecek olan türünü (\textbf{type}) ve değişkenlere (\textbf{variable}) verilecek adları içerir, örneğin
+\par C'de; bütün değişkenler (\textbf{variables}) kullanılmadan önce deklare edildi. Genellikle fonksiyonun (\textbf{function}) başında bütün çalıştırılabilir ifadelerden (\textbf{executable statements}) önce deklare edilmeli. Bir deklarasyon değişkenlerin (\textbf{variables}) özelliklerini anons eder; bu anons değişkenlerin (\textbf{variables}) deklare edilecek olan türünü (\textbf{type}) ve değişkenlere (\textbf{variable}) verilecek adları içerir, örneğin
 \newline
 \begin{lstlisting}
 		int fahr, celsius;
@@ -886,7 +886,7 @@ Bir değer döndürmesine gerek olmayan fonksiyonda: bir açıklaması (\textbf{
 \end{lstlisting}
 Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları sıklıkla kullanacağız.
 
-\par Tarih notu: ANSI C ve daha önceki versiyonlar arasındaki en önemli fark, fonksiyonların nasıl tarif (\textbf{definition}) edildiği ve deklara edildiğidir. C'nin orijinal tarifinde (\textbf{definition}), \textbf{power} fonksiyonu bu şekilde yazılmalıydı:
+\par Tarih notu: ANSI C ve daha önceki versiyonlar arasındaki en önemli fark, fonksiyonların nasıl tarif (\textbf{definition}) edildiği ve deklare edildiğidir. C'nin orijinal tarifinde (\textbf{definition}), \textbf{power} fonksiyonu bu şekilde yazılmalıydı:
 \begin{lstlisting}
 		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0 */
 		/*		  (eski-stil versiyon) */
@@ -901,7 +901,7 @@ Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları s�
 			return p;
 		}
 \end{lstlisting}
-Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce deklara ediliyor; deklara edilmemiş (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
+Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce deklare ediliyor; deklare edilmemiş (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
 \par Eski stilde \textbf{power}'ın deklarasyonu böyle gözükmeliydi:
 \begin{lstlisting}
 		int power();
@@ -929,7 +929,7 @@ C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran
 		}
 \end{lstlisting}
 Parametre n, geçici bir değişken (\textbf{variable}) olarak kullanılıyor, ve geriye doğru sayılıyor (\textbf{for} döngüsü (\textbf{loop}) geriye doğru çalışıyor, sıfır olana kadar; artık değişken (\textbf{variable}) i'ye ihtiyaç yok. \textbf{power}'ın içinde n'ye ne yapıldıysa \textbf{power}'ın çağırıldığı argüman üstünde hiçbir etkisi yok.
-\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkeni (\textbf{variable}) işaret eden bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon parametrenin bir işaretleyici (\textbf{pointer}) olduğunu deklara etmeli ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
+\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkeni (\textbf{variable}) işaret eden bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon parametrenin bir işaretleyici (\textbf{pointer}) olduğunu deklare etmeli ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
 \par Diziler (\textbf{array}) için hikaye farklı. Bir dizinin (\textbf{array}) adı argüman olarak kullanıldığında, fonksiyona geçen değer, dizinin (\textbf{array}) başlangıcının konumu veya adresi - dizi (\textbf{array}) elemanların bir kopyalanma seçeneği yok. Bu değerin (\textbf{value}) yardımıyla, fonksiyon bir dizinin (\textbf{array}) her elemanına erişip değiştirebilir. Bu bir sonraki bölümün konusu.
 
 \section{Karakter Dizileri (arrays)}
@@ -1001,8 +1001,8 @@ C'deki en yaygın dizi (\textbf{array}) tipi, karakter dizileridir (\textbf{arra
 		}
 \end{lstlisting}
 \end{samepage} \pagebreak
-\textbf{getline} ve \textbf{copy} fonksiyonları programın başında deklara edildiler, tek bir dosya içinde bulunduklarını farz ediyoruz.
-\par \textbf{main} ve \textbf{getline} bir argüman çifti ve döndürülen (\textbf{return}) bir değer (\textbf{value}) aracılığı ile iletişim kuruyorlar. \textbf{getline}'da argümanlar bu satır ile deklara ediliyor
+\textbf{getline} ve \textbf{copy} fonksiyonları programın başında deklare edildiler, tek bir dosya içinde bulunduklarını farz ediyoruz.
+\par \textbf{main} ve \textbf{getline} bir argüman çifti ve döndürülen (\textbf{return}) bir değer (\textbf{value}) aracılığı ile iletişim kuruyorlar. \textbf{getline}'da argümanlar bu satır ile deklare ediliyor
 \begin{lstlisting}
 		int getline(char s[], int lim)
 \end{lstlisting}
