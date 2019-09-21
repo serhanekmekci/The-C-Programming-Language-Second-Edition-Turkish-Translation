@@ -76,9 +76,8 @@ Bilgi işlem dünyası, 1978 yılında "C Programlama Dili"nin yayınlanmasında
 \par C'nin gittikçe artan popülaritesi, yıllar içerisinde dilde gerçekleşen değişimler ve gruplar tarafından derleyicilerin (\textbf{compilers}) oluşturulması onun dizaynına bulaştırılmadı; dilin daha açık ve kitabın ilk tirajına göre daha çağdaş bir tarifi (\textbf{definition}) için kombine edildi. 1983'te Amerikan Ulusal Standartları Enstitüsü (\textbf{American National Standards Institue}) (ANSI) amacı, C dilinin, ruhunu kaybettirmeden kesin ve makineye dayalı olmayan bir tarifini (\textbf{definition}) üretmek olan bir komite kurmuştur. Sonuç, C için "ANSI" standardıdır.
 \par Standart, ilk tirajda bahsi geçmiş fakat tam anlamıyla tarif edilmemiş (\textbf{define}) yapıları formüllendiriyor. Özellikle yapı ataması ve numaralandırma gibi konularda. Bu; fonksiyon deklarasyonunun çapraz-kontrole (\textbf{cross-checking}) izin veren, kullanımla beraber bir tarifini (\textbf{definition}) sağlar. Girdi (\textbf{input}) ve çıktıları (\textbf{output}) sergilemek için olan fonksiyonların  geniş bir dizisi, hafıza yönetimi, dize manipülasyonu ve benzer görevlerle birlikte standart bir kütüphane belirtir. Orijinal tarifte (\textbf{definition}) ayrıntılı olarak açıklanmamış özelliklerin davranışlarını açık ve kesin bir hale getirir ve aynı zamanda dilin makineye dayalı kalan yönlerini açık bir şekilde belirtir.
 \par C Programlama Dili'nin ikinci tirajı, C'yi ANSI standartlarında olduğu gibi açıklar. Biz, dilin evrildiği yerleri belirtmiş olmamıza rağmen bilerek yeni formda yazmayı tercih ettik. Büyük bir bölüm için bu, çok önemli bir fark yaratmaz. En gözle görülür değişim, fonksiyon  deklarasyonunun ve tarifinin (\textbf{definition}) yeni formudur. Modern derleyiciler (\textbf{compilers}) standardın özelliklerinin çoğunu çoktan desteklemektedir.
-\par Kitabı ilk tirajın kısalığında tutmaya çalıştık. C, büyük bir dil değil ve büyük bir kitap onun çok işine yaramaz. C programlamanın merkezi olan işaretleyiciler (\textbf{pointers}) gibi kritik özelliklerin anlatımını geliştirdik. \pagebreak
-
-
+\par Kitabı ilk tirajın kısalığında tutmaya çalıştık. C, büyük bir dil değil ve büyük bir kitap onun çok işine yaramaz. \pagebreak
+C programlamanın merkezi olan işaretleyiciler (\textbf{pointers}) gibi kritik özelliklerin anlatımını geliştirdik.
 \thispagestyle{preface} \noindent Orijinal örnekler işledik ve birkaç bölüme yeni örnekler ekledik. Örneğin; komplike deklarasyonların işlemleri deklarasyonları kelimelere dönüştüren programlar ile karşılıklı olarak arttırıldı. Önceden olduğu gibi bütün örnekler doğrudan, makine tarafından okunulabilir formda olan metinden test edilmiştir.
 \par Ek Bölüm A; referans el kitabı, standart değildir. Fakat bizim girişimimiz standardın gerekliliklerini daha küçük bir alanda iletmek. Bu programcılar tarafından kolay anlaşılmak üzere yapıldı ancak derleyici (\textbf{compiler}) yazarları için bir açıklama olarak yapılmadı. - Bu görev tamamen standardın kendisine düşüyor. Ek Bölüm B, standart kütüphanenin özetidir. Ve bu da dahil ediciler emplemantasyoncular için değil programcılar için referans edildi. Ek Bölüm C, orijinal versiyondaki değişimlerin kısa özetidir.
 \par İlk tirajın önsözünde de söylediğimiz gibi C "sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor." On yılların getirdiği tecrübe ile birlikte biz hala bu şekilde hissediyoruz. Umuyoruz ki bu kitap, C'yi öğrenmenizde ve iyi bir şekilde kullanmanızda yardımcı olur.
@@ -1006,6 +1005,23 @@ C'deki en yaygın dizi (\textbf{array}) tipi, karakter dizileridir (\textbf{arra
 \begin{lstlisting}
 		int getline(char s[], int lim)
 \end{lstlisting}
-bu satır, ilk argümanın, s'in, bir karakter dizisi olduğunu (\textbf{array}), ve ikincisi ise, \textbf{lim}'in bir tamsayı (\textbf{integer}) olduğunu belirtiyor. Bir
+bu satır, ilk argümanın, s'in, bir karakter dizisi olduğunu (\textbf{array}), ve ikincisi ise, \textbf{lim}'in bir tamsayı (\textbf{integer}) olduğunu belirtiyor. Bir dizi (\textbf{array}) deklarasyonu yaparken dizinin (\textbf{array}) boyutunu belirlememizin sebebi, o miktarda depolama yerinin bir kenara ayrılmasını sağlamaktır. \textbf{s} dizisinin (\textbf{array}) boyutunu zaten hali hazırda \textbf{main} içerisinde belirlendiğinden \textbf{getline} içerisinde belirtmek gereksizdir. \textbf{getline} çağırana (\textbf{caller}) değer göndermek için \textbf{return}'ü kullanıyor, aynen fonksiyon \textbf{power}'ın yaptığı gibi. Bu satır aynı zamanda \textbf{getline}'ın \textbf{int} döndüreceğini (\textbf{return}) deklare ediyor; \textbf{int} varsayılan döndürme tipi (\textbf{return type}) olduğundan bu atlanabilirdi.
+\par Bazı fonksiyonlar yararlı değerler (\textbf{value}) gönderir; copy gibi diğerleri ise sadece yaratacağı etkiler için kullanılır ve değer döndürmez. \textbf{copy}'nin dönüş türü (\textbf{return type}) \textbf{void}, bu açık bir şekilde bir değer (\textbf{value}) döndürülmediğini gösteriyor.
+\par \textbf{getline} '\textbackslash 0' karakterini (\textit{null karakteri}, değeri (\textbf{value}) sıfır) yarattığı dizinin (\textbf{array}) sonuna, karakter öbeğinin (\textbf{string}) sonu olduğunu işaretlemek için koyuyor. Bu düzen aynı şekilde C dili tarafından da kullanıyor: bu gibi karakter öbeği (\textbf{string}) sabitleri (\textbf{constant})
+\begin{lstlisting}
+		"hello\n"
+\end{lstlisting}
+bir C programında, karakterlerin bir dizisi (\textbf{array}) olarak saklanır ve bittiği en sonunda '\textbackslash0' karakteri ile bittiği işaretlenen bir karakter öbeği (\textbf{string}) içerir.
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+h & e & l & l & o & \textbackslash{}n & \textbackslash{}0 \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{printf}'teki '\textbf{\%s} format belirteci bu formda temsil edilecek olan eşleşen bir karakter öbeği (\textbf{string}) bekliyor. Aynı zamanda \textbf{copy} de girdi (\textbf{input}) argümanının '\textbackslash 0' ile bitmesi gerçeğine dayanıyor, ve bu karakteri çıktı (\textbf{output}) argümanına kopyalıyor. (Bütün bunlar '\textbackslash 0', karakterinin bir normal metnin bir parçası olmadığı anlamına geliyor.)
+\par Bu kadar küçük bir programın dahi bazı tatsız dizayn problemleri göstermesi bahsetmeye değer. Örneğin, \textbf{main}'in limitinden daha büyük bir satır ile karşılaşması durumunda ne yapması gerekir ? \textbf{getline} güvenli bir şekilde çalışıyor, \textbf{getline} array dolduğunda toplamayı bırakıyor, yeni satır karakteri görülmemişse bile. Uzunluğun ve döndürülen (\textbf{return}) son karakterin testi ile, \textbf{main} satırın uzunluğunun çok uzun olduğunu belirleyebilir ve ona göre istediği gibi bununla başa çıkabilir. Özlüğün esası için, bu sorunu görmezden geliyoruz.
+\par \textbf{getline}'ın kullanıcısının girdinin (\textbf{input}) ne kadar olabileceğini bilmesinin hiçbir yolu yok, bu yüzden \textbf{getline} bir taşmayı (\textbf{overflow}) kontrol ediyor. Bir diğer yandan, \textbf{copy}'nin kullanıcısı karakter öbeklerinin (\textbf{string}) ne kadar büyük olduklarını zaten biliyor (veya öğrenebilir), bu yüzden bu kısımlara hata denetlemesi koymadık.
 \end{document}
