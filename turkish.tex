@@ -73,13 +73,13 @@
 \chapter{Önsöz}
 
 Bilgi işlem dünyası, 1978 yılında "C Programlama Dili"nin yayınlanmasından itibaren köklü bir devrime uğramıştır. Büyük bilgisayarlar artık daha da büyükler ve kişisel bilgisayarlar artık on yıl öncesinin ana bilgisayarlarına rakip olabilecek kapasitedeler. Bu zaman içerisinde, mütevazi bir şekilde olsa da C de değişime uğradı ve kendi orijini olan sadece UNIX işletim sisteminin dili olmaktan çok uzaklara yayıldı.
-\par C'nin gittikçe artan popülaritesi, yıllar içerisinde dilde gerçekleşen değişimler ve gruplar tarafından derleyicilerin (\textbf{compilers}) oluşturulması onun dizaynına bulaştırılmadı; dilin daha açık ve kitabın ilk tirajına göre daha çağdaş bir tanımı için kombine edildi. 1983'te Amerikan Ulusal Standartları Enstitüsü (\textbf{American National Standards Institue}) (ANSI) amacı, C dilinin, ruhunu kaybettirmeden kesin ve makineye dayalı olmayan bir tanımını üretmek olan bir komite kurmuştur. Sonuç, C için "ANSI" standardıdır.
-\par Standart, ilk tirajda bahsi geçmiş fakat tam anlamıyla tanımlanmamış yapıları formüllendiriyor. Özellikle yapı ataması ve numaralandırma gibi konularda. Bu; fonksiyon (\textbf{function}) tanımlamanın çapraz-kontrole (\textbf{cross-checking}) izin veren, kullanımla beraber bir tanımını sağlar. Girdi (\textbf{input}) ve çıktıları (\textbf{output}) sergilemek için olan fonksiyonların (\textbf{functions}) geniş bir dizisi, hafıza yönetimi, dize manipülasyonu ve benzer görevlerle birlikte standart bir kütüphane belirtir. Orijinal tanımlamada ayrıntılı olarak açıklanmamış özelliklerin davranışlarını açık ve kesin bir hale getirir ve aynı zamanda dilin makineye dayalı kalan yönlerini açık bir şekilde belirtir.
-\par C Programlama Dili'nin ikinci tirajı, C'yi ANSI standartlarında olduğu gibi açıklar. Biz, dilin evrildiği yerleri belirtmiş olmamıza rağmen bilerek yeni formda yazmayı tercih ettik. Büyük bir bölüm için bu, çok önemli bir fark yaratmaz. En gözle görülür değişim, fonksiyon (\textbf{function}) açıklanması ve tanımlanmasının yeni formudur. Modern derleyiciler (\textbf{compilers}) standardın özelliklerinin çoğunu çoktan desteklemektedir.
+\par C'nin gittikçe artan popülaritesi, yıllar içerisinde dilde gerçekleşen değişimler ve gruplar tarafından derleyicilerin (\textbf{compilers}) oluşturulması onun dizaynına bulaştırılmadı; dilin daha açık ve kitabın ilk tirajına göre daha çağdaş bir tarifi için kombine edildi. 1983'te Amerikan Ulusal Standartları Enstitüsü (\textbf{American National Standards Institue}) (ANSI) amacı, C dilinin, ruhunu kaybettirmeden kesin ve makineye dayalı olmayan bir tarifini üretmek olan bir komite kurmuştur. Sonuç, C için "ANSI" standardıdır.
+\par Standart, ilk tirajda bahsi geçmiş fakat tam anlamıyla tarif edilmemiş (\textbf{define}) yapıları formüllendiriyor. Özellikle yapı ataması ve numaralandırma gibi konularda. Bu; fonksiyon (\textbf{function}) deklarasyonunun çapraz-kontrole (\textbf{cross-checking}) izin veren, kullanımla beraber bir tarifini (\textbf{definition}) sağlar. Girdi (\textbf{input}) ve çıktıları (\textbf{output}) sergilemek için olan fonksiyonların (\textbf{functions}) geniş bir dizisi, hafıza yönetimi, dize manipülasyonu ve benzer görevlerle birlikte standart bir kütüphane belirtir. Orijinal tarifte ayrıntılı olarak açıklanmamış özelliklerin davranışlarını açık ve kesin bir hale getirir ve aynı zamanda dilin makineye dayalı kalan yönlerini açık bir şekilde belirtir.
+\par C Programlama Dili'nin ikinci tirajı, C'yi ANSI standartlarında olduğu gibi açıklar. Biz, dilin evrildiği yerleri belirtmiş olmamıza rağmen bilerek yeni formda yazmayı tercih ettik. Büyük bir bölüm için bu, çok önemli bir fark yaratmaz. En gözle görülür değişim, fonksiyon (\textbf{function}) deklarasyonunun ve tarifinin (\textbf{definition}) yeni formudur. Modern derleyiciler (\textbf{compilers}) standardın özelliklerinin çoğunu çoktan desteklemektedir.
 \par Kitabı ilk tirajın kısalığında tutmaya çalıştık. C, büyük bir dil değil ve büyük bir kitap onun çok işine yaramaz. C programlamanın merkezi olan işaretleyiciler (\textbf{pointers}) gibi kritik özelliklerin anlatımını geliştirdik. \pagebreak
 
 
-\thispagestyle{preface} \noindent Orijinal örnekler işledik ve birkaç bölüme yeni örnekler ekledik. Örneğin; tanımlamaları kelimelere dönüştüren ve bunun tersini yapan programlar tarafından komplike tanımlamalar oluşturduk. Önceden olduğu gibi bütün örnekler doğrudan, makine tarafından okunulabilir formda olan metinden test edilmiştir.
+\thispagestyle{preface} \noindent Orijinal örnekler işledik ve birkaç bölüme yeni örnekler ekledik. Örneğin; komplike deklarasyonların işlemleri deklarasyonları kelimelere dönüştüren programlar ile karşılıklı olarak arttırıldı. Önceden olduğu gibi bütün örnekler doğrudan, makine tarafından okunulabilir formda olan metinden test edilmiştir.
 \par Ek Bölüm A; referans el kitabı, standart değildir. Fakat bizim girişimimiz standardın gerekliliklerini daha küçük bir alanda iletmek. Bu programcılar tarafından kolay anlaşılmak üzere yapıldı ancak derleyici (\textbf{compiler}) yazarları için bir açıklama olarak yapılmadı. - Bu görev tamamen standardın kendisine düşüyor. Ek Bölüm B, standart kütüphanenin özetidir. Ve bu da dahil ediciler (\textbf{implementers}) için değil programcılar için referans edildi. Ek Bölüm C, orijinal versiyondaki değişimlerin kısa özetidir.
 \par İlk tirajın önsözünde de söylediğimiz gibi C "sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor." On yılların getirdiği tecrübe ile birlikte biz hala bu şekilde hissediyoruz. Umuyoruz ki bu kitap, C'yi öğrenmenizde ve iyi bir şekilde kullanmanızda yardımcı olur.
 \par Bu ikinci tirajı ortaya çıkarmamızda yardımcı olan arkadaşlarımıza derinden borçlu hissediyoruz.  Jon Bentley, Doug Gwyn, Doug Mcllroy, Peter Nelson ve Rob Pike bize neredeyse taslağın her sayfasında sezgilerinden yola çıkarak yorumlarda bulundular. Dikkatli okumaları için  Al Aho, Dennis Allison, Joe Campbell, G. R. Emlin, Karen Fortgang, Allen Holub, Andrew Hume, Dave Kristol, John Linderman, Dave Prosser, Gene Spafford, ve Chris Van Wyk'e minnettarız. Ayrıca  BHl Cheswick, Mark Kernighan, Andy Koenig, Robin Lake, Tom London, Jim Reeds, Clovis Tondo, ve Peter Weinberger'den yardımcı tavsiyeler aldık. Dave Prosser ANSI standartları hakkında birçok detaylı sorumuzu cevapladı. Programlarımızın yerel testleri için yaygın olarak  Bjarne Stroustrup'ın C++ çeviricisini kullandık ve Dave Kristol bize final testi için bir ANSI C derleyicisi (\textbf{compiler}) sağladı. Rich Drechsler dizgilerde bize son derece yardımcı oldu.
@@ -115,30 +115,30 @@ C, genel amaçlı bir programlama dilidir. C, UNIX sisteminin kendisi olduğu gi
 \par C, iyi yapılandırılmış programlar için gerekli olan temel kontrol akışı (\textbf{control-flow}) yapılarını sağlar: ifade (\textbf{statement}) gruplaması, karar verme (if-else), mümkün olan durumlar arasından birini seçme (switch), sonucunda döngünün bitirilip bitirilmeyeceğine karar verilen koşul testinin döngünün (\textbf{loop}) başında yapıldığı döngüler (\textbf{loop}) (while, for) veya bu koşul testinin sonunda yapılmasını sağlayan (do) ve erken döngü (\textbf{loop}) bitirmeye yarayan (break).
 \par Fonksiyonlar (\textbf{functions}), temel türlerin (\textbf{type}), yapıların (\textbf{structures}), birliklerin (\textbf{unions}) veya işaretleyicilerin (\textbf{pointers}) değerini döndürebilir. \pagebreak
 
-\thispagestyle{introduction} \noindent Her fonksiyon (\textbf{function}) birden fazla kere çağırılabilir. Yerel değişkenler (\textbf{variables}) tipik olarak "otomatiktirler", ya da her çağrı ile yeniden yaratılırlar diyebiliriz. Fonksiyonlar (\textbf{functions}) iç içe tanımlanamaz fakat değişkenler (\textbf{variables}) blok yapı (\textbf{block-structured}) tarzında tanımlanabilir. C programının fonksiyonları (\textbf{functions}) ayrı olarak derlenen ayrı kaynak dosyaları içinde bulunabilir. Değişkenler; (\textbf{variables}) bir fonskiyon (\textbf{function}) için dahili, harici fakat sadece tek bir kaynak dosyası içinde bilinen ya da tüm program için görülür olabilirler.
+\thispagestyle{introduction} \noindent Her fonksiyon (\textbf{function}) birden fazla kere çağırılabilir. Yerel değişkenler (\textbf{variables}) tipik olarak "otomatiktirler", ya da her çağrı ile yeniden yaratılırlar diyebiliriz. Fonksiyonlar (\textbf{functions}) iç içe tarif edilemez (\textbf{define}) fakat değişkenler (\textbf{variables}) blok yapı (\textbf{block-structured}) tarzında deklare edilebilir. C programının fonksiyonları (\textbf{functions}) ayrı olarak derlenen ayrı kaynak dosyaları içinde bulunabilir. Değişkenler; (\textbf{variables}) bir fonskiyon (\textbf{function}) için dahili, harici fakat sadece tek bir kaynak dosyası içinde bilinen ya da tüm program için görülür olabilirler.
 \par Önişleme adımı program metninde; yerine koyma makrosunu, diğer kaynak dosyalarının dahil edilmesini ve koşulsal derleme (\textbf{compilation}) işlemlerini gerçekleştirir. \newline
-\par C, nispeten "düşük seviye" bir dil. Bu nitelendirme aşağılayıcı değil, sadece C'nin bilgisayarların çoğunun yaptığı nesnelerle uğraştığı anlamına geliyor, karakterler, sayılar ve adresler. Bunlar gerçek makineler tarafından uygulanan aritmetik ve mantıksal operatörler (\textbf{operators}) tarafından birleştirilebilir ve hareket ettirilebilirler. C, karakter öbekleri (\textbf{strings}), kümeler (\textbf{sets}), listeler (\textbf{lists}) ve diziler gibi bileşik objelerle uğraşmak için işlemler sağlamaz. Yapıların (\textbf{structures}) bir birim olarak kopyalanabilmesine rağmen karakter öbeklerinin (\textbf{string}) ve dizilerin (\textbf{arrays}) tamamını değiştirebilecek işlemler yoktur. C, statik tanımlama ve fonksiyonların (\textbf{functions}) yerel değişkenleri (\textbf{variables}) tarafından sağlanan yığın disiplini (\textbf{stack discipline}) dışında hiçbir depolama tahsis olanağı tanımlaması olmayan bir dildir. Yığın ağacı (\textbf{heap}) veya çöp koleksiyonu (\textbf{garbage collection}) yoktur. Son olarak C'nin kendisi girdi/çıktı (\textbf{input/output}) olanağı sağlamaz, \textbf{READ} veya \textbf{WRITE} ifadeleri (\textbf{statements}) ve yerleşik dosya erişim metotları yoktur. Bütün bu yüksek seviye mekanizmaların ayrıca çağırılan fonksiyonlar (\textbf{functions}) tarafından sağlanması gerekir. Birçok C implementasyonu, bu fonksiyonların (\textbf{functions}) uygun bir standart koleksiyonunu içerir.
+\par C, nispeten "düşük seviye" bir dil. Bu nitelendirme aşağılayıcı değil, sadece C'nin bilgisayarların çoğunun yaptığı nesnelerle uğraştığı anlamına geliyor, karakterler, sayılar ve adresler. Bunlar gerçek makineler tarafından uygulanan aritmetik ve mantıksal operatörler (\textbf{operators}) tarafından birleştirilebilir ve hareket ettirilebilirler. C, karakter öbekleri (\textbf{strings}), kümeler (\textbf{sets}), listeler (\textbf{lists}) ve diziler gibi bileşik objelerle uğraşmak için işlemler sağlamaz. Yapıların (\textbf{structures}) bir birim olarak kopyalanabilmesine rağmen karakter öbeklerinin (\textbf{string}) ve dizilerin (\textbf{arrays}) tamamını değiştirebilecek işlemler yoktur. C, statik tarif etme (\textbf{definition}) ve fonksiyonların (\textbf{functions}) yerel değişkenleri (\textbf{variables}) tarafından sağlanan yığın disiplini (\textbf{stack discipline}) dışında hiçbir depolama tahsis olanağı tarif etmeyen (\textbf{define}) bir dildir. Yığın ağacı (\textbf{heap}) veya çöp koleksiyonu (\textbf{garbage collection}) yoktur. Son olarak C'nin kendisi girdi/çıktı (\textbf{input/output}) olanağı sağlamaz, \textbf{READ} veya \textbf{WRITE} ifadeleri (\textbf{statements}) ve yerleşik dosya erişim metotları yoktur. Bütün bu yüksek seviye mekanizmaların ayrıca çağırılan fonksiyonlar (\textbf{functions}) tarafından sağlanması gerekir. Birçok C implementasyonu, bu fonksiyonların (\textbf{functions}) uygun bir standart koleksiyonunu içerir.
 \par Benzer şekilde C sadece basit, tek iş parçacıklı (\textbf{single-thread}) kontrol akışı (\textbf{control-flow}) sunar: testler, döngüler (\textbf{loops}), gruplama ve alt programlar (\textbf{subprograms}). Fakat multi programlama (\textbf{multiprogramming}), paralel işlemler, senkronizasyon ya da eşyordamlar (\textbf{coroutines}) sunmaz. Bu özelliklerin bazılarının yokluğu ölü gereksinim gibi gözükse de ("İki karakter dizisini karşılaştırmam için bir fonksiyon (\textbf{function}) çağırmam gerektiğini mi söylemek istedin?") dili mütevazi boyutlarda tutmanın gerçek faydaları vardır. C nispeten küçük bir dil olduğundan dolayı, küçük bir alanda açıklanabiliyor ve hızlıca öğrenilebiliyor. Bir programcı mantıklı olarak, tüm dili bilmeyi, anlamayı ve gerçekten muntazam olarak kullanmayı bekleyebilir. \pagebreak
 
-\thispagestyle{introduction} \par Yıllarca C'nin tanımı, C Programlama Dili'nin ilk tirajındaki referans el kitabı oldu. 1983'te, Amerikan Standartları Enstitüsü (\textbf{American National Standards Institute}) (\textbf{ANSI}) C'nin modern ve kapsamlı bir tanımını sağlamak için bir komite kurdu. Ortaya çıkan tanım, "ANSI standardı" ya da "ANSI C" 1988'in sonlarına doğru tamamlandı. Standardın birçok özelliği çoktan modern derleyiciler (\textbf{compilers}) tarafından desteklenmiştir.
+\thispagestyle{introduction} \par Yıllarca C'nin tarifi, C Programlama Dili'nin ilk tirajındaki referans el kitabı oldu. 1983'te, Amerikan Standartları Enstitüsü (\textbf{American National Standards Institute}) (\textbf{ANSI}) C'nin modern ve kapsamlı bir tarifini sağlamak için bir komite kurdu. Ortaya çıkan tarif, "ANSI standardı" ya da "ANSI C" 1988'in sonlarına doğru tamamlandı. Standardın birçok özelliği çoktan modern derleyiciler (\textbf{compilers}) tarafından desteklenmiştir.
 \par Standart, orijinal referans el kitabını baz almıştır. Dil nispeten biraz değişti; standartın amaçlarından biri hali hazırda varolan programların çoğunun geçerli kalması veya bu mümkün olmazsa derleyicilerin (\textbf{compilers}) yeni davranışlar için uyarılar üretmesiydi.
-\par Birçok programcı için en önemli değişim; fonksiyonları (\textbf{functions}) tanımlamak (\textbf{declare}) veya tarif etmek (\textbf{define}) için olan yeni sözdizimi (\textbf{syntax}). Bir fonksiyon (\textbf{function}) tanımlaması (\textbf{declare}) şimdi fonksiyonun (\textbf{function}) argümanlarının (\textbf{arguments}) açıklamasını içerebilir; tarif etme (\textbf{definition}) sözdizimi (\textbf{syntax}) eşleşmek üzere değişir. Bu ekstra bilgilendirme derleyicilerin (\textbf{compilers}) eşleşmeyen argümanlar (\textbf{arguments}) yüzünden ortaya çıkan hataları farketmesini daha kolay hale getirir. Bizim deneyimimizde, dile yapılan son derece kullanışlı bir ekleme.
+\par Birçok programcı için en önemli değişim; fonksiyonları (\textbf{functions}) deklara etmek veya tarif etmek (\textbf{define}) için olan yeni sözdizimi (\textbf{syntax}). Bir fonksiyon (\textbf{function}) declara şimdi fonksiyonun (\textbf{function}) argümanlarının (\textbf{arguments}) açıklamasını içerebilir; tarif etme (\textbf{definition}) sözdizimi (\textbf{syntax}) eşleşmek üzere değişir. Bu ekstra bilgilendirme derleyicilerin (\textbf{compilers}) eşleşmeyen argümanlar (\textbf{arguments}) yüzünden ortaya çıkan hataları farketmesini daha kolay hale getirir. Bizim deneyimimizde, dile yapılan son derece kullanışlı bir ekleme.
 \par Daha küçük çaplı dil değişimleri var. Geniş ölçüde mevcut olan yapı atamaları (\textbf{structure assignment}) ve numaralandırmalar (\textbf{enumerations}) şimdi resmi olarak dilin bir parçası. Kayan noktalı sayıların (\textbf{floating-point numbers}) hesaplamaları şimdi tek duyarlıklı (\textbf{single precision}) formatta yapılabilir. Aritmetiğin özellikleri, özellikle belirlenmemiş türler (\textbf{unsigned types}) için netleştirildi. Önişlemci (\textbf{preprocessor}) daha ayrıntılı. Bu değişimlerin çoğu, birçok programcı üzerinde sadece minör etkiye sahip olacaktır.
-\par Standardın ikinci en önemli katkısı, C'ye eşlik etmek üzere bir kütüphanenin tanımıdır. Bu; işletim sistemine erişmek için fonksiyonlar (\textbf{functions}) (örneğin dosyaları okumak ve yazmak için), biçimlendirilmiş girdi (\textbf{input}) ve çıktı (\textbf{output}), hafıza tahsisi (\textbf{memory allocation}), karakter öbeği (\textbf{string}) manipülasyonu vb. şeyler belirtir. Standart başlıkların (\textbf{header}) koleksiyonu, fonksiyonların (\textbf{functions}) ve veri türlerinin (\textbf{data types}) tanımlamalarına tek tip erişim sağlar. Bu kütüphaneyi programların konakçı (\textbf{host}) bilgisayar ile etkileşim için kullanması, uyumlu (compatible) davranışlar sergilemelerini güvence altına almıştır. Kütüphanenin büyük bir kısmı "standart I/O kütüphanesinde" (input/output girdi/çıktı) dikkatle modellenmiştir. Bu kütüphane ilk tirajda açıklanıyor ve diğer sistemlerde de geniş ölçüde kullanılmıştır. Tekrar söylüyoruz, birçok programcı çok fazla değişim görmeyecek.
+\par Standardın ikinci en önemli katkısı, C'ye eşlik etmek üzere bir kütüphanenin tarifidir (\textbf{definition}). Bu; işletim sistemine erişmek için fonksiyonlar (\textbf{functions}) (örneğin dosyaları okumak ve yazmak için), biçimlendirilmiş girdi (\textbf{input}) ve çıktı (\textbf{output}), hafıza tahsisi (\textbf{memory allocation}), karakter öbeği (\textbf{string}) manipülasyonu vb. şeyler belirtir. Standart başlıkların (\textbf{header}) koleksiyonu, fonksiyonların (\textbf{functions}) ve veri türlerinin (\textbf{data types} deklarasyonlarına tek tip erişim sağlar. Bu kütüphaneyi programların konakçı (\textbf{host}) bilgisayar ile etkileşim için kullanması, uyumlu (compatible) davranışlar sergilemelerini güvence altına almıştır. Kütüphanenin büyük bir kısmı "standart I/O kütüphanesinde" (input/output girdi/çıktı) dikkatle modellenmiştir. Bu kütüphane ilk tirajda açıklanıyor ve diğer sistemlerde de geniş ölçüde kullanılmıştır. Tekrar söylüyoruz, birçok programcı çok fazla değişim görmeyecek.
 \par C tarafından sağlanan veri türleri ve kontrol yapılarının (\textbf{structures}) birçok bilgisayar tarafından doğrudan destekleniyor olması yüzünden kendine yeten programları implement etmek için gerekli olan çalışma kütüphanesi (\textbf{run-time library}) oldukça küçük. \pagebreak
 
 \noindent \thispagestyle{introduction} Standart kütüphane (\textbf{library}) fonksiyonları (\textbf{functions}) tekli olarak çağrılıyor. Bu yüzden gerekli olmadıkları durumlarda kaçınılabiliyorlar. Çoğu, C dilinde yazılabilir ve içerdikleri işletim sistemi detayları hariç kendileri taşınabilirler (\textbf{portable}).
-\par C, birçok bilgisayarın kabiliyetleri ile uyuşsa da belirli herhangi bir makine mimarisinden bağımsızdır. Biraz özenle, taşınılabilir (\textbf{portable}) programlar yazmak kolaydır. Yani değişken donanımlar üzerinde bir değişim olmadan çalışabilecek programlar. Standart, taşınılabilirlik (\textbf{portability}) sorunlarını açık hale getirmekte ve programın üzerinde çalıştırıldığı makineyi tanımlayan sabitler (\textbf{constants}) kümesini reçete etmekte.
-\par C, kuvvetle-yazılmış (\textbf{strongly-typed}) bir dil değil, fakat geliştikçe, tür kontrolü (\textbf{type-checking}) de güçlendirildi (\textbf{strengthened}). C'nin orijinal tanımı, işaretleyiciler (\textbf{pointers}) ve tam sayıların (\textbf{integers}) değişimini hoş karşılamadı fakat buna izin verdi. Bu ortadan kaldırılalı uzun zaman oldu ve şimdi standart, iyi derleyiciler (\textbf{compilers}) tarafından çoktan zorunlu olan uygun tanımlamalar ve açık dönüşümler gerektiriyor. Yeni fonksiyon (\textbf{function}) tanımlamaları bu yönde bir başka adım. Derleyiciler (\textbf{compilers}) birçok tür (\textbf{type}) hatasını bildirir ve uyumsuz veri türlerinin (\textbf{data types}) otomatik dönüşümleri yoktur. Yine de C, programcıların ne yaptığını bildiği basit felsefeyi korur, sadece onların amaçlarını açıkça bildirmelerini gerektirir.
+\par C, birçok bilgisayarın kabiliyetleri ile uyuşsa da belirli herhangi bir makine mimarisinden bağımsızdır. Biraz özenle, taşınılabilir (\textbf{portable}) programlar yazmak kolaydır. Yani değişken donanımlar üzerinde bir değişim olmadan çalışabilecek programlar. Standart, taşınılabilirlik (\textbf{portability}) sorunlarını açık hale getirmekte ve programın üzerinde çalıştırıldığı makineyi karakterize eden birtakım sabitler (\textbf{constants}) kümesini reçete etmekte.
+\par C, kuvvetle-yazılmış (\textbf{strongly-typed}) bir dil değil, fakat geliştikçe, tür kontrolü (\textbf{type-checking}) de güçlendirildi (\textbf{strengthened}). C'nin orijinal tarifi, işaretleyiciler (\textbf{pointers}) ve tam sayıların (\textbf{integers}) değişimini hoş karşılamadı fakat buna izin verdi. Bu ortadan kaldırılalı uzun zaman oldu ve şimdi standart, iyi derleyiciler (\textbf{compilers}) tarafından çoktan zorunlu olan uygun deklarasyonlar ve açık dönüşümler gerektiriyor. Yeni fonksiyon (\textbf{function}) deklarasyonları bu yönde bir başka adım. Derleyiciler (\textbf{compilers}) birçok tür (\textbf{type}) hatasını bildirir ve uyumsuz veri türlerinin (\textbf{data types}) otomatik dönüşümleri yoktur. Yine de C, programcıların ne yaptığını bildiği basit felsefeyi korur, sadece onların amaçlarını açıkça bildirmelerini gerektirir.
 \par C'nin de başka her dilin olduğu gibi kendi kusurları var. Operatörlerin (\textbf{operators}) bazıları yanlış önceliklere sahip. Söz diziminin (\textbf{syntax}) bazı kısımları daha iyi olabilir. Yine de C, programlama uygulamalarının geniş çeşitliliği için son derece etkili ve anlamlı bir dil olarak kendini kanıtlamıştır.
 \par Bu kitap şu şekilde organize edilmiştir: Bölüm 1, C'nin merkezi kısmında öğreticidir. Biz; yeni bir dil öğrenmenin o dilde programlar yazmak olduğuna inandığımızdan dolayı amaç, mümkün olduğunca çabuk başlayan okuyucular edinmek. Öğretici kısım; programlamanın temellerinin okuyucuda bulunduğunu farz eder: Ne bilgisayarların, ne derlemenin ne de "n=n+1" gibi bir ifadenin anlamının açıklaması var. Biz mümkün olan yerlerde kullanışlı programlama tekniklerini göstermeyi denedik fakat bu kitap veri yapıları (\textbf{structures}) ve algoritmalar üzerinde referans çalışması olarak tasarlanmamıştır. Bir seçim yapmak zorunda kaldığımızda, dil üzerinde yoğunlaştık.
 
 \par Üzerinde durulan nokta hala yalıtılmış kısımlardan ziyade tamamlanmış programların örnekleri olmasına rağmen Bölüm 2, Bölüm 6 ile beraber C'nin çeşitli yönlerini Bölüm 1'de olduğundan daha detaylı ve daha biçimsel olarak tartışıyor. Bölüm 2, temel veri türleri (\textbf{data types}), operatörler (\textbf{operators}) ve ifadeler (\textbf{statements}) ile ilgilenir. \pagebreak
 
 \noindent \thispagestyle{introduction} Bölüm 3, kontrol akışını (\textbf{control-flow}) ele alır: if-else, switch, while, for vb. Bölüm 4, fonksiyonlar (\textbf{functions}) ve program yapılarını (\textbf{structures}) -harici değişkenler (\textbf{variables}), kapsam kuralları, çoklu kaynak dosyaları ve bunun gibi- kapsar ve ayrıca önişlemciye (\textbf{preprocessor}) değinir. Bölüm 5 işaretçileri (\textbf{pointers}) ve adres aritmetiğini tartışır. Bölüm 6 yapıları (\textbf{structures}) ve birlikleri (\textbf{unions}) kapsar.
-\par Bölüm 7, işletim sistemine uygun arayüz sağlayan standart kütüphaneyi tanımlar. Bu kütüphane "ANSI" standardı tarafından tanımlanmıştır ve C'yi destekleyen tüm makinelerde desteklenmesi için yapıldı. Bu yüzden onu girdi (\textbf{input}), çıktı (\textbf{output}) ve diğer işletim sistemi erişimi için kullanan programlar, bir sistemden diğerine değiştirilmeden taşınabilir (\textbf{prtable}).
-\par Bölüm 8, C programları ve UNIX işletim sistemi, girdi (\textbf{input}) ve çıktıya (\textbf{output}) odaklanma, dosya sistemi ve depolama tahsisi (\textbf{storage allocation}) arasındaki arayüzü tanımlar. Bu bölümün bir kısmı özellikle UNIX sistemi için olsa da diğer sistemleri kullanan programcılar da burada standart kütüphanenin bir versiyonunun nasıl uygulandığını kavrama ve taşınılabilirlik önerileri de dahil olmak üzere kullanışlı materyaller bulabilirler.
-\par Ek Bölüm A, bir dil referans el kitabı içerir. Sözdiziminin (\textbf{syntax}) ve C'nin anlambiliminin (\textbf{semantics}) resmi ifadeleri (\textbf{statements}) ANSI standardıdın kendisidir. Ancak bu belge başta derleyici (\textbf{compiler}) yazıcılara yöneliktir. Buradaki referans el kitabı dilin tanımlamasını daha kısa ve aynı titiz, katı stil olmadan iletir. Ek Bölüm B, dahil ediciler (\textbf{implementer}) çok kullanıcılar için standart kütüphanenin bir tanımı. Ek Bölüm C, orijinal dildeki değişimlerin kısa bir özeti. Ancak şüpheye düşüldüğünde standartın ve onun kendi derleyicisi (\textbf{compiler}), dilin son otoriteleri olarak kaldılar.
+\par Bölüm 7, işletim sistemine uygun arayüz sağlayan standart kütüphaneyi açıklar. Bu kütüphane "ANSI" standardı tarafından tarif edilmiştir (\textbf{define}) ve C'yi destekleyen tüm makinelerde desteklenmesi için yapıldı. Bu yüzden onu girdi (\textbf{input}), çıktı (\textbf{output}) ve diğer işletim sistemi erişimi için kullanan programlar, bir sistemden diğerine değiştirilmeden taşınabilir (\textbf{prtable}).
+\par Bölüm 8, C programları ve UNIX işletim sistemi, girdi (\textbf{input}) ve çıktıya (\textbf{output}) odaklanma, dosya sistemi ve depolama tahsisi (\textbf{storage allocation}) arasındaki arayüzü açıklar. Bu bölümün bir kısmı özellikle UNIX sistemi için olsa da diğer sistemleri kullanan programcılar da burada standart kütüphanenin bir versiyonunun nasıl uygulandığını kavrama ve taşınılabilirlik önerileri de dahil olmak üzere kullanışlı materyaller bulabilirler.
+\par Ek Bölüm A, bir dil referans el kitabı içerir. Sözdiziminin (\textbf{syntax}) ve C'nin anlambiliminin (\textbf{semantics}) resmi ifadeleri (\textbf{statements}) ANSI standardıdın kendisidir. Ancak bu belge başta derleyici (\textbf{compiler}) yazıcılara yöneliktir. Buradaki referans el kitabı dilin tarifini daha kısa ve aynı titiz, katı stil olmadan iletir. Ek Bölüm B, dahil ediciler (\textbf{implementer}) çok kullanıcılar için standart kütüphanenin bir tarifi (\textbf{definition}). Ek Bölüm C, orijinal dildeki değişimlerin kısa bir özeti. Ancak şüpheye düşüldüğünde standartın ve onun kendi derleyicisi (\textbf{compiler}), dilin son otoriteleri olarak kaldılar.
 
 \chapter{Öğretici Kısıma Giriş}
 C'ye hızlı bir girişle başlayalım. Ana odağımız dilin gerekli elemanlarını detaylara, ayrıntılara, kurallara ve istisnalara girmeden gerçek programlar aracılığıyla göstermek. Bu aşamada tamamlayıcı ve kusursuz olmaya çalışmıyoruz. Sizi, olabilecek en kısa sürede işe yarar programlar yazabilecek hale getirmeye çalışıyoruz. Ve bunu yapabilmek için temellere (değişkenler (\textbf{variables}), sabitler (\textbf{constants}), aritmetikler, kontrol akışı (\textbf{control flow}), fonksiyonlar (\textbf{functions}), girdi (\textbf{input}) ve çıktıların (\textbf{output}) esasları) odaklanmamız gerekmekte. Bilerek bu bölümde C'nin büyük programlar yazmak için önemli olan özelliklerine değinmiyoruz. Bu işaretleyiciler (\textbf{pointers}), yapılar (\textbf{structers}), C'nin zengin operatör setinin çoğunu, bazı kontrol akışı (\textbf{control-flow}) ifadelerini (\textbf{statement}) ve temel C standart kütüphanesini (\textbf{library}) içeriyor.
@@ -188,7 +188,7 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 \begin{lstlisting}
     #include <stdio.h>              standart kütüphane (library) hakkında                                 bilgileri içer
     main()                          main adında hiç argümanı (argument)
-                                    olmayan bir fonksiyon (function) tanımla
+                                    olmayan bir fonksiyon (function) deklara et
 
     {
                                     main'in ifadeleri (statements) süslü
@@ -204,8 +204,8 @@ Fonksiyonlar (\textbf{functions}) arasında veri aktarımı için gerekli metot,
 \begin{center}İlk C programı.\end{center}
 \pagebreak
 
-Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak tanımlandı, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
-Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde tanımlanır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor,
+Bu örnekte \textbf{main} fonksiyonu (\textbf{function}) hiçbir argüman (\textbf{argument}) beklemeyen bir fonksiyon (\textbf{function}) olarak deklara edildi, bu parantezler arasında hiçbir veri olmamasıyla gösterilir ().
+Fonksiyonun ifadeleri (\textbf{statements}) süslü parantezler içerisinde yer alır \textbf{\{\}}. \textbf{main} fonksiyonu sadece bir ifade (\textbf{statement}) içeriyor,
 \begin{lstlisting}
 		printf("hello, world\n");
 \end{lstlisting}
@@ -252,7 +252,7 @@ Sonraki program aşağıdaki Fahrenhayt dereceleri ve onların Selsiyus (Santigr
         280 137
         300 148
 \end{lstlisting}
-\par Programın kendisi hâlen sadece \textbf{main} adında tek bir fonksiyon (\textbf{function}) içeriyor. "hello, world" bastıran programdan biraz uzun ancak korkacak bir şey yok, komplike değil. Bu program bize, yorumlar (\textbf{comments}), tanımlamalar (\textbf{declerations}), değişkenler (\textbf{variables}), aritmetik açıklamalar, döngüler (\textbf{loops}) ve formatlanmış çıktılar (\textbf{output}) gibi birkaç yeni fikri gösteriyor.
+\par Programın kendisi hâlen sadece \textbf{main} adında tek bir fonksiyon (\textbf{function}) içeriyor. "hello, world" bastıran programdan biraz uzun ancak korkacak bir şey yok, komplike değil. Bu program bize, yorumlar (\textbf{comments}), deklarasyonlar, değişkenler (\textbf{variables}), aritmetik açıklamalar, döngüler (\textbf{loops}) ve formatlanmış çıktılar (\textbf{output}) gibi birkaç yeni fikri gösteriyor.
 
 \begin{lstlisting}
 		#include <stdio.h>
@@ -285,7 +285,7 @@ Bu iki satır \begin{lstlisting}
 			for fahr = 0, 20, ... 300 */
 \end{lstlisting}
 bu durumda programın nasıl çalıştığını, programın kaynak (\textbf{source}) kodunu okuyanlara açıklayan \textit{yorum} (\textbf{comment}) satırlarıdır. \textbf{/*} ve \textbf{*/} karakterleri arasında olan karakterler derleyici (\textbf{compiler}) tarafından görmezden gelinir, bu satırlar programı okurken anlamayı daha kolay hale getirmek için özgürce kullanılabilir. Yorum satırları boşluk, tab veya yeni satır karakterinin koyulabileceği bütün yerlere koyulabilirler.
-\par C'de; bütün değişkenler (\textbf{variables}) kullanılmadan önce tanımlanmalı. Genellikle fonksiyonun (\textbf{function}) başında bütün çalıştırılabilir ifadelerden (\textbf{executable statements}) önce tanımlanır. Bir tanımlama (\textbf{decleration}) değişkenlerin (\textbf{variables}) özelliklerini anons eder; bu anons değişkenlerin (\textbf{variables}) tanımlanacak türünü (\textbf{type}) ve değişkenlere (\textbf{variable}) verilecek adları içerir, örneğin
+\par C'de; bütün değişkenler (\textbf{variables}) kullanılmadan önce deklara edildi. Genellikle fonksiyonun (\textbf{function}) başında bütün çalıştırılabilir ifadelerden (\textbf{executable statements}) önce deklara edilmeli. Bir deklarasyon değişkenlerin (\textbf{variables}) özelliklerini anons eder; bu anons değişkenlerin (\textbf{variables}) deklare deklare edilecek olan türünü (\textbf{type}) ve değişkenlere (\textbf{variable}) verilecek adları içerir, örneğin
 \newline
 \begin{lstlisting}
 		int fahr, celsius;
@@ -308,7 +308,7 @@ Bu objelerin büyüklüğü de makineye dayalı (\textbf{machine-dependent}). Bu
         step = 20;
         fahr = lower;
 \end{lstlisting}
-Bu ifadeler (\textbf{statement}) ile değişkenler (\textbf{variables}) başlangıç değerlerine tanımlanıyor. Tekli (toplu değil, bireysel) tanımlanmak istenen değişkenler (\textbf{variables}) noktalı virgül ile bitiriliyor.
+Bu ifadeler (\textbf{statement}) ile değişkenler (\textbf{variables}) başlangıç değerlerine ayarlıyor. Tekli (toplu değil, bireysel) ayarlanmak istenen değişkenler (\textbf{variables}) noktalı virgül ile bitiriliyor.
 \par Tablonun her satırı aynı şekilde hesaplanıyor, bu yüzden her çıktı (\textbf{output}) satırı için bunu tekrarlayabiliriz; işte \textbf{while} döngüsünün (\textbf{loop}) amacı budur.
 \begin{lstlisting}
         while (fahr <= upper) {
@@ -334,7 +334,7 @@ Sadece 5/9 ile çarpmak yerine 5 ile çarpılıp ardından 9'a bölünmesinin se
 \end{lstlisting}
 iki tam sayının (\textbf{integer}) değerlerin (\textbf{values}) yani \textbf{fahr} ve \textbf{celcius}'un aralarında tab(\textbackslash t) karakteri ile bastırılmasını sağlar.
 \par Her \% karakteri \textbf{printf}'in ilk argümanından (\textbf{argument}) sonraki uyan ilk argümanıyla (\textbf{argument}) eşleşir. Argümanlar (\textbf{arguments}) ve \% karakterleri birbiriyle tür (\textbf{type}) olarak ve sıralama olarak eşleşmeli, yoksa yanlış çıktı alırsınız.
-\par Bu arada \textbf{printf} C dilinin bir parçası değil: C'nin kendisinde girdi (\textbf{input}) ve çıktı (\textbf{output}) tanımlı değil. \textbf{printf} sadece standart girdi (\textbf{input}) çıktı (\textbf{output}) kütüphanesinde (\textbf{library}) bulunan yararlı bir fonksiyon (\textbf{function}). \textbf{printf}'in davranışı ANSI standartında belirlenmiştir, böylelikle özellikleri her derleyiciyle (\textbf{compiler}) ve kütüphaneyle (\textbf{library}) standarta uyar.
+\par Bu arada \textbf{printf} C dilinin bir parçası değil: C'nin kendisinde girdi (\textbf{input}) ve çıktı (\textbf{output}) tarif edilmemiştir (\textbf{define}). \textbf{printf} sadece standart girdi (\textbf{input}) çıktı (\textbf{output}) kütüphanesinde (\textbf{library}) bulunan yararlı bir fonksiyon (\textbf{function}). \textbf{printf}'in davranışı ANSI standartında belirlenmiştir, böylelikle özellikleri her derleyiciyle (\textbf{compiler}) ve kütüphaneyle (\textbf{library}) standarta uyar.
 \par C'nin kendisine odaklanmak için, girdi (\textbf{input}) ve çıktı (\textbf{output}) hakkında Bölüm 7'den önce çok konuşmayacağız. Özellikle, o zamana dek formatlanmış girdiye (\textbf{input}) değinmeyeceğiz. Eğer numaraları girdilemeniz (\textbf{input}) gerekiyorsa, \textbf{scanf} fonksiyonu (\textbf{function}) üzerine olan Bölüm 7.4'ü okuyunuz. \textbf{scanf}, \textbf{printf} gibi, sadece çıktı yazmak yerine girdi okuyor. \pagebreak
 \par Isı birimi dönüştürme programında birtakım problemler var. Bu problemlerden daha basit olanı çıktının (\textbf{output}) pek güzel olmaması, çünkü sayılar tam yerinde değil. Bunu düzeltmesi kolay; her \% karakterini \textbf{printf} ifadesinde (\textbf{statement}) bir genişlik ile yazarsak, sayılar alanlarında olması gereken yerlerinde olacaktır.
 Örneğin
@@ -387,7 +387,7 @@ ilk sayıyı 3 basamak genişliğinde, ikinci sayıyı da 6 basamak genişliğin
             }
         }
 \end{lstlisting}
-\par Bu öncekine çok benziyor, tek farkı \textbf{fahr}'ın ve \textbf{celsius}'un ondalıklı sayı (\textbf{float}) olarak tanımlanmış olması ve dönüşüm için kullanılan formülün daha doğal şekliyle yazılmış olması. 5/9'u önceki versiyonda kullanamıyorduk çünkü iki tam sayının (\textbf{integer}) bölümü ondalıklı kısmını budayarak sonucun 0 çıkmasını sağlıyordu. Bir sabitteki (\textbf{constant}) ondalık noktası o sabitin türünün (\textbf{type}) ondalıklı sayı (\textbf{float}) olduğunu belirtir, yani 5.0/9.0 budanmadı çünkü işlem iki ondalıklı sayı (\textbf{float}) ile yapıldı.
+\par Bu öncekine çok benziyor, tek farkı \textbf{fahr}'ın ve \textbf{celsius}'un ondalıklı sayı (\textbf{float}) olarak deklare edilmiş olması ve dönüşüm için kullanılan formülün daha doğal şekliyle yazılmış olması. 5/9'u önceki versiyonda kullanamıyorduk çünkü iki tam sayının (\textbf{integer}) bölümü ondalıklı kısmını budayarak sonucun 0 çıkmasını sağlıyordu. Bir sabitteki (\textbf{constant}) ondalık noktası o sabitin türünün (\textbf{type}) ondalıklı sayı (\textbf{float}) olduğunu belirtir, yani 5.0/9.0 budanmadı çünkü işlem iki ondalıklı sayı (\textbf{float}) ile yapıldı.
 \par Eğer aritmetik operatörün tam sayı (\textbf{integer}) işlenenleri (\textbf{operands}) olursa tam sayılarla (\textbf{integers}) gerçekleşen bir işlem yapılırdı. Eğer aritmetik operatörün bir ondalıklı sayı (\textbf{float}) ve bir tam sayı (\textbf{integer}) işleneni (\textbf{operand}) var ise bir şey farketmez ve tam sayı (\textbf{integer}) işlemden önce ondalıklı sayıya (\textbf{float}) dönüştürülür ve ardından hesaplama yapılırdı. Eğer \textbf{fahr-32} yazmış olsaydık, \textbf{32} otomatikman ondalıklı sayıya (\textbf{float}) dönüştürülürdü. Yine de ondalıklı sayı (\textbf{float}) olan sabitleri tam (\textbf{integral}) olmalarına rağmen ondalık noktasını kullanarak yazmamız, onların ondalıklı sayı (\textbf{float}) doğasını insan okuyucular için vurgular. Tam sayıların (\textbf{integer}) ondalıklı sayılara (\textbf{float}) dönüşümlerinin detaylarını Bölüm 2'de göreceğiz.
 
 
@@ -466,7 +466,7 @@ Bu da aynı çıktıyı (\textbf{output}) üretecektir, fakat kesinlikle farklı
 \pagebreak En büyük değişiklik birçok değişkenin (\textbf{variables}) saf dışı bırakılması; sadece \textbf{fahr} kaldı ve onu bir \textbf{int} yaptık. \textbf{lower} ve \textbf{upper} limitleri ve adım büyüklüğü sadece \textbf{for} ifadesi (\textbf{statement}) içinde sabit (\textbf{constant}) olarak karşımızda, artık yeni bir inşâ ve Selsiyus sıcaklığını hesaplayan açıklama ayrı bir ifade (\textbf{statement}) yerine artık \textbf{printf}'nin üçüncü argümanı (\textbf{argument}) olarak karşımızda.
 
 \par Bu son değişiklik bize bir türün (\textbf{type}) değişkeni (\textbf{variable}) yerine doğrudan değer (\textbf{değer}) kullanmamıza izin verilmesi durumuna bir örnek, bu durumlarda o türün (\textbf{type}) daha komplike açıklamaları kullanılabilir. \textbf{printf}'in üçüncü argümanı \textbf{\%6.1f} ile eşleşecek olan bir ondalıklı sayı (\textbf{float}) olması gerektiğinden herhangi bir ondalıklı sayı (\textbf{float}) oraya konulabilir.
-\par \textbf{for} ifadesi (\textbf{statement}) bir döngü (\textbf{loop}), \textbf{while}'ın bir genellemesi. Eğer erken (\textbf{earlier}) \textbf{while} ile karşılaştırırsak, işleyişi açıkça görebiliriz. Parantezler içerisinde noktalı virgüller ile ayrılan üç ayrı bölüm mevcut. İlk bölüm, tanımlama:
+\par \textbf{for} ifadesi (\textbf{statement}) bir döngü (\textbf{loop}), \textbf{while}'ın bir genellemesi. Eğer erken (\textbf{earlier}) \textbf{while} ile karşılaştırırsak, işleyişi açıkça görebiliriz. Parantezler içerisinde noktalı virgüller ile ayrılan üç ayrı bölüm mevcut. İlk bölüm, deklarasyon:
 \begin{lstlisting}
 		fahr = 0
 \end{lstlisting}
@@ -479,12 +479,12 @@ Bu koşul değerlendirilir; eğer doğru ise, döngünün (\textbf{loop}) gövde
 		fahr = fahr + 20
 \end{lstlisting}
 çalıştırılır ve koşul tekrardan test edilir. Döngü (\textbf{loop}) eğer koşul yanlış (\textbf{false}) olursa sonlanır. \textbf{while}'da olduğu gibi gövde (\textbf{body}) kısmı tek bir ifadeden (\textbf{statement}) veya süslü parantezler arasındaki ifade (\textbf{statements}) gruplarından oluşabilir. Tanımlama, koşul ve arttırma bölümleri herhangi bir açıklamadan (\textbf{expression}) oluşabilir.
-\par \textbf{while} ve \textbf{for} arasındaki seçim isteğe bağlı, hangisi gereken durum için daha temiz görünüyorsa onu kullanın. \textbf{while}'dan daha kompakt olduğundan ve döngü (\textbf{loop}) kontrol ifadelerini (\textbf{statements}) beraber tek bir yerde tuttuğundan, \textbf{for} genellikle tanımlama ve arttırmanın tek bir ifade olduğu ve mantıksal olarak ilişkili olduğu döngüler (\textbf{loop}) için daha uygundur. \newline
+\par \textbf{while} ve \textbf{for} arasındaki seçim isteğe bağlı, hangisi gereken durum için daha temiz görünüyorsa onu kullanın. \textbf{while}'dan daha kompakt olduğundan ve döngü (\textbf{loop}) kontrol ifadelerini (\textbf{statements}) beraber tek bir yerde tuttuğundan, \textbf{for} genellikle deklarasyo ve arttırmanın tek bir ifade olduğu ve mantıksal olarak ilişkili olduğu döngüler (\textbf{loop}) için daha uygundur. \newline
 \\ \noindent \textbf{Egzersiz 1-5.} Isı dönüşüm programını tabloyu tersine bastıracak şekilde düzenleyin, 300 dereceden 0'a doğru. \pagebreak
 
 \section{Sembolik Sabitler (constants)}
 
-\par Isı dönüşümünü sonsuza dek bir kenara bırakmadan önce son bir gözlem yapalım. Programa 300 ve 20 gibi "sihirli sayılar" gömmek kötü; bu sayılar bu programı daha sonra okuyacak bir kişinin kolayca görmek ve değiştirmek istediği değerler (\textbf{values}) taşıyorlar, bu sayıları bu şekilde gömmek onları sistematik yolla değiştirmeyi zorlaştırdığı gibi hangi sayının neye ait olduğunu da bilmemizi zorlaştırıyor. Bu sihirli sayılarla ilgilenmenin bir yolu onlara anlamlı isimler vermek. \textbf{\#define} satırı belirli bir karakter öbeğini bir sembolik isim veya sembolik sabit (\textbf{constant}) olarak tanımlar:
+\par Isı dönüşümünü sonsuza dek bir kenara bırakmadan önce son bir gözlem yapalım. Programa 300 ve 20 gibi "sihirli sayılar" gömmek kötü; bu sayılar bu programı daha sonra okuyacak bir kişinin kolayca görmek ve değiştirmek istediği değerler (\textbf{values}) taşıyorlar, bu sayıları bu şekilde gömmek onları sistematik yolla değiştirmeyi zorlaştırdığı gibi hangi sayının neye ait olduğunu da bilmemizi zorlaştırıyor. Bu sihirli sayılarla ilgilenmenin bir yolu onlara anlamlı isimler vermek. \textbf{\#define} satırı belirli bir karakter öbeğini bir sembolik isim veya sembolik sabit (\textbf{constant}) olarak tarif eder:
 \begin{lstlisting}
 		#define isim(name) karakter öbeği
 \end{lstlisting}
@@ -508,7 +508,7 @@ Daha sonra programda herhangi bir yerde bu isim (\textbf{name}) geçtiğinde, is
 		}
 \end{lstlisting}
 
-\textbf{LOWER}, \textbf{UPPER} ve \textbf{STEP} nicelikleri birer sembolik sabittir (\textbf{constant}), değişken (\textbf{variables}) değil; bu yüzden tanımlamalarla ortaya çıkmıyorlar. Sembolik sabitler (\textbf{constant}) genellikle büyük harflerle yazılır böylece kolayca küçük harfli değişken (\textbf{variable}) adlarından ayırt edilebilirler. \textbf{\#define} satırının sonunda noktalı virgül olmadığını farkedin. \pagebreak
+\textbf{LOWER}, \textbf{UPPER} ve \textbf{STEP} nicelikleri birer sembolik sabittir (\textbf{constant}), değişken (\textbf{variables}) değil; bu yüzden deklarasyonlarla yapılmıyorlar. Sembolik sabitler (\textbf{constant}) genellikle büyük harflerle yazılır böylece kolayca küçük harfli değişken (\textbf{variable}) adlarından ayırt edilebilirler. \textbf{\#define} satırının sonunda noktalı virgül olmadığını farkedin. \pagebreak
 
 \section{Karakter Girdisi (input) ve Çıktısı (output)}
 
@@ -552,8 +552,8 @@ Bunu C'ye dönüştürürsek:
 \end{lstlisting}
 Mantıksal bir operatör olan \textbf{ !=} "eşit değil" anlamına gelir.
 \par Tabiki ekrandaki yada klavyedeki karakter, diğer her şey gibi, bit olarak içeride saklanıyor. Tür (\textbf{type}) \textbf{char} özellikle karakter verisi taşıması için oluşturuldu fakat herhangi bir tam sayı (\textbf{integer}) değer kullanılabilir. Biz ince ve önemli bir sebeple \textbf{int} kullandık.
-\par Problem, girdinin (\textbf{input}) sonunun geçerli veriden ayırılması. Çözüm ise \textbf{getchar}'ın girdi (\textbf{input}) kalmadığında herhangi gerçek bir karakterle karıştırılamayacak belirgin bir değer dönmesi (\textbf{return}). Bu değer \textbf{EOF} olarak adlandırılıyor, "dosya sonu" (\textbf{end of file}) anlamına geliyor. Biz c'yi \textbf{getchar}'ın döndürebileceği kadar büyük bir değer taşıyan bir türde tanımlamamız gerekiyor. c, lazım olduğunda EOF'yi taşıyabileceği kadar büyük olması gerektiğinden \textbf{char} kullanamazdık. Bu nedenle \textbf{int} kullandık.
-\par EOF \textbf{<stdio.h>}'da bir tam sayı (\textbf{integer}) olarak tanımlanmıştır, fakat EOF'nin sayı değeri hakkında \textbf{char} değeri ile aynı olmadığından dolayı endişelenmemiz gerekmiyor. Sembolik sabiti (\textbf{Symbolic Constant}) kullanarak, programdaki hiçbir şeyin belirli bir sayı değerine dayalı olmadığından emin olduk.
+\par Problem, girdinin (\textbf{input}) sonunun geçerli veriden ayırılması. Çözüm ise \textbf{getchar}'ın girdi (\textbf{input}) kalmadığında herhangi gerçek bir karakterle karıştırılamayacak belirgin bir değer dönmesi (\textbf{return}). Bu değer \textbf{EOF} olarak adlandırılıyor, "dosya sonu" (\textbf{end of file}) anlamına geliyor. Biz c'yi \textbf{getchar}'ın döndürebileceği kadar büyük bir değer taşıyan bir türde deklare etmemiz gerekiyor. c, lazım olduğunda EOF'yi taşıyabileceği kadar büyük olması gerektiğinden \textbf{char} kullanamazdık. Bu nedenle \textbf{int} kullandık.
+\par EOF \textbf{<stdio.h>}'da bir tam sayı (\textbf{integer}) olarak tarif edilmiştir (\textbf{define}), fakat EOF'nin sayı değeri hakkında \textbf{char} değeri ile aynı olmadığından dolayı endişelenmemiz gerekmiyor. Sembolik sabiti (\textbf{Symbolic Constant}) kullanarak, programdaki hiçbir şeyin belirli bir sayı değerine dayalı olmadığından emin olduk.
 \par Kopyalama programı tecrübeli C programcıları tarafından daha farklı yazılabilir. C'de herhangi bir atama (\textbf{assignment}), örneğin
 \begin{lstlisting}
 		c = getchar()
@@ -668,7 +668,7 @@ Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce 
 
 \subsection{Kelime Sayma}
 
-\par Yararlı programlar serimizdeki dördüncü program, gevşek bir tanımlamayla boşluk, tab veya yeni satır içermeyen her karakter sekansını kelime olarak saymakla birlikte satırları ve karakterleri sayıyor. \pagebreak
+\par Yararlı programlar serimizdeki dördüncü program, gevşek bir tarif ile (\textbf{definition}) boşluk, tab veya yeni satır içermeyen her karakter sekansını kelime olarak saymakla birlikte satırları ve karakterleri sayıyor. \pagebreak
 
 \noindent Bu bir UNIX programı olan \textbf{wc}'nin oldukça temel bir hali.
 
@@ -767,7 +767,7 @@ Tanımlama (\textbf{decleration})
 \begin{lstlisting}
 		int ndigit[10];
 \end{lstlisting}
-\textbf{ndigit}'i 10 tamsayıdan (\textbf{integer}) oluşan biri dizi (\textbf{array}) olarak tanımlıyor (\textbf{declare}). \pagebreak
+\textbf{ndigit}'i 10 tamsayıdan (\textbf{integer}) oluşan biri dizi (\textbf{array}) olarak deklare ediyor. \pagebreak
 
 
 \noindent Dizilerin (\textbf{arrays}) alt elemanları (\textbf{subscripts}) C'de her zaman 0 ile sayılmaya başlanır, Yani elemanlar bu şekildedir \textbf{ndigit[0], ndigit[1], ..., ndigit[9]}. Bu, dizileri (\textbf{arrays}) başlatan ve onları bastıran \textbf{for} döngülerinde (\textbf{loop}) gösterilmiştir.
@@ -820,7 +820,7 @@ sayısız grup olabilir.
 \section{Fonksiyonlar (functions)}
 
 C'de, fonksiyonlar (\textbf{function}) Fortran'daki altprogramların (\textbf{subroutines}) veya fonksiyonların (\textbf{functions}) veyahut Pascal'daki prosedürlerin (\textbf{procedure}) veya fonksiyonların (\textbf{function}) denkidir. Bir fonksiyon (\textbf{function}), bir hesaplamayı daha sonra kendi implementasyonunda hakkında endişelenilmeden kullanmak üzere barındırmak için kullanışlı bir yol sağlar. Uygun şekilde düzenlenen fonksiyonlarla (\textbf{functions}), işin \textit{nasıl} gerçekleştirildiğini görmezden gelmek mümkün; sadece \textit{ne} yapıldığını bilmek yeterlidir. C, fonksiyonların (\textbf{functions}) kullanımını kolay, kullanışlı ve verimli hale getiriyor; sıklıkla kısa bir fonksiyonun (\textbf{function}) tarif edildiğini (\textbf{define}) ve sadece küçük bir parça kodu içerdiğinden sadece bir kere çağırıldığını (\textbf{call}) göreceksiniz.
-\par Bu zamana kadar sadece \textbf{printf}, \textbf{getchar}, ve \textbf{putchar} gibi bize sağlanan fonksiyonları (\textbf{functions}) kullandık; artık birkaçını kendimizin yazma vakti geldi. C'nin Fortran'ın \textbf{**}'ı gibi bir üsalma operatörü olmadığından, fonksiyon (\textbf{function}) tanımlamanın (\textbf{definition}) mekaniklerini göstermek için \textbf{power(m,n)} fonksiyonunu, m tamsayısının (\textbf{integer}) n kuvvetini hesaplamak ve bunu göstermek için yazalım. Bu, \textbf{power(2,5)}'in değerini 32 yapar. Bu fonksiyon (\textbf{function}), sadece küçük tamsayıların (\textbf{integer}) pozitif değerleriyle hesap yapabildiğinden pratik bir bir üsalma rutini değil, fakat bu gösterimi yapmamız için yeterli. (Standart kütüphane (\textbf{library}) \textbf{pow(x,y)} adında \textbf{$x^y$}'yi hesaplayan bir fonksiyon (\textbf{function}) içeriyor.)
+\par Bu zamana kadar sadece \textbf{printf}, \textbf{getchar}, ve \textbf{putchar} gibi bize sağlanan fonksiyonları (\textbf{functions}) kullandık; artık birkaçını kendimizin yazma vakti geldi. C'nin Fortran'ın \textbf{**}'ı gibi bir üsalma operatörü olmadığından, fonksiyon (\textbf{function}) tarifinin (\textbf{definition}) mekaniklerini göstermek için \textbf{power(m,n)} fonksiyonunu, m tamsayısının (\textbf{integer}) n kuvvetini hesaplamak ve bunu göstermek için yazalım. Bu, \textbf{power(2,5)}'in değerini 32 yapar. Bu fonksiyon (\textbf{function}), sadece küçük tamsayıların (\textbf{integer}) pozitif değerleriyle hesap yapabildiğinden pratik bir bir üsalma rutini değil, fakat bu gösterimi yapmamız için yeterli. (Standart kütüphane (\textbf{library}) \textbf{pow(x,y)} adında \textbf{$x^y$}'yi hesaplayan bir fonksiyon (\textbf{function}) içeriyor.)
 \par İşte, fonksiyon (\textbf{function}) \textbf{power} ve onu çalıştırması için main programı, bu sayede bütün yapıyı (\textbf{structure}) bir arada görebilirsiniz.
 \begin{lstlisting}
 		#include <stdio.h>
@@ -850,9 +850,9 @@ C'de, fonksiyonlar (\textbf{function}) Fortran'daki altprogramların (\textbf{su
 \end{lstlisting}
 Fonksiyon (\textbf{function}) tarif etmek (\textbf{definition}) böyle bir forma sahip:
 \begin{lstlisting}
-		dönüş-türü fonksiyon-adı(parametre tanımlamaları, eğer varsa)
+		dönüş-türü fonksiyon-adı(parametre deklarasyonları, eğer varsa)
 		{
-			tanımlamalar (* \textit{(declarations)} *)
+			deklarasyonlar
 			ifadeler (* \textit{(statements)} *)
 		}
 \end{lstlisting}
@@ -867,7 +867,7 @@ her çağırma, her defasında formatlanıp bastırılacak olan bir tam sayı (\
 \begin{lstlisting}
 		int power(int base, int n)
 \end{lstlisting}
-parametre türlerini (\textbf{type}), adlarını ve fonksiyonun (\textbf{function}) döndüreceği sonucun türünü (\textbf{type}) tanımlıyor (\textbf{declare}). \textbf{power} tarafından parametreleri için kullanılan isimler \textbf{power}'a yereldir (\textbf{local}), ve bir değer fonksiyon (\textbf{function}) tarafından görünebilir değildir: diğer rutinler aynı ismi bir çakışma yaşanmadan kullanabilirler. Bu aynen i ve p değişkenleri (\textbf{variable}) için de geçerli; \textbf{power} içindeki i ile \textbf{main} içindeki i tamami ile ilişkisiz.
+parametre türlerini (\textbf{type}), adlarını ve fonksiyonun (\textbf{function}) döndüreceği sonucun türünü (\textbf{type}) deklare ediyor. \textbf{power} tarafından parametreleri için kullanılan isimler \textbf{power}'a yereldir (\textbf{local}), ve bir değer fonksiyon (\textbf{function}) tarafından görünebilir değildir: diğer rutinler aynı ismi bir çakışma yaşanmadan kullanabilirler. Bu aynen i ve p değişkenleri (\textbf{variable}) için de geçerli; \textbf{power} içindeki i ile \textbf{main} içindeki i tamami ile ilişkisiz.
 \par Biz genellikle \textit{parametre}'yi fonksiyon (\textbf{function}) tarifinde (\textbf{definition}) parantezler içerisindeki listede adlandırılmış değişkenler (\textbf{variable}) için, argümanı ise fonksyon çağırımı (\textbf{call}) sırasında kullanılan değerler (\textbf{value}) için kullanacağız. \textit{biçimsel} (\textbf{formal}) argümanın ve \textit{asıl} (\textbf{actual}) argümanın koşulları bazen aynı ayrımı yapmak için kullanılır.
 \par \textbf{power}'ın hesapladığı değer, \textbf{return} ifade (\textbf{statement}) tarafından \textbf{main}'e döndürüldü. \textbf{return}'ü takip eden herhangi bir açıklama:
 \begin{lstlisting}
@@ -875,18 +875,18 @@ parametre türlerini (\textbf{type}), adlarını ve fonksiyonun (\textbf{functio
 \end{lstlisting}
 Bir değer döndürmesine gerek olmayan fonksiyonda: bir açıklaması (\textbf{expression}) olmayan \textbf{return} ifadesi (\textbf{statement}) kontrolü sağlar, fakat çağırıcı (\textbf{caller}) tarafından kullanılacak kullanışlı bir değeri (\textbf{value}) değil, fonksiyonu (\textbf{function}) sonlandıran sağ süslü paranteze ulaşarak fonksiyonun (\textbf{function}) "sonuna düşmek" ile olduğu gibi. Ve çağırılan fonksiyon (\textbf{function}), fonksiyon (\textbf{function}) tarafından döndürülen (\textbf{return}) değeri (\textbf{value}) görmezden gelebilir.
 \par \textbf{main}'in sonunda bir \textbf{return} ifadesi (\textbf{statement}) olduğunu farketmişsinizdir.  \textbf{main} diğerleri gibi bir fonksiyon (\textbf{function}) olduğundan dolayı, o da çağıranına (\textbf{caller}) bir değer gönderebilir, bu da programın çalıştırıldığı çevreyi (\textbf{environment}) etkileyebilir. içeriği sıfır olan bir \textbf{return} değeri (\textbf{value}) normal bitişi (\textbf{termination}); sıfır-olmayan değerler (\textbf{values}) ise sinyal alışılmadık (\textbf{unusual}) veya hata (\textbf{erroneous}) bitirme koşullarıdır (\textbf{conditions}). Bu noktadan önce basitlik uğruna, \textbf{main} fonksiyonlarımızdaki (\textbf{function}) \textbf{return} ifadesini (\textbf{statement}) atladık, fakat bundan böyle artık onları da dahil edeceğiz, bir hatırlatma olarak, programların durumlarını çevrelerine (\textbf{environment}) döndürmelerinin (\textbf{return}) iyi olacağını belirtelim.
-\par \textbf{main}'den hemen önceki bu tanımlama (\textbf{decleration})
+\par \textbf{main}'den hemen önceki bu deklarasyon
 \begin{lstlisting}
 		int power(int m, int n);
 \end{lstlisting}
-\textbf{power}'ın iki \textbf{int} argüman bekleyen ve int döndüren (\textbf{return}) bir fonksiyon (\textbf{function}) olduğunu söylüyor. \textit{fonksiyon prototipi} olarak adlandırılan bu tanımlama (\textbf{decleration}), \textbf{power}'ın tarifi (\textbf{definition}) ve kullanımı konusuna açıklık getirmek zorunda. Bu fonksiyonun (\textbf{function}) tarifi (\textbf{function}) veya herhangi bir kullanımı ile prototipi arasında bir uyuşmazlık var ise bu hataya sebep olur.
+\textbf{power}'ın iki \textbf{int} argüman bekleyen ve int döndüren (\textbf{return}) bir fonksiyon (\textbf{function}) olduğunu söylüyor. \textit{fonksiyon prototipi} olarak adlandırılan bu deklarasyon, \textbf{power}'ın tarifi (\textbf{definition}) ve kullanımı konusuna açıklık getirmek zorunda. Bu fonksiyonun (\textbf{function}) tarifi (\textbf{function}) veya herhangi bir kullanımı ile prototipi arasında bir uyuşmazlık var ise bu hataya sebep olur.
 \par Parametre isimlerinin uyuşmasına gerek yok. Aslında parametre isimleri fonksiyon prototipi için opsiyonel, yani prototip için bunu da yazabilirdik
 \begin{lstlisting}
 		int power(int, int);
 \end{lstlisting}
 Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları sıklıkla kullanacağız.
 
-\par Tarih notu: ANSI C ve daha önceki versiyonlar arasındaki en önemli fark, fonksiyonların nasıl tarif (\textbf{definition}) edildiği ve tanımlandığıdır (\textbf{declare}). C'nin orijinal tarifinde (\textbf{definition}), \textbf{power} fonksiyonu bu şekilde yazılmalıydı:
+\par Tarih notu: ANSI C ve daha önceki versiyonlar arasındaki en önemli fark, fonksiyonların nasıl tarif (\textbf{definition}) edildiği ve deklara edildiğidir. C'nin orijinal tarifinde (\textbf{definition}), \textbf{power} fonksiyonu bu şekilde yazılmalıydı:
 \begin{lstlisting}
 		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0 */
 		/*		  (eski-stil versiyon) */
@@ -901,22 +901,22 @@ Güzel çizilen isimler güzel dökümantasyon sağlar, her nasılsa, onları s�
 			return p;
 		}
 \end{lstlisting}
-Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce tanımlanıyordu (\textbf{declaration}); tanımlanmayan (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
-\par Eski stilde \textbf{power}'ın tanımlanması (\textbf{declaration}) böyle gözükmeliydi:
+Parametreler parantezler arasında isimlendiriliyordu, ve onların türleri (\textbf{type}) açılan sol süslü parantezden önce deklara ediliyor; deklara edilmemiş (\textbf{undeclared}) parametreler \textbf{int} olarak alınıyordu. (Fonksiyonun gövdesi önceki ile aynı)
+\par Eski stilde \textbf{power}'ın deklarasyonu böyle gözükmeliydi:
 \begin{lstlisting}
 		int power();
 \end{lstlisting}
-Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) \textbf{power}'ın doğru çağırılıp çağırılmadığını kolayca kontrol edemiyordu. Aslında, varsayılan olarak \textbf{power}'ın \textbf{int} döndüreceği (\textbf{return}) farzedildiğinden, tüm tanımlama (\textbf{decleration}) atlanabilirdi.
-\par Fonksiyon prototiplerinin yeni sözdizimi (\textbf{syntax}) derleyicinin (\textbf{compiler}) hataları ve argümanların sayılarını veya onların türlerini (\textbf{types}) tespit etmesini oldukça kolaylaştırıyor. Eski stil tanımlamama (\textbf{declaration}) ve tarif etme (\textbf{definition}) ANSI C'de halen çalışıyor, en azından bir geçiş periyodu için, fakat eğer destekleyen bir derleyiciniz (\textbf{compiler}) varsa yeni formu kullanmanızı şiddetle tavsiye ediyoruz. \\
+Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) \textbf{power}'ın doğru çağırılıp çağırılmadığını kolayca kontrol edemiyordu. Aslında, varsayılan olarak \textbf{power}'ın \textbf{int} döndüreceği (\textbf{return}) farzedildiğinden, tüm deklarasyon işlemi atlanabilirdi.
+\par Fonksiyon prototiplerinin yeni sözdizimi (\textbf{syntax}) derleyicinin (\textbf{compiler}) hataları ve argümanların sayılarını veya onların türlerini (\textbf{types}) tespit etmesini oldukça kolaylaştırıyor. Eski stil deklarasyon ve tarif etme (\textbf{definition}) ANSI C'de halen çalışıyor, en azından bir geçiş periyodu için, fakat eğer destekleyen bir derleyiciniz (\textbf{compiler}) varsa yeni formu kullanmanızı şiddetle tavsiye ediyoruz. \\
 
 
 \textbf{Egzersiz 1-15.} Bölüm 1.2'nin ısı dönüşüm programını dönüşüm için bir fonksiyon kullanmak üzere yeniden yazınız.
 
 \section{Argümanlar - Değer ile Çağırma}
 
-C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran kullanmış olan programcılara yabancı gelebilir. C'de, bütün fonksiyon argümanları "değerleriyle" (\textbf{by value}) geçirilir. Bu, çağırılan (\textbf{call}) fonksiyona, fonksiyonun argümanlarına verilmiş değerlerin (\textbf{value}), orijinallerinden ziyade, geçici değişkenler (\textbf{variables}) olarak verilmesidir. Bu, bizi "referans ile çağır" (\textbf{call by reference}) kullanan Fortran gibi veya \textbf{var} parametreleri içen Pascal gibi dillerden farklı özellikler getiriyor, bu gibi dillerde çağırılan (\textbf{call}) rutinin yerel bir kopyadan ziyade, orijinal argümana erişimi var.
+C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran'ı kullanmış olan programcılara yabancı gelebilir. C'de, bütün fonksiyon argümanları "değerleriyle" (\textbf{by value}) geçirilir. Bu, çağırılan (\textbf{call}) fonksiyona, fonksiyonun argümanlarına verilmiş değerlerin (\textbf{value}), orijinallerinden ziyade, geçici değişkenler (\textbf{variables}) olarak verilmesidir. Bu, bizi "referans ile çağır" (\textbf{call by reference}) kullanan Fortran gibi veya \textbf{var} parametreleri içeren Pascal gibi dillerden farklı özellikler getiriyor, bu gibi dillerde çağırılan (\textbf{call}) rutinin yerel bir kopyadan ziyade, orijinal argümana erişimi var.
 \par Ana değişiklik, C'de çağırılan (\textbf{call}) fonksiyonun direkt olarak çağırılan fonksiyondaki değişkende (\textbf{variable}) bir değişiklik yapamamasıdır; sadece kendi özel, geçici kopyasını değiştirebilir.
-\par Değer ile çağır (\textbf{call by value}) bir varlık (asset), ancak, bir yükümlülük değil. Bu, daha az fazladan değişken (\textbf{variable}) ile daha kompakt programları sağlıyor, çünkü çağırılan (\textbf{call}) rutinde parametrelere sıradan şekilde ilklendirilmiş (\textbf{initialize}) yerel değişkenler gibi davranılabiliyor. Örneğin, \textbf{power}'ın bu özelliği kullanan bir versiyonu. \pagebreak
+\par Değer ile çağır (\textbf{call by value}) bir varlık (asset), ancak, bir yükümlülük değil. Bu, daha az fazladan değişken (\textbf{variable}) ile daha kompakt programları sağlıyor, çünkü çağırılan (\textbf{call}) rutinde parametrelere, sıradan şekilde ilklendirilmiş (\textbf{initialize}) yerel değişkenler gibi davranılabiliyor. Örneğin, \textbf{power}'ın bu özelliği kullanan bir versiyonu. \pagebreak
 \begin{lstlisting}
 		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0; versiyon 2 */
 		int power(int base, int n)
@@ -929,6 +929,83 @@ C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran
 		}
 \end{lstlisting}
 Parametre n, geçici bir değişken (\textbf{variable}) olarak kullanılıyor, ve geriye doğru sayılıyor (\textbf{for} döngüsü (\textbf{loop}) geriye doğru çalışıyor, sıfır olana kadar; artık değişken (\textbf{variable}) i'ye ihtiyaç yok. \textbf{power}'ın içinde n'ye ne yapıldıysa \textbf{power}'ın çağırıldığı argüman üstünde hiçbir etkisi yok.
-\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkene (\textbf{variable}) bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon parametrenin bir işaretleyici (\textbf{pointer}) olduğunu tanımlamalı (\textbf{declare}) ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
-\par Diziler (\textbf{array}) için hikaye farklı. Bir dizinin (\textbf{array}) adı argüman olarak kullanıldığında, fonksiyona geçen değer dizinin (\textbf{array}) başlangıcının konumu veya adresi - dizi (\textbf{array}) elemanların bir kopyalanma seçeneği yok. Bu değerin (\textbf{value}) yardımıyla, fonksiyon bir dizinin (\textbf{array}) her elemanına erişip değiştirebilir. Bu bir sonraki bölümün konusu.
+\par Gerektiğinde, çağırılan (\textbf{call}) rutindeki bir değişkeni (\textbf{variable}) değiştirmek üzere bir fonksiyon yapılabilir. Çağıran, değişkenin (\textbf{variable}) yazılacak bir \textit{adresini} sağlamalı (teknik olarak değişkeni (\textbf{variable}) işaret eden bir \textit{işaretleyici} (\textbf{pointer})), ve çağırılan (\textbf{call}) fonksiyon parametrenin bir işaretleyici (\textbf{pointer}) olduğunu deklara etmeli ve değişkene (\textbf{variable}) bunun üzerinden direkt olarak erişmeli. İşaretleyicileri (\textbf{pointer}) Bölüm 5'de konuşacağız.
+\par Diziler (\textbf{array}) için hikaye farklı. Bir dizinin (\textbf{array}) adı argüman olarak kullanıldığında, fonksiyona geçen değer, dizinin (\textbf{array}) başlangıcının konumu veya adresi - dizi (\textbf{array}) elemanların bir kopyalanma seçeneği yok. Bu değerin (\textbf{value}) yardımıyla, fonksiyon bir dizinin (\textbf{array}) her elemanına erişip değiştirebilir. Bu bir sonraki bölümün konusu.
+
+\section{Karakter Dizileri (arrays)}
+
+C'deki en yaygın dizi (\textbf{array}) tipi, karakter dizileridir (\textbf{array}). Karakter dizilerinin (\textbf{array}) ve onları manipüle etmek için kullanılan fonksiyonları göstermek üzere, bir grup metin satırı okuyarak aralarından en uzun olanı bastıran bir program yazalım. Programın dış hatları bu kadar basit:
+\begin{lstlisting}
+		while (başka bir satır var)
+			if (bu satır bir önceki en uzun satırdan daha uzun)
+				satırı kaydet
+				satırın uzunluğunu kaydet
+		print en büyük satır
+\end{lstlisting} \pagebreak
+
+\noindent Bu dış hatlar, programın doğal olarak ayrılacağı parçaları açığa kavuşturuyor. Bir parça yeni bir satır alıyor, bir diğeri test ediyor, bir diğeri kaydediyor, ve kalanı işlemi kontrol ediyor.
+\par Bunlar güzelce parçalara ayırıldığından, bunları aynı şekilde yazmak da güzel olacak. Buna uygun olarak, bir sonraki girdi (\textbf{input}) satırını okuyacak \textbf{getline} isimli ayrı bir fonksiyon yazalım. Fonksiyonu farklı şartlar altında da yararlı olacak şekilde yazmaya çalışacağız. En basiti, \textbf{getline} olası bir dosya sonu (\textbf{end of file}) durumunda bir sinyal döndürmeli (\textbf{return}); daha kullanışlı bir tasarım satırın uzunluğunu, veya dosya sonu (\textbf{end of file}) ile karşılaşıldığında zero döndürürdü Sıfır kabul edilebilir bir \textbf{end-of-file} döndürülüşü çünkü sıfır geçerli bir satır uzunluğu değil. Her metin satırı en azından bir karaktere sahip; yeni satır karakteri içeren bir satırın bile uzunluğu 1.
+\par Bir önceki en uzun satırdan daha uzun bir satır bulduğumuzda, bu satır bir yere kaydedilmeli. Bu bize bir diğer yazmamız gerekn fınksiyonu öneriyor, yeni satırı başka bir yere kopyalamak için \textbf{copy} fonksiyonu.
+\par Sonunda, \textbf{getline} ve \textbf{copy} fonksiyonlarını kontrol etmesi için bir main programına ihtiyacımız var. Sonuç burada. \footnote{\noindent Çevirmenden not: \\ \indent \textbf{getline} fonksiyonu, kitabın yazıldığı süreçte olmasa da artık bir GNU/POSIX eklentisi olduğundan standart kütüphaneye (\textbf{library}) dahil edildi. Bu yüzden kitabın orjinalinde olduğu gibi \textbf{getline} fonksiyonu aynı isimle kullanılırsa derleme (\textbf{compile}) sırasında çakışma (\textbf{conflict}) hatası verecektir. gcc'yi -ansi gönderiyle (\textbf{flag}) (gcc -ansi test.c şeklinde) çalıştırmak sorunu çoğu sistemde çözse de MacOS ve BSD sistemlerde bilinmez bir nedenle işe yaramadığından fonksiyonun adını kaynak kodunda \textbf{getline2} olarak değiştirmeyi uygun görsek de metin içerisinde metnin orijinalliği esasında \textbf{getline} olarak kullanmaya devam etmeyi daha uygun gördük.} \pagebreak
+\enlargethispage{2\baselineskip}
+\begin{samepage}
+\begin{lstlisting}
+		#include <stdio.h>
+		#define MAXLINE 1000 /* maksimum girdi (input) satır büyüklüğü */
+
+		int getline2(char line[], int maxline);
+		void copy(char to[], char from[]);
+
+		/* girdideki en uzun satırı bastır */
+		main ()
+		{
+			int len;			/* tedavüldeki satırın uzunluğu */
+			int max;			/* görülen en uzun satırın uzunluğu */
+			char line[MAXLINE];		/* tedavüldeki satır */
+			char longest[MAXLINE];	/* en uzun satır burada kaydediliyor */
+
+			max = 0;
+			while ((len = getline2(line, MAXLINE)) > 0)
+				if (len > max) {
+					max = len;
+					copy(longest, line);
+				}
+			if (max > 0)	/* satır vardı */
+				printf("%s", longest);
+			return 0;
+		}
+
+		/* getline2: s'deki satırı oku, uzunluğunu döndür (return) */
+		int getline2(char s[], int lim)
+		{
+			int c, i;
+
+			for (i=0; i<lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
+				s[i] = c;
+			if (c == '\n') {
+				s[i] = c;
+				++i;
+			}
+			s[i] = '\0';
+			return i;
+		}
+
+		/* copy: from'dan to'ya kopyala; yeterince büyük olduğunu farz et */
+		void copy(char to[], char from[])
+		{
+			int i;
+
+			i = 0;
+			while ((to[i] = from[i]) != '\0')
+				++i;
+		}
+\end{lstlisting}
+\end{samepage} \pagebreak
+\textbf{getline} ve \textbf{copy} fonksiyonları programın başında deklara edildiler, tek bir dosya içinde bulunduklarını farz ediyoruz.
+\par \textbf{main} ve \textbf{getline} bir argüman çifti ve döndürülen (\textbf{return}) bir değer (\textbf{value}) aracılığı ile iletişim kuruyorlar. \textbf{getline}'da argümanlar bu satır ile deklara ediliyor
+\begin{lstlisting}
+		int getline(char s[], int lim)
+\end{lstlisting}
+bu satır, ilk argümanın, s'in, bir karakter dizisi olduğunu (\textbf{array}), ve ikincisi ise, \textbf{lim}'in bir tamsayı (\textbf{integer}) olduğunu belirtiyor. Bir
+
 \end{document}
