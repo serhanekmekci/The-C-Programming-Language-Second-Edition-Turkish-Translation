@@ -1023,5 +1023,18 @@ h & e & l & l & o & \textbackslash{}n & \textbackslash{}0 \\ \hline
 
 \textbf{printf}'teki '\textbf{\%s} format belirteci bu formda temsil edilecek olan eşleşen bir karakter öbeği (\textbf{string}) bekliyor. Aynı zamanda \textbf{copy} de girdi (\textbf{input}) argümanının '\textbackslash 0' ile bitmesi gerçeğine dayanıyor, ve bu karakteri çıktı (\textbf{output}) argümanına kopyalıyor. (Bütün bunlar '\textbackslash 0', karakterinin bir normal metnin bir parçası olmadığı anlamına geliyor.)
 \par Bu kadar küçük bir programın dahi bazı tatsız dizayn problemleri göstermesi bahsetmeye değer. Örneğin, \textbf{main}'in limitinden daha büyük bir satır ile karşılaşması durumunda ne yapması gerekir ? \textbf{getline} güvenli bir şekilde çalışıyor, \textbf{getline} array dolduğunda toplamayı bırakıyor, yeni satır karakteri görülmemişse bile. Uzunluğun ve döndürülen (\textbf{return}) son karakterin testi ile, \textbf{main} satırın uzunluğunun çok uzun olduğunu belirleyebilir ve ona göre istediği gibi bununla başa çıkabilir. Özlüğün esası için, bu sorunu görmezden geliyoruz.
-\par \textbf{getline}'ın kullanıcısının girdinin (\textbf{input}) ne kadar olabileceğini bilmesinin hiçbir yolu yok, bu yüzden \textbf{getline} bir taşmayı (\textbf{overflow}) kontrol ediyor. Bir diğer yandan, \textbf{copy}'nin kullanıcısı karakter öbeklerinin (\textbf{string}) ne kadar büyük olduklarını zaten biliyor (veya öğrenebilir), bu yüzden bu kısımlara hata denetlemesi koymadık.
+\par \textbf{getline}'ın kullanıcısının girdinin (\textbf{input}) ne kadar olabileceğini bilmesinin hiçbir yolu yok, bu yüzden \textbf{getline} bir taşmayı (\textbf{overflow}) kontrol ediyor. Bir diğer yandan, \textbf{copy}'nin kullanıcısı karakter öbeklerinin (\textbf{string}) ne kadar büyük olduklarını zaten biliyor (veya öğrenebilir), bu yüzden bu kısımlara hata denetlemesi koymadık. \\
+
+
+\noindent \textbf{Egzersiz 1-16.} En uzun satır programının main rutinini ne kadar uzun satır girilirse girilsin boyutunu bastırabilecek, ve metnin mümkün olduğu kadarını bastırabilecek şekilde tekrar gözden geçirin. \\
+
+
+\noindent \textbf{Egzersiz 1-17.} 80 karakterden büyük bütün girdi (\textbf{input}) satırlarını bastıracak bir program yazınız. \\
+
+
+\noindent \textbf{Egzersiz 1-18.} Sondaki boşlukları ve tab karakterlerini girdideki (\textbf{input}) satırlardan silen bir program yazınız, ayrıca tamami ile boş olan satırları da silen. \\
+
+
+\noindent \textbf{Egzersiz 1-19.} \textbf{reverse(s)} isimli s karakter öbeğinin (\textbf{string}) karakterlerini ters çevirecek bir fonksiyon yazınız. Bunu, girdisini (\textbf{input}) satır satır ters çeviren bir program yazmak için kullanınız. \\
+
 \end{document}
