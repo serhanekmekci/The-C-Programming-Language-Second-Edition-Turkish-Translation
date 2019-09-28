@@ -81,7 +81,7 @@ C programlamanın merkezi olan işaretleyiciler (\textbf{pointers}) gibi kritik 
 \thispagestyle{preface} \noindent Orijinal örnekler işledik ve birkaç bölüme yeni örnekler ekledik. Örneğin; komplike deklarasyonların işlemleri deklarasyonları kelimelere dönüştüren programlar ile karşılıklı olarak arttırıldı. Önceden olduğu gibi bütün örnekler doğrudan, makine tarafından okunulabilir formda olan metinden test edilmiştir.
 \par Ek Bölüm A; referans el kitabı, standart değildir. Fakat bizim girişimimiz standardın gerekliliklerini daha küçük bir alanda iletmek. Bu programcılar tarafından kolay anlaşılmak üzere yapıldı ancak derleyici (\textbf{compiler}) yazarları için bir açıklama olarak yapılmadı. - Bu görev tamamen standardın kendisine düşüyor. Ek Bölüm B, standart kütüphanenin özetidir. Ve bu da dahil ediciler emplemantasyoncular için değil programcılar için referans edildi. Ek Bölüm C, orijinal versiyondaki değişimlerin kısa özetidir.
 \par İlk tirajın önsözünde de söylediğimiz gibi C "sizlerden gelişen tecrübeyle hala iyi kalmayı başarıyor." On yılların getirdiği tecrübe ile birlikte biz hala bu şekilde hissediyoruz. Umuyoruz ki bu kitap, C'yi öğrenmenizde ve iyi bir şekilde kullanmanızda yardımcı olur.
-\par Bu ikinci tirajı ortaya çıkarmamızda yardımcı olan arkadaşlarımıza derinden borçlu hissediyoruz.  Jon Bentley, Doug Gwyn, Doug Mcllroy, Peter Nelson ve Rob Pike bize neredeyse taslağın her sayfasında sezgilerinden yola çıkarak yorumlarda bulundular. Dikkatli okumaları için  Al Aho, Dennis Allison, Joe Campbell, G. R. Emlin, Karen Fortgang, Allen Holub, Andrew Hume, Dave Kristol, John Linderman, Dave Prosser, Gene Spafford, ve Chris Van Wyk'e minnettarız. Ayrıca  BHl Cheswick, Mark Kernighan, Andy Koenig, Robin Lake, Tom London, Jim Reeds, Clovis Tondo, ve Peter Weinberger'den yardımcı tavsiyeler aldık. Dave Prosser ANSI standartları hakkında birçok detaylı sorumuzu cevapladı. Programlarımızın yerel testleri için yaygın olarak  Bjarne Stroustrup'ın C++ çeviricisini kullandık ve Dave Kristol bize final testi için bir ANSI C derleyicisi (\textbf{compiler}) sağladı. Rich Drechsler dizgilerde bize son derece yardımcı oldu.
+\par Bu ikinci tirajı ortaya çıkarmamızda yardımcı olan arkadaşlarımıza derinden borçlu hissediyoruz.  Jon Bentley, Doug Gwyn, Doug Mcllroy, Peter Nelson ve Rob Pike bize neredeyse taslağın her sayfasında sezgilerinden yola çıkarak yorumlarda bulundular. Dikkatli okumaları için  Al Aho, Dennis Allison, Joe Campbell, G. R. Emlin, Karen Fortgang, Allen Holub, Andrew Hume, Dave Kristol, John Linderman, Dave Prosser, Gene Spafford, ve Chris Van Wyk'e minnettarız. Ayrıca  BHl Cheswick, Mark Kernighan, Andy Koenig, Robin Lake, Tom London, Jim Reeds, Clovis Tondo, ve Peter Weinberger'den yardımcı tavsiyeler aldık. Dave Prosser ANSI standartları hakkında birçok detaylı sorumuzu cevapladı. Programlarımızın yerel (\textbf{local}) testleri için yaygın olarak  Bjarne Stroustrup'ın C++ çeviricisini kullandık ve Dave Kristol bize final testi için bir ANSI C derleyicisi (\textbf{compiler}) sağladı. Rich Drechsler dizgilerde bize son derece yardımcı oldu.
 \par Hepsine içten teşekkürlerimizle.
 \newline
 
@@ -116,7 +116,7 @@ C, genel amaçlı bir programlama dilidir. C, UNIX sisteminin kendisi olduğu gi
 
 \thispagestyle{introduction} \noindent Her fonksiyon  birden fazla kere çağırılabilir. Yerel değişkenler (\textbf{variables}) tipik olarak "otomatiktirler", ya da her çağrı ile yeniden yaratılırlar diyebiliriz. Fonksiyonlar  iç içe tarif edilemez (\textbf{define}) fakat değişkenler (\textbf{variables}) blok yapı (\textbf{block-structured}) tarzında deklare edilebilir. C programının fonksiyonları  ayrı olarak derlenen ayrı kaynak dosyaları içinde bulunabilir. Değişkenler; (\textbf{variables}) bir fonskiyon  için dahili, harici fakat sadece tek bir kaynak dosyası içinde bilinen ya da tüm program için görülür olabilirler.
 \par Önişleme adımı program metninde; yerine koyma makrosunu, diğer kaynak dosyalarının dahil edilmesini ve koşulsal derleme (\textbf{compilation}) işlemlerini gerçekleştirir. \newline
-\par C, nispeten "düşük seviye" bir dil. Bu nitelendirme aşağılayıcı değil, sadece C'nin bilgisayarların çoğunun yaptığı nesnelerle uğraştığı anlamına geliyor, karakterler, sayılar ve adresler. Bunlar gerçek makineler tarafından uygulanan aritmetik ve mantıksal operatörler (\textbf{operators}) tarafından birleştirilebilir ve hareket ettirilebilirler. C, karakter öbekleri (\textbf{strings}), kümeler (\textbf{sets}), listeler (\textbf{lists}) ve diziler gibi bileşik objelerle uğraşmak için işlemler sağlamaz. Yapıların (\textbf{structures}) bir birim olarak kopyalanabilmesine rağmen karakter öbeklerinin (\textbf{string}) ve dizilerin (\textbf{arrays}) tamamını değiştirebilecek işlemler yoktur. C, statik tarif etme (\textbf{definition}) ve fonksiyonların  yerel değişkenleri (\textbf{variables}) tarafından sağlanan yığın disiplini (\textbf{stack discipline}) dışında hiçbir depolama tahsis olanağı tarif etmeyen (\textbf{define}) bir dildir. Yığın ağacı (\textbf{heap}) veya çöp koleksiyonu (\textbf{garbage collection}) yoktur. Son olarak C'nin kendisi girdi/çıktı (\textbf{input/output}) olanağı sağlamaz, \textbf{READ} veya \textbf{WRITE} ifadeleri (\textbf{statements}) ve yerleşik dosya erişim metotları yoktur. Bütün bu yüksek seviye mekanizmaların ayrıca çağırılan fonksiyonlar  tarafından sağlanması gerekir. Birçok C emplementasyonu, bu fonksiyonların  uygun bir standart koleksiyonunu içerir.
+\par C, nispeten "düşük seviye" bir dil. Bu nitelendirme aşağılayıcı değil, sadece C'nin bilgisayarların çoğunun yaptığı nesnelerle uğraştığı anlamına geliyor, karakterler, sayılar ve adresler. Bunlar gerçek makineler tarafından uygulanan aritmetik ve mantıksal operatörler (\textbf{operators}) tarafından birleştirilebilir ve hareket ettirilebilirler. C, karakter öbekleri (\textbf{strings}), kümeler (\textbf{sets}), listeler (\textbf{lists}) ve diziler gibi bileşik objelerle uğraşmak için işlemler sağlamaz. Yapıların (\textbf{structures}) bir birim olarak kopyalanabilmesine rağmen karakter öbeklerinin (\textbf{string}) ve dizilerin (\textbf{arrays}) tamamını değiştirebilecek işlemler yoktur. C, statik tarif etme (\textbf{definition}) ve fonksiyonların  yerel (\textbf{local}) değişkenleri (\textbf{variables}) tarafından sağlanan yığın disiplini (\textbf{stack discipline}) dışında hiçbir depolama tahsis olanağı tarif etmeyen (\textbf{define}) bir dildir. Yığın ağacı (\textbf{heap}) veya çöp koleksiyonu (\textbf{garbage collection}) yoktur. Son olarak C'nin kendisi girdi/çıktı (\textbf{input/output}) olanağı sağlamaz, \textbf{READ} veya \textbf{WRITE} ifadeleri (\textbf{statements}) ve yerleşik dosya erişim metotları yoktur. Bütün bu yüksek seviye mekanizmaların ayrıca çağırılan fonksiyonlar  tarafından sağlanması gerekir. Birçok C emplementasyonu, bu fonksiyonların  uygun bir standart koleksiyonunu içerir.
 \par Benzer şekilde C sadece basit, tek iş parçacıklı (\textbf{single-thread}) kontrol akışı (\textbf{control-flow}) sunar: testler, döngüler (\textbf{loops}), gruplama ve alt programlar (\textbf{subprograms}). Fakat multi programlama (\textbf{multiprogramming}), paralel işlemler, senkronizasyon ya da eşyordamlar (\textbf{coroutines}) sunmaz. Bu özelliklerin bazılarının yokluğu ölü gereksinim gibi gözükse de ("İki karakter dizisini karşılaştırmam için bir fonksiyon  çağırmam gerektiğini mi söylemek istedin?") dili mütevazi boyutlarda tutmanın gerçek faydaları vardır. C nispeten küçük bir dil olduğundan dolayı, küçük bir alanda açıklanabiliyor ve hızlıca öğrenilebiliyor. Bir programcı mantıklı olarak, tüm dili bilmeyi, anlamayı ve gerçekten muntazam olarak kullanmayı bekleyebilir. \pagebreak
 
 \thispagestyle{introduction} \par Yıllarca C'nin tarifi, C Programlama Dili'nin ilk tirajındaki referans el kitabı oldu. 1983'te, Amerikan Standartları Enstitüsü (\textbf{American National Standards Institute}) (\textbf{ANSI}) C'nin modern ve kapsamlı bir tarifini sağlamak için bir komite kurdu. Ortaya çıkan tarif, "ANSI standardı" ya da "ANSI C" 1988'in sonlarına doğru tamamlandı. Standardın birçok özelliği çoktan modern derleyiciler (\textbf{compilers}) tarafından desteklenmiştir.
@@ -913,9 +913,9 @@ Parametre listesine izin verilmiyordu, bu yüzden derleyici (\textbf{compiler}) 
 
 \section{Argümanlar - Değer ile Çağırma}
 
-C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran'ı kullanmış olan programcılara yabancı gelebilir. C'de, bütün fonksiyon argümanları "değerleriyle" (\textbf{by value}) geçirilir. Bu, çağırılan (\textbf{call}) fonksiyona, fonksiyonun argümanlarına verilmiş değerlerin (\textbf{value}), orijinallerinden ziyade, geçici değişkenler (\textbf{variables}) olarak verilmesidir. Bu, bizi "referans ile çağır" (\textbf{call by reference}) kullanan Fortran gibi veya \textbf{var} parametreleri içeren Pascal gibi dillerden farklı özellikler getiriyor, bu gibi dillerde çağırılan (\textbf{call}) rutinin yerel bir kopyadan ziyade, orijinal argümana erişimi var.
+C fonksiyonlarının bir yönü başka programlama dillerini, özellikle Fortran'ı kullanmış olan programcılara yabancı gelebilir. C'de, bütün fonksiyon argümanları "değerleriyle" (\textbf{by value}) geçirilir. Bu, çağırılan (\textbf{call}) fonksiyona, fonksiyonun argümanlarına verilmiş değerlerin (\textbf{value}), orijinallerinden ziyade, geçici değişkenler (\textbf{variables}) olarak verilmesidir. Bu, bizi "referans ile çağır" (\textbf{call by reference}) kullanan Fortran gibi veya \textbf{var} parametreleri içeren Pascal gibi dillerden farklı özellikler getiriyor, bu gibi dillerde çağırılan (\textbf{call}) rutinin yerel (\textbf{local}) bir kopyadan ziyade, orijinal argümana erişimi var.
 \par Ana değişiklik, C'de çağırılan (\textbf{call}) fonksiyonun direkt olarak çağırılan fonksiyondaki değişkende (\textbf{variable}) bir değişiklik yapamamasıdır; sadece kendi özel, geçici kopyasını değiştirebilir.
-\par Değer ile çağır (\textbf{call by value}) bir varlık (asset), ancak, bir yükümlülük değil. Bu, daha az fazladan değişken (\textbf{variable}) ile daha kompakt programları sağlıyor, çünkü çağırılan (\textbf{call}) rutinde parametrelere, sıradan şekilde ilklendirilmiş (\textbf{initialize}) yerel değişkenler gibi davranılabiliyor. Örneğin, \textbf{power}'ın bu özelliği kullanan bir versiyonu. \pagebreak
+\par Değer ile çağır (\textbf{call by value}) bir varlık (asset), ancak, bir yükümlülük değil. Bu, daha az fazladan değişken (\textbf{variable}) ile daha kompakt programları sağlıyor, çünkü çağırılan (\textbf{call}) rutinde parametrelere, sıradan şekilde ilklendirilmiş (\textbf{initialize}) yerel (\textbf{local}) değişkenler gibi davranılabiliyor. Örneğin, \textbf{power}'ın bu özelliği kullanan bir versiyonu. \pagebreak
 \begin{lstlisting}
 		/* power: base sayısını n'inci kuvvetine yükselt; n >= 0; versiyon 2 */
 		int power(int base, int n)
@@ -1037,4 +1037,76 @@ h & e & l & l & o & \textbackslash{}n & \textbackslash{}0 \\ \hline
 
 \noindent \textbf{Egzersiz 1-19.} \textbf{reverse(s)} isimli s karakter öbeğinin (\textbf{string}) karakterlerini ters çevirecek bir fonksiyon yazınız. Bunu, girdisini (\textbf{input}) satır satır ters çeviren bir program yazmak için kullanınız. \\
 
+\section{Harici Değişkenler (\textbf{variables}) ve Kapsam (\textbf{scope})}
+
+\textbf{line}, \textbf{longest} vb. \textbf{main}'deki değişkenler (\textbf{variables}), \textbf{main}'e özel (\textbf{private}) veya yereldir (\textbf{local}). Çünkü onlar \textbf{main}'in içinde deklare edilmiştir, bu yüzden başka hiçbir fonksiyon onlara direkt olarak erişemez. Aynısı diğer fonksiyonlardaki tüm değişkenler (\textbf{variables}) için de geçerli; örneğin, \textbf{getline} fonksiyonundaki \textbf{i} ile \textbf{copy} fonksiyonundaki \textbf{i} tamami ile ilişkisiz. Bir fonksiyondaki her yerel (\textbf{local}) değişken (\textbf{variable}) ancak fonksiyon çağırıldığında (\textbf{call}) varoluyor, ve fonksiyon çalışmayı bitirdiğinde kayboluyor. Bu yüzden böyle değişkenler (\textbf{variables}), diğer dillerde de bunu takip eden bir terminoloji ile, \textit{otomatik} değişkenler (\textbf{variables}) olarak biliniyor. Bundan böyle bu yerel (\textbf{local}) değişkenleri (\textbf{variables}) belirtmek için otomatik terimini kullanacağız. (Bölüm 4'de çağırımlar (\textbf{call}) arası değerlerini (\textbf{value}) kaybetmeyen \textbf{static} depolama sınıfını (\textbf{class}) açıklayacağız.)
+\par Çünkü otomatik değişkenler (\textbf{variables}) fonksiyon ilklendirmesi (\textbf{initialize}) gelip gidiyor, bir çağırıdan (\textbf{call}) diğerine değerlerini (\textbf{value}) saklamıyorlar, ve açıkça her girişte belirlenmeleri gerek. Eğer belirlenmezlerse çöp (\textbf{garbage}) içereceklerdir.
+\par Otomatik değişkenlere (\textbf{variables}) bir alternatif olarak, bütün fonksiyonlara \textit{harici} (\textbf{external}) olan bir değişken (\textbf{variable}) tarif edilebilir (\textbf{define}) bu, tüm fonksiyonlar tarafınca ismi ile erişilebilen bir değişken (\textbf{variable}) tarif eder (\textbf{define}). (Bu mekanizma Fortan'ın veya Pascal'ın en dıştaki bloğunda deklare edilen değişkenleri (\textbf{variables}) gibidir.) Çünkü harici (\textbf{external}) değişkenler (\textbf{variables}) global olarak erişilebilir, argüman listeleri yerine fonksiyonlar arası veri iletişimi için kullanılabilir. Ayrıca harici (\textbf{external}) değişkenler (\textbf{variables}) her fonksiyon çağırımında (\textbf{call}) ortaya çıkıp kaybolmaktan ziyade sonsuza kadar varoluşlarını koruduklarından dolayı, onları belirleyen fonksiyonlar döndükten (\textbf{return}) sonra bile değerlerini (\textbf{value}) koruyorlar.
+\par Harici (\textbf{external}) bir değişken (\textbf{variable}), tam olarak bir kere, herhangi bir fonksiyonun dışında  \textit{tarif edilmeli} (\textbf{define}); bu onun için bir depolama ayıracak. Aynı zamanda değişken (\textbf{variable}) ona erişmek isteyen her fonksiyonun içinde \textit{deklare} edilmeli; bu değişkenin (\textbf{variable}) tipini belirliyor.
+\begin{lstlisting}
+		#include <stdio.h>
+
+		#define MAXLINE 1000	/* maksimum girdi (input) satırı boyutu */
+
+		int max;				/* görülen maksimum uzunluk */
+		char line[MAXLINE];     /* tedavüldeki girdi (input) satırı */
+		char longest[MAXLINE];  /* en uzun satır burada kaydediliyor */
+
+		int getline2(void);
+		void copy(void);
+
+		/* en uzun girdi (input) satırı bastır; özelleştirilmiş versiyon */
+		main()
+		{
+			int len;
+			extern int max;
+			extern char longest[];
+
+			max = 0;
+			while ((len = getline2()) > 0)
+				if (len > max) {
+					max = len;
+					copy();
+				}
+			if (max > 0)	/* satır vardı */
+				printf("%s",longest);
+			return 0;
+		}
+
+		/* getline: özelleştirilmiş versiyon */
+		int getline2(void)
+		{
+			int c, i;
+			extern char line[];
+
+			for (i = 0; i < MAXLINE -1
+				&& (c = getchar()) != EOF && c != '\n'; ++i)
+				line[i] = c;
+			if (c == '\n') {
+				line[i] = c;
+				++i;
+			}
+			line[i] = '\0';
+			return i;
+		}
+
+		/* copy: özelleştirilmiş versiyon */
+		void copy(void)
+		{
+			int i;
+			extern char line[], longest[];
+
+			i = 0;
+			while ((longest[i] = line[i]) != '\0')
+				++i;
+		}
+\end{lstlisting}
+\par \textbf{main}'deki harici (\textbf{external}) değişkenler (\textbf{variables}) olan, \textbf{getline} ve \textbf{copy} yukarıdaki örneğin ilk satırlarında tarif edildi (\textbf{define}), bu onların tipini ve onlara ayrılacak olan depolamayı belirledi. Sözdizimsel (\textbf{syntactically}) olarak, harici (\textbf{external}) tarifler (\textbf{definition}) yerel (\textbf{local}) değişkenlerin (\textbf{variable}) tarifi (\textbf{definition}) ile aynı, fakat tüm fonksiyonların dışında olduklarından dolayı, değişkenler (\textbf{variables}) harici (\textbf{external}). Fonksiyon bir harici (\textbf{external}) değişkeni (\textbf{variable}) kullanmadan önce, değişkenin (\textbf{variable}) adı fonksiyonca bilinmelidir. Bunu yapmanın bir yolu bir fonksiyonun içinde bir \textbf{extern} deklarasyonu yazmaktır; eklenilen \textbf{extern} anahtar kelimesi dışında deklarasyon önceki yaptığımız deklarasyonların aynısıdır.
+\par Belirli koşullar altında, \textbf{extern} deklarasyonu atlanabilir. Eğer harici (\textbf{external}) değişkenin (\textbf{variable}) tarifi (\textbf{definition}), herhangi bir fonksiyonda kullanılmadan önce, aynı kaynak dosyası içinde bulunuyorsa, fonksiyonun içinde \textbf{extern} deklarasyonu yapmaya gerek yoktur. \textbf{main'}deki \textbf{extern} deklarasyonları olan \textbf{getline} ve \textbf{copy} bu yüzden gereksiz. Aslında, çoğunlukla yapılan, bütün harici (\textbf{external}) değişkenlerin (\textbf{variable}) tariflerini (\textbf{definition}) kaynak dosyasının başına koymak ve bütün \textbf{extern} deklarasyonlarını atlamaktır.
+\par Eğer program birden fazla kaynak dosyasında ise, ve değişken \textit{dosya1}'de tarif edilip (\textbf{define}) \textit{dosya2}'de ve \textit{dosya3}'de kullanıldıysa, \textbf{extern} deklarasyonları \textit{dosya2}'de ve \textit{dosya3}'de değişkenin (\textbf{variable}) kullanışlarını bağlamak için gereklidir. Genellikle yapılandeğişkenlerin (\textbf{variables}) ve fonksiyonların bütün \textbf{extern} deklarasyonlarını ayrı bir dosyada toplamaktır. Tarihsel olarak \textit{header} olarak bilinir bu dosya, ve her kaynak dosyasının başında \textbf{\#include} ile dahil edilir. Uzantı \textbf{.h} header adları için gelenekseldir. Standart kütüphanenin (\textbf{library}) fonksiyonları, örneğin, \textbf{<stdio.h>} içinde deklare edilir. Bu konu Bölüm 4'de konuşuldu, ve kütüphanenin (\textbf{library}) kendisi Bölüm 7'de ve Ek B'de konuşuldu.
+\par \textbf{getline} ve \textbf{copy}'nin özelleştirilmiş versiyonlarının hiç argümanı olmadığından, mantıken dosyanın başındaki fonksiyon prototipinin \textbf{getline()} ve \textbf{copy()} olması gerekiyor. Fakat eski C programları ile uyumluluk için standard boş listeyi eskistil deklarasyon olarak alıyor, ve bütün argüman listesi kontrolünü devre dışı bırakıyor; \textbf{void} açık bir ekilde boş liste için kullanılıyor. Bunu Bölüm 4'ün sonlarında konuşacağız.
+\par tarif etme (\textbf{definition}) ve deklarasyon kelimelerini bu bölümde harici (\textbf{external}) değişkenleri (\textbf{variables}) anlatırken ne kadar dikkatli kullandığımızı farketmişsinizdir. "Tarif" (\textbf{definition}), değişkenin (\textbf{variable}) oluşturulduğu ve ona bir depolama atandığı yere karşılık gelirken, "deklarasyon" değişkenin (\textbf{variable}) doğasının belirlendiği ancak bir bir depolama ayrılmadığı yere karşılık gelir.
+\par Bu arada, her şeyi \textbf{extern} değişkeni (\textbf{variable}) şeklinde yapmak gibi bir eğilim var, çünkü bu iletişimi oldukça basitleştiriyor-argüman listeleri oldukça kısa ve değişkenler (\textbf{variables}) onları ne zaman istersen oradalar. Fakat harici (\textbf{external}) değişkenler (\textbf{variable}) onları istemediğin zaman bile oradalar. Harici (\textbf{external}) değişkenlere çok güvenmek veri bağlantıları gözle görülür, açık olmayan programlara yol açtığından tehlikeli bir şekilde endişe verici-değişkenler (\textbf{variables}) beklenmedik hatta istenmedik şekillerde değişebilirler, ve program düzenlenmesi oldukça zor olacaktır. en-uzun-satır programının ikinci versiyonu ilk versiyonuna kıyasla bir kısmı belirttiğimiz nedenlerden dolayı, bir kısmı ise iki yararlı fonksiyonu manipüle ettikleri değişkenlerin (\textbf{variables}) isimlerine bağlayarak genelliğini yok ettiği için daha ast durumda. \pagebreak
+\newline
+\par Bu noktada, geleneksel olarak C'nin temeli olan bahsedilen şeyi kavramış bulunmaktayız. Bu bir avuç blok inşâsı ile, belli bir boyuttaki programları yazmak mümkün, ve eğer bunu yapmak için yeterince ara verdiyseniz bu muhtemelen iyi bir fikirdi. Bu egzersizler bu bölümdeki programların daha kompleks hallerini öneriyor.
 \end{document}
