@@ -1108,9 +1108,18 @@ h & e & l & l & o & \textbackslash{}n & \textbackslash{}0 \\ \hline
 \par tarif etme (\textbf{definition}) ve deklarasyon kelimelerini bu bölümde harici (\textbf{external}) değişkenleri (\textbf{variables}) anlatırken ne kadar dikkatli kullandığımızı farketmişsinizdir. "Tarif" (\textbf{definition}), değişkenin (\textbf{variable}) oluşturulduğu ve ona bir depolama atandığı yere karşılık gelirken, "deklarasyon" değişkenin (\textbf{variable}) doğasının belirlendiği ancak bir bir depolama ayrılmadığı yere karşılık gelir.
 \par Bu arada, her şeyi \textbf{extern} değişkeni (\textbf{variable}) şeklinde yapmak gibi bir eğilim var, çünkü bu iletişimi oldukça basitleştiriyor-argüman listeleri oldukça kısa ve değişkenler (\textbf{variables}) onları ne zaman istersen oradalar. Fakat harici (\textbf{external}) değişkenler (\textbf{variable}) onları istemediğin zaman bile oradalar. Harici (\textbf{external}) değişkenlere çok güvenmek veri bağlantıları gözle görülür, açık olmayan programlara yol açtığından tehlikeli bir şekilde endişe verici-değişkenler (\textbf{variables}) beklenmedik hatta istenmedik şekillerde değişebilirler, ve program düzenlenmesi oldukça zor olacaktır. en-uzun-satır programının ikinci versiyonu ilk versiyonuna kıyasla bir kısmı belirttiğimiz nedenlerden dolayı, bir kısmı ise iki yararlı fonksiyonu manipüle ettikleri değişkenlerin (\textbf{variables}) isimlerine bağlayarak genelliğini yok ettiği için daha ast durumda. \pagebreak
 \newline
-\par Bu noktada, geleneksel olarak C'nin temeli olarak bahsedilen şeyi kavramış bulunmaktayız. Bu bir avuç blok inşâsı ile, belli bir boyuttaki programları yazmak mümkün, ve eğer bunu yapmak için yeterince ara verdiyseniz bu muhtemelen bu iyi bir fikirdi. Bu egzersizler bu bölümdeki programların daha kompleks hallerini istiyor.
+\par Bu noktada, geleneksel olarak C'nin temeli olarak bahsedilen şeyi kavramış bulunmaktayız. Bu bir avuç blok inşâsı ile, belli bir boyuttaki programları yazmak mümkün, ve eğer bunu yapmak için yeterince ara verdiyseniz bu muhtemelen bu iyi bir fikirdi. Bu egzersizler bu bölümdeki programların daha kompleks hallerini istiyor. \newline
+
+\noindent \textbf{Egzersiz 1-20.} \textbf{detab} isimli girdideki (\textbf{input}) tab karakterlerini uygun sayıda boşluk karakterleriyle bir sonraki tab durağına kadar değiştiren bir program yazınız. Sabit bir tab durağı farz edin, her \textbf{n} bir basamak olsun. \textbf{n} bir değişken (\textbf{variable}) mi ? Yoksa bir sembolik parametre mi olmalı ?\\
+
+\noindent \textbf{Egzersiz 1-21.} \textbf{entab} isimli boşluk karakterlerinin öbeklerini (\textbf{string}) aynı boşluk aralığını sağlamak için minimum sayıda tablerle ve boşluklarla değiştiren bir program yazınız. \textbf{detab}'deki aynı tab durağını kullanın. Bir tab veya tek bir boşluk tab durağına erişmede yeterli olduğunda hangisi tercih edilmeli ? \\
+
+\noindent \textbf{Egzersiz 1-22.} Uzun girdi (\textbf{input}) satırlarını en sonuncu boş-olmayan (\textbf{non-blank}) karakterden önce, girdinin (\textbf{input}) \textbf{n'inci} basamağından önce ortaya çıkan karakterden önce iki yada daha fazla daha kısa satıra "katlayacak" bir program yazınız. Programınızın, çok uzun satırlarla karşılaştığında veya belirlenen basamaktan önce herhangi bir boşluk yada tab olmadığında zekice bir şey yaptığına emin olun. \\
+
+\noindent \textbf{Egzersiz 1-23.} Bir C programındaki bütün yorumları silen bir program yazınız. Alıntılanmış karakte öbeklerini (\textbf{string}) ve karakter sabitlerini (\textbf{constants}) düzgünce hesaba katmayı unutmayın. C yorumları iç içe geçmez. \\
+
+\noindent \textbf{Egzersiz 1-24.} Bir C programının kapatılmamış parantezler ve süslü parantezler gibi ilkel sözdizimi (\textbf{syntax}) hatalarını kontrol eden bir program yazınız. Tırnak işaretlerini , tekli ve çift olanları, kaçış sekanslarını (\textbf{sequence}), ve yorumları unutmayın. (Bu program bütün çoğunluğu ile yapılırsa zorlayıcı.)\\
 
 \chapter{Tipler, Operatörler ve Açıklamalar (expression)}
-
 
 \end{document}
