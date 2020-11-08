@@ -31,6 +31,8 @@
 \title{C Programlama Dili İkinci Tiraj}
 \date{}
 
+% Courier font
+\renewcommand{\ttdefault}{pcr}
 \lstset{
     escapeinside={(*}{*)},
     frame=tb,
@@ -1131,6 +1133,22 @@ Bölüm 1'de değişken (\textbf{variable}) ve sabitlerin (\textbf{constants}) i
 \par Değişkenin (\textbf{variable}) adını değişken (\textbf{variable}) ile ilintili seçmek mantıklı olacaktır, böylece tipografik olarak karışmaları daha zor olacaktır. Yerel değişkenler (\textbf{local}) için, özellikle döngü göstergeleri (\textbf{loop indices}) için kısa isimler, ve harici değişkenler (\textbf{external variables}) için daha uzun isimler kullanma eğilimindeyizdir. \\
 
 \section{Veri Tipleri ve Büyüklükleri}
+C'de sadece birkaç basit veri tipi bulunmakta:
+\begin{lstlisting}
+		(*\textbf{char}*)      tek bayt, sadece yerel karakter setinden
+					tek bir karakter tutabilir.
 
+		(*\textbf{int}*)        tamsayı, genellikle konak makinedeki
+					tam sayıların boyutunu yansıtır.
 
+		(*\textbf{float}*)     tek duyarlıklı kayan noktalı sayı.
+
+		(*\textbf{double}*)    çift duyarlıklı kayan noktalı sayı.
+\end{lstlisting}
+\par Ek olarak, bu basit tiplere ekleyebileceğiniz bazı niteleyiciler (\textbf{qualifiers}) mevcut. \textbf{short} ve \textbf{long} tamsayılara (\textbf{integers}):
+\begin{lstlisting}
+		short int sh;
+		long int counter;
+\end{lstlisting}
+\textbf{int} kelimesi böyle deklarasyonlarda atlanabilir, ve genellikle atlanır.
 \end{document}
