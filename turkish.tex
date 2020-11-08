@@ -550,7 +550,7 @@ Bunu C'ye dönüştürürsek:
 		}
 \end{lstlisting}
 Mantıksal bir operatör olan \textbf{ !=} "eşit değil" anlamına gelir.
-\par Tabiki ekrandaki yada klavyedeki karakter, diğer her şey gibi, bit olarak içeride saklanıyor. Tür (\textbf{type}) \textbf{char} özellikle karakter verisi taşıması için oluşturuldu fakat herhangi bir tam sayı (\textbf{integer}) değer kullanılabilir. Biz ince ve önemli bir sebeple \textbf{int} kullandık.
+\par Tabiki ekrandaki yada klavyedeki karakter, diğer her şey gibi, bit olarak içeride saklanıyor. Tür (\textbf{type}) \textbf{char} özellikle karakter verisi taşıması için oluşturuldu fakat herhangi bir tam sayı (\textbf{integer}) değeri kullanılabilir. Biz ince ve önemli bir sebeple \textbf{int} kullandık.
 \par Problem, girdinin (\textbf{input}) sonunun geçerli veriden ayırılması. Çözüm ise \textbf{getchar}'ın girdi (\textbf{input}) kalmadığında herhangi gerçek bir karakterle karıştırılamayacak belirgin bir değer dönmesi (\textbf{return}). Bu değer \textbf{EOF} olarak adlandırılıyor, "dosya sonu" (\textbf{end of file}) anlamına geliyor. Biz c'yi \textbf{getchar}'ın döndürebileceği kadar büyük bir değer taşıyan bir tipte deklare etmemiz gerekiyor. c, lazım olduğunda EOF'yi taşıyabileceği kadar büyük olması gerektiğinden \textbf{char} kullanamazdık. Bu nedenle \textbf{int} kullandık.
 \par EOF \textbf{<stdio.h>}'da bir tam sayı (\textbf{integer}) olarak tarif edilmiştir (\textbf{define}), fakat EOF'nin sayı değeri hakkında \textbf{char} değeri ile aynı olmadığından dolayı endişelenmemiz gerekmiyor. Sembolik sabiti (\textbf{Symbolic Constant}) kullanarak, programdaki hiçbir şeyin belirli bir sayı değerine dayalı olmadığından emin olduk.
 \par Kopyalama programı tecrübeli C programcıları tarafından daha farklı yazılabilir. C'de herhangi bir atama (\textbf{assignment}), örneğin
@@ -661,7 +661,7 @@ Bir sonraki program girdideki (\textbf{input}) satırları sayıyor. Daha önce 
 
 \noindent \textbf{Egzersiz 1-8.} Boşlukları, tableri, ve yenı satırları sayan bir program yazınız. \newline
 
-\noindent \textbf{Egzersiz 1-9.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her karakter öbeğindeki (\textbf{string}) birden fazla olan boşlukları tek boşlukla değiştirecek. \newline
+\noindent \textbf{Egzersiz 1-9.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan her karakter öbeğindeki (\textbf{string}) birden fazla olan boşlukları tek boşlukla değiştirecek bir program yazınız. \newline
 
 \noindent \textbf{Egzersiz 1-10.} Girdisini (\textbf{input}) çıktısına (\textbf{output}) kopyalayan bir program yazınız, her tabi \textbackslash t ile, her geri tuşunu \textbackslash b ile ve her ters eğik çizgiyi \textbackslash \textbackslash ile değiştirecek. Bu tableri, ters eğik çizgiyi ve geri tuşu karakterlerini daha açık bir yolla gösterecek.
 
