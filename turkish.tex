@@ -1124,6 +1124,13 @@ Değişkenler (\textbf{variables}) ve sabitler (\textbf{constants}) bir programd
 
 \par ANSI standardı basit tip ve açıklamalara bir çok küçük eklemede bulundu. Artık \textbf{signed} ve \textbf{unsigned} bütün tamsayılardan (\textbf{integer}), ve \textbf{unsigned} sabitlerin (\textbf{constants}) ve hexademical karakter sabitlerinin \textbf{constants} için notasyonlarından oluşabiliyor. Kayan nokta (\textbf{floating-point}) operasyonları tek nicelikli (\textbf{single precision}) yapılabiliyor; genişletilmiş nicelik (\textbf{extended precision}) için ise \textbf{long double} tipi bulunmaktadır. Karakter öbeği (\textbf{string}) sabitleri (\textbf{constants}) derleme (\textbf{compile}) zamanında birleştirilebiliyor. Uzun süredir bir özellik olarak numaralandırmalar (\textbf{enumurations}) artık dilin bir parçası oldular. Objeler \textbf{const} olarak deklare edilebilirler bu onları daha sonra değiştirilmesini önler. Otomatik zorlamalar için kurallar arasından aritmetik tipler daha zengin tipleri ile başa çıkmak için arttırıldı. \\
 
-\section{Değişken (\textbf{değişken}) Adları}
+\section{Değişken (\textbf{variable}) Adları}
+
+Bölüm 1'de değişken (\textbf{variable}) ve sabitlerin (\textbf{constants}) isimlerinde bazı kısıtlamalar olduğunu belirtmedik. İsimler harflerden ve rakamlardan oluşuyor; ilk karakter mutlaka bir harf olmalıdır. Altçizgi "\_" bir harf olarak sayılır; bazen uzun değişken (\textbf{variable}) adlarını okumada yardımcı olabilir. Yine de çoğunlukla kütüphane (\textbf{library}) rutinleri sıklıkla böyle isimler kullandığından altçizgi ile başlayan değişken (\textbf{variable}) adları kullanmayın. Büyük ve küçük harfler birbirinden ayrılır, yani x ve X iki farklı isimdir. Geleneksel C pratiği değişken adları için küçük sembolik sabitler (\textbf{constants}) için büyük harflerin kullanılmasıdır.
+\par En azından dahili bir değişkenin (\textbf{variable}) ilk 31 karakteri önemlidir. Fonksiyon adları ve harici değişkenler (\textbf{variables}) için, sayı 31'den düşük olabilir çünkü harici adları dilin kontrolünde olmayan birleştiriciler (\textbf{assembler}) veya yükleyiciler (\textbf{loaders}) tarafından kullanılıyor olabilir. Harici adlar için, standard ilk 6 karakterin ve tek bir durumun (harflerin küçük olması) benzersizliğini garanti ediyor. \textbf{if}, \textbf{else}, \textbf{int}, \textbf{float}, etc. gibi anahtar kelimeler rezervedir ve değişken adları olarak kullanılamaz. Küçük harfli olmaları gerekmektedir.
+\par Değişkenin (\textbf{variable}) adını değişken (\textbf{variable}) ile ilintili seçmek mantıklı olacaktır, böylece tipografik olarak karışmaları daha zor olacaktır. Yerel değişkenler (\textbf{local}) için, özellikle döngü göstergeleri (\textbf{loop indices}) için kısa isimler, ve harici değişkenler (\textbf{external variables}) için daha uzun isimler kullanma eğilimindeyizdir. \\
+
+\section{Veri Tipleri ve Büyüklükleri}
+
 
 \end{document}
